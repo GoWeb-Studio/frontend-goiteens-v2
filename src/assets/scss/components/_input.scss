@@ -19,7 +19,7 @@
 }
 
 .input-field {
-  @apply h-12 w-full rounded-[144px] border border-[#EDEDED] bg-white px-4 py-2 font-IBMPlexSans text-[14px] font-normal leading-[1.2] md:h-[68px] md:px-8 md:py-[18px] md:text-2xl;
+  @apply h-12 w-full rounded-[144px] border border-[#EDEDED] bg-white px-4 py-2 font-IBMPlexSans text-[14px] font-normal leading-[1.2] md:h-[56px] md:px-8 md:py-[18px] md:text-[16px] xxl:h-[64px];
 
   &::placeholder {
     @apply text-[#999];

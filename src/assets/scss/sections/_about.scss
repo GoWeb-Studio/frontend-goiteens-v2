@@ -2,12 +2,12 @@
   background-repeat: no-repeat;
   background-image: url('../images/about/bg-mob.svg');
   background-size: 357px auto;
-  background-position: top 294px right calc(50% - 68px);
+  background-position: top 339px right calc(50% - 68px);
 
   @include mq(tablet) {
     background-image: url('../images/about/bg-tab.svg');
     background-size: 772px auto;
-    background-position: top 302px right calc(50% - 48px);
+    background-position: top 345px right calc(50% - 48px);
   }
 
   @include mq(desktop) {

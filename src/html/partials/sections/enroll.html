@@ -1,19 +1,32 @@
 {% set section = enroll %}
 <section
-  class="{{section.id}} bg-white-dark pt-20 pb-10 md:pb-[100px] xl:pt-[170px] xl:pb-[186px] xxl:pb-[156px]"
+  class="{{section.id}} bg-[#F2FAE6] pt-20 pb-10 md:pb-[100px] xl:pt-[130px] xl:pb-[130px] xxl:pb-[156px] md:pt-[72px]"
 >
   <div class="container">
     <div class="xl:mx-auto xl:max-w-[982px]">
-      <h2 class="section-title mb-5 md:mb-8 xl:mb-10 smOnly:text-[18px] smOnly:leading-[1.3]">
+      <h2
+        class="section-title mb-5 text-center md:mb-10 md:max-w-[600px] md:text-start xl:mb-[56px] xl:max-w-none smOnly:text-[18px] smOnly:leading-[1.3]"
+      >
         {{section.title}}
       </h2>
-      <ul class="mb-10 grid gap-6 md:mb-12 md:gap-8 xl:mb-[64px] xl:gap-10">
+      <!-- <p class="text- mb-10 font-IBMPlexMono text-lg font-semibold md:mb-8 md:text-2xl">
+        {{section.format}}
+      </p>
+      <p class="mb-10 font-IBMPlexMono text-lg font-semibold md:mb-8 md:text-2xl">
+        {{section.timeFormat}}
+      </p> -->
+      <ul class="mb-12 grid gap-y-10 md:mb-12 md:gap-y-8 xl:grid-cols-2 xl:gap-x-6 xl:gap-y-10">
         {% for item in section.items %}
         <li>
-          <h3 class="mb-3 font-IBMPlexMono text-base md:text-xl">{{item.title}}</h3>
-          <ul class="list-disc pl-7 md:pl-8">
+          <p class="mb-10 font-IBMPlexMono text-lg font-semibold md:mb-8 md:text-2xl xxl:mb-[56px]">
+            {{item.format}}
+          </p>
+          <h3 class="mb-2 font-IBMPlexMono text-[14px] font-normal md:text-xl">{{item.title}}</h3>
+          <ul
+            class="list-disc pl-5 font-IBMPlexMono text-base font-normal text-black-47 md:pl-8 md:text-[16px]"
+          >
             {% for text in item.list %}
-            <li class="font-IBMPlexMono text-base font-semibold md:text-2xl">{{text}}</li>
+            <li class="text-lg font-semibold md:text-2xl">{{text}}</li>
             {% endfor %}
           </ul>
         </li>
@@ -21,13 +34,16 @@
       </ul>
       <div class="relative xl:z-[1]">
         <button
-          class="btn enroll-btn mx-auto block max-w-[335px] bg-[#5331B2] py-2 text-center hover:bg-[#27398A] focus:bg-[#27398A] md:max-w-[704px] md:py-4 xl:max-w-[968px] xl:bg-[#653CD9] xl:py-6 xl:hover:bg-[#5331B2] xl:focus:bg-[#5331B2]"
+          class="btn enroll-btn mx-auto block max-w-[335px] bg-[#5331B2] py-2 text-center hover:bg-[#653CD9] focus:bg-[#653CD9] active:bg-[#8160E0] md:max-w-[704px] md:py-4 xl:max-w-[968px] xl:bg-[#5331B2] xl:py-6 xl:hover:bg-[#653CD9] xl:focus:bg-[#653CD9]"
           type="button"
           data-modal-open
         >
           {{section.btn}}
         </button>
       </div>
+      <!-- <p class="mt-5 text-xs text-[#474747] md:text-base xl:mt-10 xl:max-w-[760px] xl:text-base">
+        {{section.subtitle}}
+      </p> -->
     </div>
   </div>
 </section>

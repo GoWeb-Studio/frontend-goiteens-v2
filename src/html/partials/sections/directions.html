@@ -2,32 +2,24 @@
 <section class="{{section.id}} bg-primary pt-20 pb-14 overflow-hidden md:pb-8 xl:py-0">
   <div class="container">
     <div
-      class="xl:flex xl:items-center xl:gap-[74px] xxl:ml-auto xxl:max-w-[1236px] xxl:gap-[108px]"
+      class="xl:flex xl:items-center xl:gap-[53px] xxl:ml-auto xxl:max-w-[1236px] xxl:gap-[88px]"
     >
       <div class="xl:max-w-[732px] xl:shrink-0">
         <h2 class="section-title title mb-5 mdOnly:max-w-[582px]">{{section.title}}</h2>
         <p class="mb-8 text-sm md:mb-[54px] md:max-w-[582px] md:text-xl">{{section.text}}</p>
-        <!-- <a
+        <a
           href="{{section.linkBtn}}"
           aria-label="{{section.ariaLabel}}"
           rel="noopener noreferrer nofollow"
           target="_blank"
-          class="btn mb-[52px] block max-w-[335px] bg-[#5331B2] py-2 text-center hover:bg-[#27398A] focus:bg-[#27398A] md:mb-[128px] md:max-w-[704px] md:py-4 xl:mb-0 xl:max-w-[732px] notXl:mx-auto"
+          class="btn mb-[52px] block max-w-[335px] bg-[#5331B2] py-2 text-center hover:bg-[#653CD9] focus:bg-[#653CD9] md:mb-[128px] active:bg-[#8160E0] md:max-w-[704px] md:py-4 xl:mb-0 xl:max-w-[732px] notXl:mx-auto"
           >{{section.btn}}</a
-        > -->
-
-        <button
-          class="btn redirect-link-js mb-[52px] block max-w-[335px] bg-[#5331B2] py-2 text-center hover:bg-[#27398A] focus:bg-[#27398A] md:mb-[128px] md:max-w-[704px] md:py-4 xl:mb-0 xl:max-w-[732px] notXl:mx-auto"
-          type="button"
-          data-link="{{section.linkBtn}}"
         >
-          {{section.btn}}
-        </button>
       </div>
       <ul class="directions-slick-carousel hidden xl:block">
         {% for item in section.items %}
         <li
-          class="directions__items {{item.class}} h-[158px] w-[335px] border-[3px] bg-white p-5 md:h-[179px] md:w-[384px] xl:h-[200px]"
+          class="directions__items {{item.class}} h-[158px] w-[335px] border-[3px] bg-white p-5 md:h-[179px] md:w-[384px] xl:h-[200px] xl:w-[396px]"
         >
           <div
             class="mb-3 smOnly:flex smOnly:flex-row-reverse smOnly:items-center smOnly:justify-between"
@@ -48,7 +40,7 @@
   <ul class="directions-slick-carousel xl:hidden">
     {% for item in section.items %}
     <li
-      class="directions__items h-[166px] md:h-[200px] {{item.class}} w-[335px] border-[3px] bg-white p-5 md:w-[384px]"
+      class="directions__items h-[200px] {{item.class}} w-[335px] border-[3px] bg-white p-5 md:w-[384px]"
     >
       <div class="mb-3 smOnly:flex smOnly:flex-row-reverse smOnly:justify-between">
         <p

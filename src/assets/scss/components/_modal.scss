@@ -16,11 +16,12 @@
 
   background-repeat: no-repeat;
   background-image: url('../images/form/bg-modal.svg');
-  background-size: 355px auto;
-  background-position: top -93px left calc(50% - 275px);
+  background-size: 104px auto;
+  background-position: top 6px left;
 
   @include mq(tablet) {
-    background-position: top -139px left calc(50% - 348px);
+    background-position: top -24px left;
+     background-size:200px auto;
   }
 
   .is-hidden & {

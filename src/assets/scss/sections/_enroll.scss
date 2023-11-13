@@ -22,4 +22,17 @@
       }
     }
   }
+  .list-mark li::before {
+    content: '';
+    background-color: #c2b0f5;
+    border-radius: 50%;
+    display: block;
+    min-width: 16px;
+    height: 16px;
+    margin-top: 6px;
+  }
+  @include mq(tablet) {
+    padding-top: 212px;
+    padding-bottom: 212px;
+  }
 }

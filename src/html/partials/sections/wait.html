@@ -1,0 +1,40 @@
+{% set section = wait %} {% set grid = wait.grid %}
+<section class="{{section.id}} py-10 xl:pt-[85px]">
+  <div class="container">
+    <h2 class="section-title mb-10">{{section.title}}</h2>
+    <!-- grid-rows-[1fr_0.5fr] -->
+
+    <ul class="wait-list grid h-full grid-cols-2 gap-2 font-IBMPlexSans text-[14px] md:gap-5">
+      <li
+        class="wait-list-item relative col-start-1 col-end-3 row-start-1 row-end-2 border-[2px] border-[#8160E0] p-8 text-center md:px-6 md:py-7 md:border-[4px]"
+      >
+        {{grid.first}}
+      </li>
+      <li
+        class="wait-list-item bg-yellow-600 relative col-start-2 col-end-3 row-start-2 row-end-4 border-[2px] border-[#EBA371] bg-[#FAEEE6] px-[19px] py-[74px] text-start md:py-[110px] md:pr-[130px] xl:py-[120px] md:border-[4px]"
+      >
+        {{grid.second}}
+      </li>
+      <li
+        class="wait-list-item relative col-start-1 col-end-2 row-start-2 row-end-3 border-[2px] border-[#8160E0] px-4 py-[22px] md:px-6 md:py-[42px] md:border-[4px]"
+      >
+        {{grid.third}}
+      </li>
+      <li
+        class="wait-list-item relative col-start-1 col-end-2 row-start-3 row-end-4 border-[2px] border-[#8160E0] px-4 py-[22px] md:px-6 md:py-[42px] md:border-[4px]"
+      >
+        {{grid.fourth}}
+      </li>
+      <li
+        class="wait-list-item relative col-start-1 col-end-3 row-start-4 row-end-5 border-[2px] border-[#8160E0] bg-[#EBE6FA] px-5 py-8 text-center after:-translate-x-1/2 md:px-6 md:py-[29] md:border-[4px]"
+      >
+        {{grid.fifth}}
+      </li>
+      <li
+        class="wait-list-item relative col-start-1 col-end-3 row-start-5 row-end-6 border-[2px] border-[#8160E0] p-8 text-center md:px-[76px] md:py-[42px] xl:py-10 md:border-[4px]"
+      >
+        {{grid.sixth}}
+      </li>
+    </ul>
+  </div>
+</section>

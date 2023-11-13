@@ -1,0 +1,29 @@
+.try {
+  .program-list-top {
+    @for $i from 1 to 4 {
+      .program-item:nth-child(#{$i})::before {
+        background-image: url('../images/try/#{$i}.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  .program-list-bott {
+    @for $i from 1 to 7 {
+      .program-item:nth-child(#{$i}) .title::before {
+        background-image: url('../images/try/bott/#{$i}.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  @include mq(desktop) {
+    background-image: url('../images/try/bg.svg');
+    background-position: bottom 210px left calc(50% - 396px);
+    background-repeat: no-repeat;
+  }
+  @include mq(big-desktop) {
+    background-position: bottom 30px left calc(50% - 484px);
+  }
+}

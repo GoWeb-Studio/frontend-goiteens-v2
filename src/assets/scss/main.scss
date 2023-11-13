@@ -20,13 +20,18 @@
 
 @import 'sections/header';
 @import 'sections/hero';
+@import 'sections/try';
 @import 'sections/studying';
 @import 'sections/program';
 @import 'sections/learn';
 @import 'sections/enroll';
 @import 'sections/reviews';
+@import 'sections/wait';
+
 @import 'sections/teachers';
+@import 'sections/before';
 @import 'sections/about';
 /*! purgecss start ignore */
+@import 'sections/teachers';
 @import 'sections/directions';
 /*! purgecss end ignore */

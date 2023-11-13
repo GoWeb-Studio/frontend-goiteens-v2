@@ -5,6 +5,7 @@ $('.directions-slick-carousel').slick({
   speed: 15000,
   autoplay: true,
   autoplaySpeed: 0,
+  arrows:false,
   cssEase: 'linear',
   slidesToShow: 1,
   slidesToScroll: 1,

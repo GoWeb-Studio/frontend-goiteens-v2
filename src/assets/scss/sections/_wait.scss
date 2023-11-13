@@ -1,0 +1,115 @@
+.wait {
+  .wait-list-item:nth-child(1)::after {
+    content: '';
+    position: absolute;
+
+    left: 16px;
+    background-image: url('../images/wait/arrow-violet.svg');
+  }
+  .wait-list-item:nth-child(1)::before {
+    content: '';
+    position: absolute;
+
+    right: 125px;
+    background-image: url('../images/wait/arrow-orange.svg');
+    @include mq(tablet) {
+      right: 255px;
+    }
+    @include mq(desktop) {
+      right: 490px;
+    }
+    @include mq(big-desktop) {
+      right: 637px;
+    }
+  }
+  .wait-list-item:nth-child(2)::before {
+    content: '';
+    position: absolute;
+
+    right: 125px;
+    background-image: url('../images/wait/arrow-orange.svg');
+    @include mq(tablet) {
+      right: 255px;
+    }
+    @include mq(desktop) {
+      right: 490px;
+    }
+    @include mq(big-desktop) {
+      right: 637px;
+    }
+  }
+  .wait-list-item:nth-child(3)::after,
+  .wait-list-item:nth-child(4)::after {
+    content: '';
+    position: absolute;
+
+    left: 16px;
+    background-image: url('../images/wait/arrow-violet.svg');
+  }
+  .wait-list-item:nth-child(5)::after {
+    content: '';
+    position: absolute;
+
+    left: 50%;
+
+    background-image: url('../images/wait/arrow-violet.svg');
+  }
+  .wait-list-item:nth-child(6) {
+    background-repeat: no-repeat;
+    background-image: url('../images/wait/bg-6.svg');
+    background-position: bottom left;
+    @include mq(tablet) {
+      background-image: url('../images/wait/bg-6-tab.svg');
+    }
+    @include mq(desktop) {
+      background-image: url('../images/wait/bg-6-desk.svg');
+      background-position: top left;
+    }
+  }
+  .wait-list-item:nth-child(2) {
+    background-repeat: no-repeat;
+    color: #1A1A1A;
+    background-image: url('../images/wait/bg-2.svg');
+    background-position: top right;
+    @include mq(tablet) {
+      background-image: url('../images/wait/bg-2-tab.svg');
+    }
+    @include mq(desktop) {
+      background-image: url('../images/wait/bg-2-desk.svg');
+    }
+  }
+  .wait-list-item::after {
+    width: 22px;
+    height: 8px;
+    bottom: -10px;
+    background-repeat: no-repeat;
+    @include mq(tablet) {
+      height: 20px;
+      width: 56px;
+      bottom: -22px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  .wait-list-item::before {
+    width: 22px;
+    height: 8px;
+    bottom: -10px;
+    background-repeat: no-repeat;
+    @include mq(tablet) {
+      height: 20px;
+      width: 56px;
+     bottom: -24px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  .wait-list-item {
+    @include mq(tablet) {
+      font-size: 20px;
+    }
+    @include mq(desktop) {
+      font-size: 24px;
+    }
+  }
+}

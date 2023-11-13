@@ -30,6 +30,7 @@
     &[aria-expanded='true'] .accordion-svg {
       transform: translateY(-50%) rotate(180deg);
       transform-origin: center;
+      fill: #653cd9;
       stroke: #653cd9;
     }
     &[aria-expanded='true'] .accordion-answer {
@@ -52,8 +53,8 @@
 .faq {
   .accordion-item {
     &[aria-expanded='true'] {
-      background-color: #ebe6fa;
-      border-bottom: 4px solid #653cd9;
+      background-color: #faeee6;
+      border-bottom: 4px solid #8160e0;
     }
 
     &[aria-expanded='true'] .accordion-svg {

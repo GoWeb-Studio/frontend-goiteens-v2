@@ -24,6 +24,8 @@ module.exports = {
       orange: '2px 8px 29px rgba(240, 127, 46, 0.2)', // class="shadow-orange"
       gray: '0px 1px 3px 0px rgba(0, 0, 0, 0.20)',
       black:
+        'box-shadow: 48px 0px 84px 0px rgba(0, 0, 0, 0.06), 0px 0px 0px 0px rgba(0, 0, 0, 0.05), 33px -13px 78px 0px rgba(0, 0, 0, 0.05), 133px -51px 142px 0px rgba(0, 0, 0, 0.04), 299px -114px 192px 0px rgba(0, 0, 0, 0.03), 532px -203px 228px 0px rgba(0, 0, 0, 0.01), 832px -318px 249px 0px rgba(0, 0, 0, 0.00);',
+      blackk:
         '48px 0px 84px 0px rgba(0, 0, 0, 0.06), 0px 0px 0px 0px rgba(0, 0, 0, 0.05), 33px -13px 78px 0px rgba(0, 0, 0, 0.05), 133px -51px 142px 0px rgba(0, 0, 0, 0.04), 299px -114px 192px 0px rgba(0, 0, 0, 0.03), 532px -203px 228px 0px rgba(0, 0, 0, 0.01), 832px -318px 249px 0px rgba(0, 0, 0, 0.00);',
     },
     // THEME
@@ -41,10 +43,14 @@ module.exports = {
           DEFAULT: '#000000', // class="bg-black text-black border-black"
           light: '#474747', // class="bg-black-light text-black-light border-black-light"
           dark: '#1A1A1A',
+          '1A': '#1A1A1A',
+          47: '#474747',
         },
         white: {
-          DEFAULT: '#ffffff', // class="bg-white text-white border-white"
-          dark: '#F2FAE6', // class="bg-white-dark text-white-dark border-white-dark"
+          DEFAULT: '#ffffff', //
+          dark: '#F2FAE6',
+          D6: '#D6D6D6', //
+          //
         },
         accent: '#5331B2', // class="bg-accent text-accent border-accent"
         primary: '#F5F5F5',
@@ -55,7 +61,10 @@ module.exports = {
           light: '#ABABAB',
         },
         yellow: '#FEC830',
-        purple: '#653CD9',
+
+        blue: {
+          D9: '#653CD9',
+        },
         pink: '#F5BAE2',
       },
       // CONTAINER

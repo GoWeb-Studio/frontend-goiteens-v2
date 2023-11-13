@@ -146,7 +146,8 @@ $slick-opacity-not-active: 0.25 !default;
   text-align: center;
   padding: 0;
   margin: 0;
-  bottom: -57px;
+  // bottom: -57px;
+  top: 0;
   left: 8px;
   width: 100%;
   li {
@@ -221,15 +222,15 @@ $slick-opacity-not-active: 0.25 !default;
 .teachers-slider {
   @apply md:w-screen smOnly:mx-auto smOnly:max-w-[340px];
   & .slick-dots {
-    @apply absolute -top-7 m-0 flex h-3 list-none items-end gap-2  p-0 md:-top-[60px] xl:hidden;
+    @apply absolute -top-7 m-0 flex h-3 list-none items-end gap-2  p-0 md:-top-[60px] xxl:-top-9;
     li {
-      @apply m-0 h-2 w-2 cursor-pointer border-none bg-[#E0E0E0] p-0 text-[0px] xl:hidden;
+      @apply m-0 h-2 w-2 cursor-pointer border-none bg-[#E0E0E0] p-0 text-[0px];
       & button {
-        @apply h-full w-full p-0 text-[0px] before:hidden xl:hidden;
+        @apply h-full w-full p-0 text-[0px] before:hidden;
       }
     }
     .slick-active {
-      @apply h-3 w-3 bg-[#FEC830] xl:hidden;
+      @apply h-3 w-3 bg-[#FEC830];
     }
   }
 

@@ -40,10 +40,10 @@ $ini_array = parse_ini_file('params.ini');
     </label>
 
     <div style="display: flex; flex-direction: row; gap: 20px">
-      <label style="width: 50%">
+      <!-- <label style="width: 50%">
         Leeloo Hash
         <input type="text" name="LEELOO_HASH" value="<?= $ini_array['LEELOO_HASH'] ?>" placeholder="<?= $ini_array['LEELOO_HASH'] ?>" />
-      </label>
+      </label> -->
 
       <label style="width: 50%">
         Elza Token

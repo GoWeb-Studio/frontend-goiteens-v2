@@ -28,6 +28,9 @@
     @include mq(tablet) {
       width: 374px !important;
     }
+     @include mq(desktop) {
+      width: 396px !important;
+    }
   }
   .slick-slide {
     padding: 6px !important;

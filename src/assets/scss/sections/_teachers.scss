@@ -1,30 +1,22 @@
 .teachers {
   @include mq(tablet) {
-    background: url('../images/teachers/bg.svg'),
-      linear-gradient(90deg, rgba(255, 255, 255, 1) 64%, rgba(199, 71, 54, 1) 64%);
+    background: url('../images/teachers/bg-tab.svg');
     background-repeat: no-repeat;
-
-    background-size:
-      715px auto,
-      auto;
-    background-position:
-      top right -438px,
-      top center;
+    background-size: 276px auto;
+    background-position: right top;
   }
 
   @include mq(desktop) {
-    background-position:
-      top right -264px,
-      top center;
-  }
-
-  @include mq(big-desktop) {
-    background: url('../images/teachers/bg.svg'),
-      linear-gradient(90deg, rgba(255, 255, 255, 1) 51%, rgba(199, 71, 54, 1) 51%);
+    background: url('../images/teachers/bg-desk.svg');
+    background-size: 788px auto;
     background-repeat: no-repeat;
-    background-position:
-      top right calc(50% - 382px),
-      top center;
+    background-position: right;
+  }
+  @include mq(big-desktop) {
+    background: url('../images/teachers/bg-big.svg');
+    background-size: 770px auto;
+    background-repeat: no-repeat;
+    background-position: right;
   }
 
   &-item {
@@ -34,6 +26,10 @@
   }
 
   &-wrapper {
-    backdrop-filter: blur(48px);
+    backdrop-filter: blur(22px);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
+    //   url(<path-to-image>),
+    //   lightgray 50% / cover no-repeat;
+    // filter: blur(22px);
   }
 }

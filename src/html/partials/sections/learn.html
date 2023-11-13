@@ -3,7 +3,7 @@
   class="{{section.id}} py-20 md:pb-[79px] xl:pt-[170px] xl:pb-[287px] xxl:pb-[331px] overflow-hidden"
 >
   <div class="container">
-    <h2 class="section-title mb-6 md:mb-10 xl:mb-[202px] xl:text-end xxl:mb-10">
+    <h2 class="section-title mb-6 md:mb-10 xl:mb-[180px] text-end xxl:mb-10">
       {{section.title}}
     </h2>
     <div class="relative flex flex-col gap-5 xxl:pl-[490px]">
@@ -46,7 +46,7 @@
       </div>
       {% for item in section.items %}
       <div
-        class="learn__item border-2 border-black-dark px-[16px] py-6 md:border-4 md:p-[32px]"
+        class="learn__item border-2 border-black-dark px-[16px] py-6 md:border-4 md:p-[32px] min-h-[155px] xl:min-h-none md:min-h-[175px]"
         data-aos="{{item.data}}"
         data-aos-delay="1000"
       >

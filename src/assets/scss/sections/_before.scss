@@ -1,0 +1,55 @@
+.before {
+  @for $i from 1 to 10 {
+    .bg-item:nth-child(#{$i}) {
+      background-image: url('../images/before/#{$i}.svg');
+      background-repeat: no-repeat;
+      background-position: center left;
+      background-size: auto 32px;
+      @include mq(tablet) {
+        background-size: auto 72px;
+      }
+    }
+  }
+  .bg-item:last-child > p {
+    white-space: nowrap;
+  }
+  @include mq(tablet) {
+    background-image: url('../images/before/bg.svg');
+    background-repeat: no-repeat;
+    background-position: top -49px left -93px;
+    background-size: 215px auto;
+  }
+
+  @include mq(desktop) {
+    background-position: top -59px left -82px;
+    background-size: 199px auto;
+  }
+  @include mq(big-desktop) {
+    background-position: top -59px left -82px;
+    background-size: 212px auto;
+  }
+
+  &-btn::before {
+    @include mq(desktop) {
+      position: absolute;
+      bottom: -16px;
+      left: 16px;
+      display: block;
+      content: '';
+      width: 968px;
+      height: 80px;
+      border: 3px solid #1a1a1a;
+      border-radius: 64px;
+      z-index: -1;
+    }
+  }
+
+  &-btn:hover,
+  &-btn:focus {
+    &::before {
+      @include mq(desktop) {
+        background-color: #1a1a1a;
+      }
+    }
+  }
+}

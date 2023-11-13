@@ -1,0 +1,26 @@
+.mentors {
+  overflow: hidden;
+  position: relative;
+
+  .mentors-bg {
+    @include mq(tablet) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 290px;
+      height: 900px;
+      background-image: url(../images/mentors/mentors-pyton.svg);
+      background-size: auto;
+      background-repeat: no-repeat;
+      z-index: -2;
+    }
+    @include mq(desktop) {
+      width: 790px;
+    }
+  }
+
+  &__wrapper {
+    backdrop-filter: blur(24px);
+  }
+}

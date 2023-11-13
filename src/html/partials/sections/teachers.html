@@ -1,11 +1,11 @@
 {% set section = teachers %}
-<section class="{{section.id}} py-10 relative overflow-hidden md:pt-[262px] xl:pt-[308px]">
+<section class="{{section.id}} py-10 relative overflow-hidden md:pt-[156px] md:pb-[190px] xl:pt-[248px] xl:pb-[112px]">
   <div class="container">
-    <h2 class="section-title mb-12 md:mb-[84px] xl:mb-20">{{section.title}}</h2>
-    <ul class="teacher-list xl:flex xl:max-w-[1068px] xl:gap-6">
+    <h2 class="section-title mb-12 md:mb-[84px] xl:mb-20 xxl:pl-[350px] xxl:mb-[40px]">{{section.title}}</h2>
+    <ul class="teachers-slider">
       {% for item in section.items %}
       <li
-        class="teachers-item group relative min-w-[340px] cursor-pointer overflow-hidden md:min-w-0 smOnly:mx-auto"
+        class="teachers-item group relative min-w-[340px] cursor-pointer overflow-hidden smOnly:mx-auto"
       >
         <picture>
           <!-- WEBP -->
@@ -27,9 +27,12 @@
             class="w-full"
           />
         </picture>
+        {% if item.name%}
         <h3 class="absolute bottom-5 right-5 z-[2] text-2xl font-medium normal-case text-white">
           {{ item.name }}
         </h3>
+        {% endif %}
+
         <div
           class="teachers-wrapper absolute left-0 top-0 z-[1] h-full w-full opacity-0 shadow-black duration-300 ease-out group-hover:opacity-100 group-focus:opacity-100"
         >

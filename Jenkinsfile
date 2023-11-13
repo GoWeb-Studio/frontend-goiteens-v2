@@ -8,9 +8,9 @@ node("all-biulds"){
             string(credentialsId: 'telegramChatIdJenkinsSoftryzen', variable: 'telegramNotifyChannelChatId'),
 
             //ADD FTP CREDENTIAL
-            string(credentialsId: 'ftp_user_pass_host_for_math', variable: 'ftpUserAndPass')
+            string(credentialsId: 'ftp_user_pass_host_for_design', variable: 'ftpUserAndPass')
         ]) {
-                env.gitRepository = 'git@github.com:GoWeb-Studio/math-goiteens.git';
+                env.gitRepository = 'git@github.com:GoWeb-Studio/design-goiteens.git';
                 env.gitBranch = 'main';
                 env.folderPath = './';
                 //

@@ -42,6 +42,8 @@
             <li class="">{{item}}</li>
             {% endfor %}
           </ul>
+          {% endif %} {% if faq.listText %}
+          <p>{{faq.listText}}</p>
           {% endif %}
         </div>
       </li>

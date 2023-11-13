@@ -1,6 +1,25 @@
 .learn {
+  background-image: url('../images/learn/bg-mob.svg');
+  background-repeat: no-repeat;
+  background-position: top 0px center;
+  @include mq(tablet) {
+    background-size: 1200px auto;
+  }
+  @include mq(desktop) {
+    background-position: top -30px center;
+    background-size: 1400px auto;
+  }
+  @include mq(big-desktop) {
+    background-position: top -30px center;
+    background-size: 1400px auto;
+  }
+
+  // &__item:nth-child(1) {
+  //   background-color: #faf5e6;
+  // }
   &__item:nth-child(2) {
-    background-color: #fae8e6;
+    background-color: #faeee6;
+    color: #6e6e6e;
 
     @include mq(tablet) {
       background-image: url('../images/learn/circles-tab.svg');
@@ -63,10 +82,10 @@
   &__item:nth-child(4) {
     @include mq(desktop) {
       width: 420px;
-      height: 338px;
-      padding-bottom: 74px;
+      height: 237px;
+      padding-bottom: 70px;
       position: absolute;
-      top: -135px;
+      top: -14px;
       right: 58px;
       z-index: 11;
       background-color: white;
@@ -92,7 +111,7 @@
       height: 237px;
       padding-bottom: 74px;
       position: absolute;
-      top: 232px;
+      top: 249px;
       right: -44px;
       z-index: 11;
 
@@ -111,7 +130,12 @@
   &__item:last-child {
     background-image: url('../images/learn/waves-mob.svg');
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: right top 0;
+    background-size: 141px auto;
+    @include mq(tablet) {
+      background-image: url('../images/learn/waves-tab.svg');
+      background-size: 152px auto;
+    }
 
     @include mq(desktop) {
       width: 792px;
@@ -120,8 +144,8 @@
       right: 0;
       z-index: 11;
       background-color: white;
-      background-image: url('../images/learn/waves.svg');
-      background-position: right -50px center;
+      background-image: url('../images/learn/waves-desk.svg');
+      background-position: right 0px center;
 
       .learn__text {
         width: 622px;
@@ -130,13 +154,27 @@
 
     @include mq(big-desktop) {
       width: 900px;
-      bottom: -156px;
+      bottom: -121px;
       right: 146px;
-      background-position: right top 34px;
+      background-size: 160px auto;
+      background-position: right top 0;
+      background-image: url('../images/learn/waves-big-desk.svg');
 
       .learn__text {
         width: 791px;
       }
+    }
+  }
+  &__item:nth-child(2) {
+    background-image: url('../images/learn/circle-mob.svg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    @include mq(tablet) {
+      background-image: url('../images/learn/circles-tab.svg');
+    }
+    @include mq(desktop) {
+      background-image: url('../images/learn/circles-desk.svg');
+      background-position: left 32px top 12px;
     }
   }
 }

@@ -1,8 +1,8 @@
 .program {
   background-repeat: no-repeat;
   background-image: url('../images/program/bg.svg');
-  background-size: 569px auto;
-  background-position: top -32px left calc(50% + 101px);
+  background-size: cover;
+  // background-position: top -32px left calc(50% + 101px);
 
   @include mq(tablet) {
     background-size: cover;
@@ -26,5 +26,72 @@
       background-size: 1478px auto;
       background-position: top -150px left;
     }
+  }
+  .program-bg[aria-expanded='true'] {
+    @include mq(tablet) {
+      background-repeat: no-repeat;
+      background-image: url('../images/program/bg-card.svg');
+      background-size: 193px auto;
+
+      background-position: bottom right;
+    }
+    @include mq(desktop) {
+      background-repeat: no-repeat;
+      background-image: url('../images/program/bg-card.svg');
+
+      background-position: bottom right;
+    }
+  }
+  .tab-btn.active {
+    border-radius: 112px;
+    background: #5331b2;
+    color: white;
+  }
+  .tab-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .tab-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+  }
+  .tab-btn {
+    border: 1px solid transparent;
+    padding-left: 18px;
+    padding-right: 18px;
+    transition:
+      background 0.3s ease,
+      border-radius 0.3s ease,
+      color 0.3s ease;
+  }
+
+  .tab-btn.active {
+    border-radius: 112px;
+    background: #5331b2;
+    color: white;
+  }
+
+  .item-click > .accordion-btn {
+    fill: #a38aed;
+    color: #a38aed;
+    stroke: #a38aed;
+  }
+  .item-click:hover > .accordion-btn {
+    fill: #5331b2;
+    color: #5331b2;
+    stroke: #5331b2;
+  }
+  .item-click:active > .accordion-btn {
+    fill: #452994;
+    color: #452994;
+    stroke: #452994;
+  }
+  .accordion-item[aria-expanded='true'] > .accordion-btn {
+    fill: #452994 !important;
+    color: #452994 !important;
+    stroke: #452994 !important;
   }
 }
