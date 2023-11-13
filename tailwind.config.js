@@ -55,11 +55,13 @@ module.exports = {
         accent: '#5331B2', // class="bg-accent text-accent border-accent"
         primary: '#F5F5F5',
         second: '#90C8F0',
+
         grey: {
           DEFAULT: '#202020',
           dark: '#2E2F30',
           light: '#ABABAB',
         },
+
         yellow: '#FEC830',
 
         purple: {

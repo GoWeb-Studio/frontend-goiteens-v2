@@ -1,6 +1,6 @@
 .hero {
   .bigTitle {
-    background: linear-gradient(90deg, #eba371 -4.91%, #6721a4 121.69%);
+    background: linear-gradient(92deg, #97cb43 2.65%, #3b92d1 103.58%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -37,7 +37,7 @@
   }
 
   &-clip::before {
-    background-color: #e58845;
+    background-color: #97cb43;
     min-height: 49%;
     @media (min-width: 320px) and (max-width: 374px) {
       min-height: 53%;

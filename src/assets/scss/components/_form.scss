@@ -82,5 +82,5 @@
 }
 
 .form-btn {
-  @apply mt-[37px] w-full rounded-[144px] border-2 border-transparent bg-accent pb-3.5 pt-[13px] text-center text-base text-white outline-none duration-300 ease-linear hover:border-accent hover:bg-[#653CD9]  focus:border-accent focus:bg-[#653CD9]  active:bg-[#8160E0] md:mt-[32px] md:rounded-[64px] md:py-3 md:text-[20px] xl:max-w-[576px] xxl:mt-[82px] xxl:max-w-[720px] xxl:py-[18px] mdOnly:text-[15px];
+  @apply mt-6 w-full rounded-[144px] border-2 border-transparent bg-accent py-[10px] text-center text-base text-white outline-none duration-300 ease-linear hover:border-accent hover:bg-[#653CD9]  focus:border-accent focus:bg-[#653CD9]  active:bg-[#8160E0] md:mt-[32px] md:rounded-[64px] md:py-3 md:text-[20px] xl:max-w-[576px] xxl:mt-[82px] xxl:max-w-[720px] xxl:py-[18px] mdOnly:text-[15px];
 }
