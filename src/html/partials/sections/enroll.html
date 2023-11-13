@@ -1,0 +1,33 @@
+{% set section = enroll %}
+<section
+  class="{{section.id}} bg-white-dark pt-20 pb-10 md:pb-[100px] xl:pt-[170px] xl:pb-[186px] xxl:pb-[156px]"
+>
+  <div class="container">
+    <div class="xl:mx-auto xl:max-w-[982px]">
+      <h2 class="section-title mb-5 md:mb-8 xl:mb-10 smOnly:text-[18px] smOnly:leading-[1.3]">
+        {{section.title}}
+      </h2>
+      <ul class="mb-10 grid gap-6 md:mb-12 md:gap-8 xl:mb-[64px] xl:gap-10">
+        {% for item in section.items %}
+        <li>
+          <h3 class="mb-3 font-IBMPlexMono text-base md:text-xl">{{item.title}}</h3>
+          <ul class="list-disc pl-7 md:pl-8">
+            {% for text in item.list %}
+            <li class="font-IBMPlexMono text-base font-semibold md:text-2xl">{{text}}</li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="relative xl:z-[1]">
+        <button
+          class="btn enroll-btn mx-auto block max-w-[335px] bg-[#5331B2] py-2 text-center hover:bg-[#27398A] focus:bg-[#27398A] md:max-w-[704px] md:py-4 xl:max-w-[968px] xl:bg-[#653CD9] xl:py-6 xl:hover:bg-[#5331B2] xl:focus:bg-[#5331B2]"
+          type="button"
+          data-modal-open
+        >
+          {{section.btn}}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

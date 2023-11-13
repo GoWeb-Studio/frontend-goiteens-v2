@@ -1,0 +1,51 @@
+{% set section = faq %}
+<section class="{{section.id}} pt-3 pb-[55px] md:pt-[30px] xl:pt-[85px] md:pb-20 xl:pb-[170px]">
+  <div class="container">
+    <h2 class="section-title mb-[30px] md:mb-10">{{section.title}}</h2>
+    <ul class="flex flex-col gap-2 md:gap-3 smOnly:-mx-5">
+      {% for faq in section.accordion.faqs %}
+      <li
+        aria-expanded="false"
+        class="accordion-item group w-full cursor-pointer border-b border-[#D6D6D6] py-6 transition duration-300 hover:border-[#6E6E6E] hover:bg-[#FAFAFA] focus:border-[#6E6E6E] focus:bg-[#FAFAFA] md:py-8 smOnly:px-5"
+      >
+        <div class="font-plexMono flex justify-between text-start md:px-8">
+          <h3
+            class="accordion-title font-IBMPlexMono text-[14px] font-semibold uppercase leading-[1.3] text-[#6E6E6E] transition duration-300 group-hover:text-black-dark group-focus:text-black-dark md:text-[20px] xl:text-[24px] smOnly:mr-8"
+          >
+            {{faq.faqQuestion}}
+          </h3>
+          <button
+            type="button"
+            aria-label="кнопка розкриття акордеона"
+            class="accordion-btn relative inline-flex items-center"
+          >
+            <svg
+              class="accordion-svg right-0 flex h-6 w-6 fill-[#D6D6D6] group-hover:fill-[#6E6E6E] group-focus:fill-[#6E6E6E] md:h-8 md:w-8"
+              width="24px"
+              height="24px"
+              aria-label="{{section.accordion.svgAria}}"
+            >
+              <use
+                class="transition duration-300 ease-in-out"
+                href="./assets/images/sprite.svg#accordion-plus"
+              ></use>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="accordion-answer flex flex-col gap-3 pr-[52px] text-sm md:px-8 md:text-base xl:pr-[171px] xl:text-xl xxl:pr-[458px]"
+        >
+          <p>{{faq.faqAnswer}}</p>
+          {% if faq.list %}
+          <ul class="list-disc px-5">
+            {% for item in faq.list %}
+            <li class="">{{item}}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

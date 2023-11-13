@@ -1,0 +1,32 @@
+@use 'sass:math';
+
+@import 'aos/dist/aos.css';
+
+/*! purgecss start ignore */
+@import 'vendors/modern-normalize';
+@import 'vendors/intTelInput';
+@import 'vendors/slick';
+@import 'vendors/slick-theme';
+/*! purgecss end ignore */
+
+@import 'utils/mixins';
+@import 'vendors/tailwind';
+
+@import 'components/input';
+@import 'components/form';
+@import 'components/modal';
+@import 'components/accordion';
+// @import 'components/mobile-menu';
+
+@import 'sections/header';
+@import 'sections/hero';
+@import 'sections/studying';
+@import 'sections/program';
+@import 'sections/learn';
+@import 'sections/enroll';
+@import 'sections/reviews';
+@import 'sections/teachers';
+@import 'sections/about';
+/*! purgecss start ignore */
+@import 'sections/directions';
+/*! purgecss end ignore */

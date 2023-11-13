@@ -1,0 +1,29 @@
+.backdrop {
+  @apply visible fixed inset-0 z-[100] flex overflow-auto opacity-100 duration-300 ease-linear;
+  background-color: rgba(0, 0, 0, 0.55);
+
+  &.is-hidden {
+    @apply pointer-events-none invisible opacity-0;
+  }
+}
+
+.modal-close-btn {
+  @apply absolute right-5 top-7 grid h-10 w-10 place-items-center rounded-full fill-black-light p-0 duration-300 ease-linear hover:fill-accent focus:fill-accent md:right-6 md:top-6;
+}
+
+.modal {
+  @apply m-auto flex w-full max-w-[336px] translate-x-0 translate-y-0 scale-100 flex-col justify-evenly rounded-3xl p-5 pb-6 ease-linear only:duration-300 md:max-w-[640px] md:rounded-[40px] md:px-20 md:pb-10 md:pt-6;
+
+  background-repeat: no-repeat;
+  background-image: url('../images/form/bg-modal.svg');
+  background-size: 355px auto;
+  background-position: top -93px left calc(50% - 275px);
+
+  @include mq(tablet) {
+    background-position: top -139px left calc(50% - 348px);
+  }
+
+  .is-hidden & {
+    @apply opacity-0 duration-300 ease-linear;
+  }
+}

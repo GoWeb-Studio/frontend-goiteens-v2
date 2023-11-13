@@ -1,0 +1,362 @@
+.studying {
+}
+// Перший блок  ------------------------------>
+
+.studying-box:nth-child(1) {
+  position: relative;
+  margin-bottom: 80px;
+
+  @include mq(desktop) {
+    margin-bottom: 0;
+  }
+
+  & .studying-frame:nth-child(1) {
+    @include mq(desktop) {
+      margin: 0 auto;
+      max-width: 1015px;
+    }
+  }
+
+  & .studying-frame img {
+    @include mq(desktop) {
+      max-width: 1015px;
+    }
+  }
+
+  & .studying-video {
+    border-radius: 12px;
+    filter: brightness(0.3);
+  }
+
+  & .studying-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0 20px;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+  }
+
+  & .studying-text {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.33;
+
+    @include mq(tablet) {
+      font-size: 20px;
+      line-height: 1.65;
+    }
+
+    @include mq(desktop) {
+      font-size: 24px;
+      line-height: 1.42;
+    }
+  }
+}
+
+// Blocks 2-3-4-5-6  ------------------------------>
+
+.studying-box:nth-child(2),
+.studying-box:nth-child(3),
+.studying-box:nth-child(4),
+.studying-box:nth-child(5),
+.studying-box:nth-child(6) {
+  & .studying-frame {
+    position: relative;
+    margin-bottom: 50px;
+
+    @include mq(tablet) {
+      margin-bottom: 66px;
+    }
+
+    @include mq(desktop) {
+      margin-bottom: 0;
+      margin-right: 90px;
+    }
+
+    @include mq(big-desktop) {
+      margin-right: 130px;
+    }
+  }
+
+  & .studying-frame::after {
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    // border: 4px solid #eb7f71;
+    border-radius: 24px;
+    transform: translateX(11px);
+    z-index: -1;
+
+    @include mq(tablet) {
+      top: 24px;
+      left: 12px;
+      width: 680px;
+      height: 425px;
+      // border: 12px solid #eb7f71;
+      border-radius: 40px;
+      transform: translateX(12px);
+    }
+
+    @include mq(desktop) {
+      width: 589px;
+      height: 368px;
+    }
+
+    @include mq(big-desktop) {
+      width: 640px;
+      height: 400px;
+    }
+  }
+
+  & .studying-video {
+    border-radius: 16px;
+    transform: translateX(-6px);
+
+    @include mq(tablet) {
+      border-radius: 16px;
+      transform: translateX(0);
+    }
+
+    @include mq(desktop) {
+      width: 588px;
+    }
+
+    @include mq(big-desktop) {
+      width: 640px;
+    }
+  }
+
+  & .studying-content {
+    position: relative;
+    padding-top: 10px;
+
+    @include mq(tablet) {
+      padding-top: 50px;
+      padding-left: 150px;
+    }
+
+    @include mq(desktop) {
+      max-width: 514px;
+      min-height: 330px;
+      padding-left: 64px;
+    }
+
+    @include mq(big-desktop) {
+      max-width: 600px;
+      padding-left: 40px;
+    }
+  }
+
+  & .studying-number {
+    position: absolute;
+    top: -28px;
+    left: -46px;
+
+    @include mq(tablet) {
+      left: -44px;
+    }
+
+    @include mq(big-desktop) {
+      left: -98px;
+    }
+  }
+
+  & .studying-number::before {
+    position: absolute;
+    top: -7px;
+    left: -20px;
+    display: block;
+    content: '';
+    width: 220px;
+    height: 235px;
+    background-image: url('../images/studying/studying-cells.svg');
+    background-size: 220px 402px;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @include mq(tablet) {
+      top: 0px;
+      left: 0px;
+      height: 402px;
+    }
+  }
+
+  & .studying-subtitle {
+    max-width: 300px;
+    padding-left: 68px;
+
+    @include mq(tablet) {
+      max-width: 400px;
+      padding-left: 0;
+    }
+
+    @include mq(desktop) {
+      max-width: 100%;
+      padding-left: 80px;
+      text-align: end;
+    }
+
+    @include mq(big-desktop) {
+      padding-left: 160px;
+    }
+  }
+
+  & .studying-text {
+    @include mq(tablet) {
+      font-size: 20px;
+      line-height: 1.4;
+    }
+  }
+}
+
+.studying-box:nth-child(3) .studying-subtitle {
+  max-width: none;
+
+  @include mq(big-desktop) {
+    padding-left: 152px;
+  }
+}
+
+.studying-box:nth-child(2) .studying-content,
+.studying-box:nth-child(3) .studying-content,
+.studying-box:nth-child(5) .studying-content {
+  padding-top: 36px;
+
+  @include mq(tablet) {
+    padding-top: 90px;
+  }
+}
+
+.studying-box:nth-child(6) .studying-content {
+  @include mq(tablet) {
+    padding-top: 90px;
+  }
+}
+
+.studying-box:nth-child(6) .studying-subtitle {
+  @include mq(desktop) {
+    white-space: nowrap;
+  }
+
+  @include mq(big-desktop) {
+    white-space: normal;
+    padding-left: 113px;
+  }
+}
+
+.studying-box:nth-child(2) {
+  & .studying-frame::after {
+    border: 4px solid #f0cd60;
+    // border-color: #f0cd60;
+    @include mq(tablet) {
+      border: 12px solid #f0cd60;
+    }
+  }
+}
+
+.studying-box:nth-child(3) {
+  & .studying-frame::after {
+    border: 4px solid #eb7f71;
+    // border-color: #eb7f71;
+
+    @include mq(tablet) {
+      border: 12px solid #eb7f71;
+    }
+  }
+}
+
+.studying-box:nth-child(4) {
+  & .studying-frame::after {
+    border: 4px solid #eba371;
+    // border-color: #eba371;
+
+    @include mq(tablet) {
+      border: 12px solid #eba371;
+    }
+  }
+}
+
+.studying-box:nth-child(5) {
+  & .studying-frame::after {
+    border: 4px solid #b0e061;
+    // border-color: #b0e061;
+
+    @include mq(tablet) {
+      border: 12px solid #b0e061;
+    }
+  }
+}
+
+.studying-box:nth-child(6) {
+  margin-bottom: 0;
+  & .studying-frame::after {
+    border: 4px solid #71b8eb;
+    // border-color: #71b8eb;
+
+    @include mq(tablet) {
+      border: 12px solid #71b8eb;
+    }
+  }
+}
+
+.studying-box:nth-child(2),
+.studying-box:nth-child(3),
+.studying-box:nth-child(4),
+.studying-box:nth-child(5),
+.studying-box:nth-child(6) {
+  @include mq(desktop) {
+    background-repeat: no-repeat;
+    background-image: url('../images/studying/bg.svg');
+    background-size: 686px auto;
+    background-position: bottom -160px right calc(50% - 356px);
+  }
+
+  @include mq(big-desktop) {
+    background-position: bottom -117px right calc(50% - 356px);
+  }
+}
+
+.studying-title {
+  @media (min-width: 320px) and (max-width: 374.99px) {
+    font-size: 16px;
+  }
+}
+
+// Стилі для GSAP  ------------------------------>
+
+html {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+body {
+  overflow-y: visible;
+  position: relative;
+  height: unset;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+@include mq(desktop) {
+  .scroll-container {
+    min-width: 600%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .scroll-panel {
+    width: 100vw;
+  }
+}

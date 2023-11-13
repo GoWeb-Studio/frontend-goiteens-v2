@@ -1,0 +1,39 @@
+.teachers {
+  @include mq(tablet) {
+    background: url('../images/teachers/bg.svg'),
+      linear-gradient(90deg, rgba(255, 255, 255, 1) 64%, rgba(199, 71, 54, 1) 64%);
+    background-repeat: no-repeat;
+
+    background-size:
+      715px auto,
+      auto;
+    background-position:
+      top right -438px,
+      top center;
+  }
+
+  @include mq(desktop) {
+    background-position:
+      top right -264px,
+      top center;
+  }
+
+  @include mq(big-desktop) {
+    background: url('../images/teachers/bg.svg'),
+      linear-gradient(90deg, rgba(255, 255, 255, 1) 51%, rgba(199, 71, 54, 1) 51%);
+    background-repeat: no-repeat;
+    background-position:
+      top right calc(50% - 382px),
+      top center;
+  }
+
+  &-item {
+    @media (min-width: 320px) and (max-width: 374.99px) {
+      min-width: 280px;
+    }
+  }
+
+  &-wrapper {
+    backdrop-filter: blur(48px);
+  }
+}

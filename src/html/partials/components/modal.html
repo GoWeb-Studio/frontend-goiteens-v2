@@ -1,0 +1,29 @@
+{% set formId = form.id %}
+<div class="backdrop is-hidden smOnly:px-5" data-modal>
+  <div class="modal bg-[#FAF5E6] text-black-light">
+    <button
+      class="modal-close-btn"
+      type="button"
+      data-modal-close
+      aria-label="{{form.btnCloseAria}}"
+    >
+      <svg
+        class="modal-btn-close-svg md:h-8 md:w-8"
+        width="24"
+        height="24"
+        aria-label="{{form.btnCloseAria}}"
+      >
+        <use href="./assets/images/sprite.svg#icon-close-menu"></use>
+      </svg>
+    </button>
+
+    <h2
+      class="mb-11 font-IBMPlexMono text-[20px] font-bold uppercase leading-[1.2] text-[#1A1A1A] md:mb-[66px] md:text-[32px] md:leading-[1.4] smOnly:max-w-[228px]"
+    >
+      {{ form.title }}
+    </h2>
+
+    {% include './formFields.njk' %}
+    <p class="mt-3 text-xs text-[#6E6E6E] md:mt-6 md:text-center md:text-sm">{{form.text}}</p>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<form class="text-lg" id="{{formId}}" novalidate autocomplete="on">
+  <div class="hero-field flex flex-wrap gap-6 md:gap-[52px]">
+    {% block formFields %} {% endblock %}
+  </div>
+  <div class="hero-btn-wrapper">
+    <button
+      class="form-btn hero-btn disabled:border-none disabled:bg-gray-200 disabled:hover:text-white"
+      type="submit"
+    >
+      {% if section.id === "hero" %} {{hero.btn}} {% else %} {{ form.btnSubmit }} {% endif %}
+    </button>
+  </div>
+</form>

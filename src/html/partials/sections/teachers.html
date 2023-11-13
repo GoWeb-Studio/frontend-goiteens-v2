@@ -1,0 +1,48 @@
+{% set section = teachers %}
+<section class="{{section.id}} py-10 relative overflow-hidden md:pt-[262px] xl:pt-[308px]">
+  <div class="container">
+    <h2 class="section-title mb-12 md:mb-[84px] xl:mb-20">{{section.title}}</h2>
+    <ul class="teacher-list xl:flex xl:max-w-[1068px] xl:gap-6">
+      {% for item in section.items %}
+      <li
+        class="teachers-item group relative min-w-[340px] cursor-pointer overflow-hidden md:min-w-0 smOnly:mx-auto"
+      >
+        <picture>
+          <!-- WEBP -->
+          <source
+            type="image/webp"
+            srcset="
+              ./assets/images/teachers/{{ item.img }}.webp 1x,
+              ./assets/images/teachers/{{ item.img }}@2x.webp 2x
+            "
+          />
+          <!-- PNG -->
+          <img
+            width="340"
+            height="430"
+            loading="lazy"
+            alt="{{ item.name }}"
+            src="./assets/images/teachers/{{ item.img }}.png"
+            srcset="./assets/images/teachers/{{ item.img }}@2x.png 2x"
+            class="w-full"
+          />
+        </picture>
+        <h3 class="absolute bottom-5 right-5 z-[2] text-2xl font-medium normal-case text-white">
+          {{ item.name }}
+        </h3>
+        <div
+          class="teachers-wrapper absolute left-0 top-0 z-[1] h-full w-full opacity-0 shadow-black duration-300 ease-out group-hover:opacity-100 group-focus:opacity-100"
+        >
+          <ul
+            class="absolute left-0 top-0 z-[2] h-full w-full space-y-2 px-6 py-8 text-white marker:w-[6px] marker:pl-6 marker:text-white"
+          >
+            {% for skill in item.skills %}
+            <li class="ml-6 list-disc">{{ skill.text }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

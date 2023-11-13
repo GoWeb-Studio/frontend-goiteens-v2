@@ -1,0 +1,142 @@
+.learn {
+  &__item:nth-child(2) {
+    background-color: #fae8e6;
+
+    @include mq(tablet) {
+      background-image: url('../images/learn/circles-tab.svg');
+      background-repeat: no-repeat;
+      background-position: right 19px top;
+    }
+
+    @include mq(desktop) {
+      @apply flex flex-col justify-end;
+      background-image: url('../images/learn/circles-desk.svg');
+      width: 437px;
+      height: 492px;
+      position: absolute;
+      top: -135px;
+      left: 51px;
+      background-position: top right;
+      z-index: 1;
+
+      .learn__text {
+        width: 301px;
+      }
+    }
+
+    @include mq(big-desktop) {
+      top: -82px;
+      left: 83px;
+      & h3 {
+        color: #1a1a1a;
+      }
+      .learn__text {
+        color: #6e6e6e;
+        width: 352px;
+      }
+    }
+  }
+
+  &__item:nth-child(3) {
+    @include mq(desktop) {
+      width: 501px;
+      height: 279px;
+      padding-bottom: 82px;
+      position: absolute;
+      top: 380px;
+
+      .learn__text {
+        width: 323px;
+      }
+    }
+
+    @include mq(big-desktop) {
+      top: 470px;
+      left: 32px;
+
+      .learn__text {
+        width: 346px;
+      }
+    }
+  }
+
+  &__item:nth-child(4) {
+    @include mq(desktop) {
+      width: 420px;
+      height: 338px;
+      padding-bottom: 74px;
+      position: absolute;
+      top: -135px;
+      right: 58px;
+      z-index: 11;
+      background-color: white;
+    }
+
+    @include mq(big-desktop) {
+      width: 497px;
+      height: 279px;
+      top: 70px;
+      right: 80px;
+
+      .learn__text {
+        max-width: 408px;
+      }
+    }
+  }
+
+  &__item:nth-child(5) {
+    background-color: #ebe6fa;
+
+    @include mq(desktop) {
+      width: 580px;
+      height: 237px;
+      padding-bottom: 74px;
+      position: absolute;
+      top: 232px;
+      right: -44px;
+      z-index: 11;
+
+      .learn__text {
+        width: 408px;
+      }
+    }
+
+    @include mq(big-desktop) {
+      width: 611px;
+      top: 369px;
+      right: 10px;
+    }
+  }
+
+  &__item:last-child {
+    background-image: url('../images/learn/waves-mob.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    @include mq(desktop) {
+      width: 792px;
+      position: absolute;
+      bottom: -154px;
+      right: 0;
+      z-index: 11;
+      background-color: white;
+      background-image: url('../images/learn/waves.svg');
+      background-position: right -50px center;
+
+      .learn__text {
+        width: 622px;
+      }
+    }
+
+    @include mq(big-desktop) {
+      width: 900px;
+      bottom: -156px;
+      right: 146px;
+      background-position: right top 34px;
+
+      .learn__text {
+        width: 791px;
+      }
+    }
+  }
+}

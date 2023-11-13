@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* If you need to download some fonts - use this site: https://www.cufonfonts.com/ */
+@layer base {
+  @include font-face('Gotham', '../fonts/GothamBook', 400);
+
+  @include font-face('IBMPlexMono', '../fonts/IBMPlexMono-Regular', 400);
+  @include font-face('IBMPlexMono', '../fonts/IBMPlexMono-Medium', 500);
+  @include font-face('IBMPlexMono', '../fonts/IBMPlexMono-SemiBold', 600);
+  @include font-face('IBMPlexMono', '../fonts/IBMPlexMono-Bold', 700);
+
+  @include font-face('IBMPlexSans', '../fonts/IBMPlexSans-Regular', 400);
+  @include font-face('IBMPlexSans', '../fonts/IBMPlexSans-Medium', 500);
+  @include font-face('IBMPlexSans', '../fonts/IBMPlexSans-SemiBold', 600);
+  @include font-face('IBMPlexSans', '../fonts/IBMPlexSans-Bold', 700);
+}
+
+body {
+  @apply bg-body font-IBMPlexSans text-black-light;
+}
+
+.section {
+  @apply py-10 md:py-[60px] xl:py-20;
+}
+
+.section-title {
+  @apply font-IBMPlexMono text-[20px] font-semibold uppercase leading-[1.3] text-black-dark md:text-[32px] md:leading-[1.4];
+}
+
+.btn {
+  @apply w-full rounded-[104px] font-IBMPlexSans text-[16px] leading-[2] text-white duration-300 md:text-2xl;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}

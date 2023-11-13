@@ -1,0 +1,30 @@
+.program {
+  background-repeat: no-repeat;
+  background-image: url('../images/program/bg.svg');
+  background-size: 569px auto;
+  background-position: top -32px left calc(50% + 101px);
+
+  @include mq(tablet) {
+    background-size: cover;
+    background-position: top left calc(50% + 360px);
+  }
+
+  @include mq(desktop) {
+    background-size: 1478px auto;
+    background-position: top -150px left calc(50% + 110px);
+  }
+
+  @include mq(big-desktop) {
+    background-image: none;
+    background-color: transparent;
+  }
+
+  &-wrapper {
+    @include mq(big-desktop) {
+      background-repeat: no-repeat;
+      background-image: url('../images/program/bg.svg');
+      background-size: 1478px auto;
+      background-position: top -150px left;
+    }
+  }
+}

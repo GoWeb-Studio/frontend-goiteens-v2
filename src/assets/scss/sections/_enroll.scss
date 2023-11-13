@@ -1,0 +1,25 @@
+.enroll {
+  &-btn::before {
+    @include mq(desktop) {
+      position: absolute;
+      bottom: -16px;
+      left: 16px;
+      display: block;
+      content: '';
+      width: 968px;
+      height: 80px;
+      border: 3px solid #1a1a1a;
+      border-radius: 64px;
+      z-index: -1;
+    }
+  }
+
+  &-btn:hover,
+  &-btn:focus {
+    &::before {
+      @include mq(desktop) {
+        background-color: #1a1a1a;
+      }
+    }
+  }
+}

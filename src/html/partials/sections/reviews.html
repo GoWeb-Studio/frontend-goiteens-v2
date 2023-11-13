@@ -1,0 +1,68 @@
+{% set section = reviews %}
+<section
+  class="{{section.id}} pt-20 md:relative pb-10 md:pb-20 overflow-hidden xl:pt-[170px] xl:pb-[186px] xxl:pt-[186px]"
+>
+  <div class="container">
+    <h2 class="section-title mb-8 md:mb-10 xl:text-center mdOnly:max-w-[583px]">
+      {{section.title}}
+    </h2>
+    <ul class="slider-js xl:mx-auto xl:max-w-[1054px]">
+      {% for item in section.items %}
+      <li class="">
+        <div class="xl:flex xl:gap-[90px] xxl:mr-[100px] xxl:gap-[77px]">
+          <div class="relative xl:shrink-0">
+            <div class="reviews-img relative z-[1] w-[307px]">
+              <picture class="">
+                <!-- WEBP -->
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./assets/images/reviews/{{item.img}}.webp    1x,
+                    ./assets/images/reviews/{{item.img}}@2x.webp 2x
+                  "
+                />
+                <!-- PNG (insert "image/jpeg" for JPEG) -->
+                <img
+                  class="image min-h-[438px] border-b-[3px] border-l-[3px] border-[#1A1A1A] pb-2 pl-2 notXl:mb-10"
+                  width="299"
+                  height="438"
+                  loading="lazy"
+                  alt="{{item.alt}}"
+                  src="./assets/images/reviews/{{item.img}}.png"
+                  srcset="./assets/images/reviews/{{item.img}}@2x.png 2x"
+                />
+              </picture>
+
+              <p
+                class="absolute bottom-5 left-1/2 z-[3] -translate-x-1/2 font-IBMPlexMono text-sm text-white mdOnly:left-[50%]"
+              >
+                {{item.name}}
+              </p>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="mb-3 font-IBMPlexMono text-[18px] font-semibold uppercase leading-[1.3] text-[#1A1A1A] md:mb-6 md:text-2xl xl:mb-[29px]"
+            >
+              {{item.title}}
+            </h3>
+            <p class="text-base md:text-xl">{{item.text}}</p>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="btn-wrapper flex justify-center gap-2 smOnly:mt-8">
+      <button
+        class="prev-but-js prev-icon h-[62px] w-[111px]"
+        type="button"
+        aria-label="кнопка попереднього слайду"
+      ></button>
+      <button
+        class="next-but-js next-icon h-[62px] w-[111px] rotate-180"
+        type="button"
+        aria-label="кнопка наступного слайду"
+      ></button>
+    </div>
+  </div>
+</section>

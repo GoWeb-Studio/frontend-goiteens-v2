@@ -1,0 +1,6 @@
+.header {
+  @include mq(desktop) {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #f5f5f5;
+  }
+}

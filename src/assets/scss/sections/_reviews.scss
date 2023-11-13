@@ -1,0 +1,70 @@
+.reviews {
+  &-img::before {
+    position: absolute;
+    top: 20px;
+    right: -11px;
+    display: block;
+    content: '';
+    width: 11px;
+    height: 386px;
+    background-color: #ededed;
+    z-index: -2;
+
+    @media (min-width: 320px) and (max-width: 374.99px) {
+      display: none;
+    }
+  }
+
+  &-img::after {
+    position: absolute;
+    top: 12px;
+    right: 0px;
+    display: block;
+    content: '';
+    width: 12px;
+    height: 406px;
+    background-color: #d6d6d6;
+    z-index: -1;
+
+    @media (min-width: 320px) and (max-width: 374.99px) {
+      display: none;
+    }
+  }
+
+  .prev-icon,
+  .next-icon {
+    background-repeat: no-repeat;
+    background-image: url('../images/reviews/arrow.svg');
+    background-size: 111px auto;
+  }
+
+  .btn-wrapper {
+    @include mq(tablet) {
+      position: absolute;
+      bottom: 336px;
+      right: calc(50% - 376px);
+    }
+
+    @include mq(desktop) {
+      bottom: 193px;
+      right: calc(50% - 202px);
+    }
+
+    @include mq(big-desktop) {
+      bottom: 200px;
+      right: calc(50% - 68px);
+    }
+  }
+
+  &-img {
+    @media (min-width: 320px) and (max-width: 374.99px) {
+      width: 268px;
+    }
+  }
+
+  & .image {
+    @media (min-width: 320px) and (max-width: 374.99px) {
+      min-height: 393px;
+    }
+  }
+}

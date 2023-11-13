@@ -1,0 +1,102 @@
+{% set section = footer %}
+<footer class="bg-grey pb-[64px] pt-8 font-gotham text-white md:pb-10 md:pt-10">
+  <div class="container md:flex md:justify-between md:px-[32px]">
+    <div
+      class="footer__content-wrapper relative md:flex md:justify-between xl:gap-[207px] xl:pb-0 xxl:gap-[251px] smOnly:pb-8"
+    >
+      <div class="smOnly:flex smOnly:justify-between">
+        <div class="md:mb-[27px]">
+          <a
+            href="{{page.canonical}}"
+            aria-label="{{logo.link_logo_aria}}"
+            class="mb-[49px] block md:mb-[28px]"
+          >
+            <svg
+              width="118"
+              height="30"
+              aria-label="{{logo.logo_aria}}"
+              class="md:h-[43px] md:w-[169px]"
+            >
+              <use href="./assets/images/sprite.svg#logo"></use>
+            </svg>
+          </a>
+        </div>
+        <ul class="flex max-h-[96px] max-w-[96px] flex-wrap gap-4 sm:max-w-full sm:flex-nowrap">
+          {% for item in section.socialItems %}
+          <li class="h-[40px] w-[40px]">
+            <a
+              href="{{item.link}}"
+              rel="noopener noreferrer nofollow"
+              aria-label="{{item.ariaLabel}}"
+              target="_blank"
+            >
+              <svg
+                width="40"
+                height="40"
+                aria-label="{{item.svgAlt}}"
+                class="footer__icon-social fill-white duration-300 hover:fill-yellow focus:fill-yellow"
+              >
+                <use href="./assets/images/sprite.svg#{{item.svg}}"></use>
+              </svg>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <ul
+        class="hidden grid-cols-1 gap-y-6 text-base leading-[0.9] md:grid-cols-2 md:gap-x-[30px] md:text-[20px] smOnly:pr-5"
+      >
+        {% for item in section.linksItems %}
+        <li class="md:w-[170px]">
+          <a
+            href="{{item.link}}"
+            rel="noopener noreferrer nofollow"
+            class="duration-300 hover:text-yellow focus:text-yellow"
+            >{{item.title}}</a
+          >
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="md:flex md:flex-col md:items-end md:justify-start xl:gap-5 xl:pt-0 smOnly:pt-8">
+      <a
+        href="tel:{{section.contactNumberLink}}"
+        class="hidden text-[20px] leading-[0.9] hover:text-[#fec830] focus:text-[#fec830] smOnly:mb-7 smOnly:text-center"
+      >
+        <svg
+          width="24"
+          height="24"
+          class="inline-block fill-white hover:fill-[#fec830] focus:fill-[#fec830]"
+          aria-label="іконка телефона"
+        >
+          <use href="./assets/images/sprite.svg#phone"></use>
+        </svg>
+        {{section.contactNumber}}</a
+      >
+      <ul class="mb-7 flex max-w-[92px] gap-4 smOnly:mx-auto">
+        {% for item in section.paymentList %}
+        <li>
+          <svg width="38" height="26" aria-label="{{item.svgAlt}}">
+            <use href="./assets/images/sprite.svg#{{item.svg}}"></use>
+          </svg>
+        </li>
+        {% endfor %}
+      </ul>
+      <ul
+        class="mx-auto flex max-w-[221px] flex-col items-center gap-[10px] text-[16px] leading-[0.95] text-grey-light md:m-0 md:items-end"
+      >
+        {% for item in section.documentList %}
+        <li>
+          <a
+            href="{{item.link}}"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            class="inline-block underline duration-300 hover:text-yellow focus:text-yellow"
+            >{{item.title}}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</footer>

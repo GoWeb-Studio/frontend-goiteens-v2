@@ -1,0 +1,138 @@
+.directions {
+  background-repeat: no-repeat;
+  background-image: url('../images/directions/bg.svg');
+  background-size: 1761px auto;
+  background-position: bottom -536px left;
+
+  @include mq(tablet) {
+    background-position: bottom -680px left;
+  }
+
+  @include mq(desktop) {
+    background-position: bottom -722px left;
+  }
+
+  @include mq(big-desktop) {
+    background-position: bottom -722px left calc(50% + 53px);
+  }
+
+  .title {
+    color: #474747;
+  }
+
+  .slick-slide .directions__items {
+    width: 330px !important;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(tablet) {
+      width: 374px !important;
+    }
+  }
+  .slick-slide {
+    padding: 6px !important;
+
+    @include mq(mobile-only) {
+      width: 335px !important;
+    }
+
+    @include mq(tablet) {
+      width: 384px !important;
+    }
+  }
+
+  &__items {
+    animation: all 250ms ease-in;
+  }
+
+  .scratch {
+    border-color: #f5e3ab;
+
+    .item-age {
+      background-color: #f0cd60;
+      color: #ffffff;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .minecraft {
+    border-color: #dbf5b0;
+
+    .item-age {
+      background-color: #dbf5b0;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .roblox {
+    border-color: #f5bfb8;
+
+    .item-age {
+      background-color: #f5bfb8;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .frontend {
+    border-color: #c2b0f5;
+
+    .item-age {
+      background-color: #c2b0f5;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .math {
+    border-color: #f0b890;
+
+    .item-age {
+      background-color: #f0b890;
+      flex-shrink: 0;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .gameDev {
+    border-color: #d6d6d6;
+
+    .item-age {
+      background-color: #d6d6d6;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .design {
+    border-color: #f5bae2;
+
+    .item-age {
+      background-color: #f5bae2;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .python {
+    border-color: #b8dbf5;
+
+    .item-age {
+      background-color: #b8dbf5;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

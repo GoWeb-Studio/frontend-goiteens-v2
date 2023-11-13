@@ -1,0 +1,216 @@
+.hero {
+  background-repeat: no-repeat;
+  background-image: url('../images/hero/bg-mob@2x.png'), url('../images/hero/shadow-mob.svg');
+  background-image: -webkit-image-set(url('../images/hero/bg-mob@2x.webp') 2x),
+    url('../images/hero/shadow-mob.svg');
+  background-size:
+    1185px auto,
+    810px auto;
+  background-position:
+    top 619px left calc(50% + 2px),
+    top left calc(50% + 110px);
+
+  @include mq(tablet) {
+    background-repeat: no-repeat;
+    background-image: url('../images/hero/bg-tab@2x.png'), url('../images/hero/shadow-tab.svg');
+    background-image: -webkit-image-set(url('../images/hero/bg-tab@2x.webp') 2x),
+      url('../images/hero/shadow-tab.svg');
+    background-size:
+      1180px auto,
+      1858px auto;
+    background-position:
+      top 388px left calc(50% + 26px),
+      top -150px left calc(50% + 280px);
+  }
+
+  @include mq(desktop) {
+    background-repeat: no-repeat;
+    background-image: url('../images/hero/bg-desk@2x.png'), url('../images/hero/shadow-tab.svg');
+    background-image: -webkit-image-set(url('../images/hero/bg-desk@2x.webp') 2x),
+      url('../images/hero/shadow-tab.svg');
+    background-size:
+      1180px auto,
+      1858px auto;
+    background-position:
+      top 450px left calc(50% - 294px),
+      top -150px left calc(50% + 140px);
+  }
+
+  @include mq(big-desktop) {
+    background-repeat: no-repeat;
+    background-image: url('../images/hero/bg-bigDesk@2x.png'), url('../images/hero/shadow-tab.svg');
+    background-image: -webkit-image-set(url('../images/hero/bg-bigDesk@2x.webp') 2x),
+      url('../images/hero/shadow-tab.svg');
+    background-size:
+      1180px auto,
+      1858px auto;
+    background-position:
+      top 366px left calc(50% - 294px),
+      top -193px left calc(50% + 159px);
+  }
+
+  &-title {
+    background: linear-gradient(309deg, #ff5050 8.94%, #059bbf 85.41%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (min-width: 320px) and (max-width: 374.99px) {
+      font-size: 46px;
+    }
+  }
+
+  &-clip::before {
+    background-color: #c74736;
+    min-height: 48.2%;
+    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background-image: url('../images/hero/bg-line.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right calc(50% - 44px) bottom 55px;
+
+    @media (min-width: 320px) and (max-width: 374.99px) {
+      min-height: 49.5%;
+    }
+
+    @include mq(tablet) {
+      -webkit-clip-path: polygon(0 9%, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(0 9%, 100% 0, 100% 100%, 0 100%);
+      min-height: 50.5%;
+      background-position: right calc(50% - 44px) bottom 57px;
+    }
+
+    @include mq(desktop) {
+      min-height: 42%;
+      -webkit-clip-path: polygon(90% 0, 100% 22%, 100% 100%, 0 100%, 0 17%);
+      clip-path: polygon(90% 0, 100% 22%, 100% 100%, 0 100%, 0 17%);
+      background-size: 1653px auto;
+      background-position: right calc(50% - 5px) bottom -238px;
+    }
+
+    @include mq(big-desktop) {
+      min-height: 38.5%;
+      background-size: 1653px auto;
+      background-position: right calc(50% + 8px) bottom -266px;
+    }
+  }
+
+  &__list:nth-child(even) {
+    @include mq(desktop) {
+      width: 204px;
+    }
+  }
+
+  // &-btn::before {
+  //   @include mq(desktop) {
+  //     position: absolute;
+  //     bottom: -16px;
+  //     left: 16px;
+  //     display: block;
+  //     content: '';
+  //     width: 534px;
+  //     height: 80px;
+  //     border: 3px solid #1a1a1a;
+  //     border-radius: 64px;
+  //     z-index: -1;
+  //   }
+
+  //   @include mq(big-desktop) {
+  //     width: 580px;
+  //   }
+  // }
+  // &-btn:hover,
+  // &-btn:focus {
+  //   &::before {
+  //     @include mq(desktop) {
+  //       background-color: #1a1a1a;
+  //     }
+  //   }
+  // }
+
+  form {
+    & .hero-btn-wrapper {
+      @include mq(desktop) {
+        position: relative;
+        z-index: 1;
+      }
+    }
+    & .hero-btn {
+      max-width: 480px;
+      margin-top: 24px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      @include mq(tablet) {
+        margin-top: 32px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 20px;
+        line-height: 1.4;
+      }
+
+      @include mq(desktop) {
+        padding-top: 14px;
+        padding-bottom: 14px;
+        max-width: 576px;
+
+        &::after {
+          position: absolute;
+          bottom: -12px;
+          left: 12px;
+          display: block;
+          content: '';
+          width: 576px;
+          height: 56px;
+          border: 3px solid #1a1a1a;
+          border-radius: 64px;
+          z-index: -1;
+        }
+        &:hover,
+        &:focus {
+          background-color: #653cd9;
+          color: #ffffff;
+          &::after {
+            background-color: #1a1a1a;
+          }
+        }
+      }
+
+      @include mq(big-desktop) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        max-width: 720px;
+
+        &::after {
+          width: 720px;
+          height: 64px;
+        }
+      }
+    }
+
+    & .hero-field {
+      gap: 24px;
+
+      & .input-field {
+        height: 48px;
+      }
+
+      @include mq(tablet) {
+        gap: 32px;
+
+        & .input-field {
+          height: 56px;
+          font-size: 16px;
+          line-height: 2;
+        }
+      }
+    }
+  }
+}
