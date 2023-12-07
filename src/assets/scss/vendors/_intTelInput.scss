@@ -34,7 +34,11 @@
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 0 6px 0 8px;
+  padding: 0 6px 0 16px;
+
+  @include mq(desktop) {
+    padding-left: 18px;
+  }
 }
 .iti__arrow {
   margin-left: 6px;
@@ -1267,14 +1271,14 @@
 .iti__flag {
   height: 15px;
   box-shadow: 0px 0px 1px 0px #888;
-  background-image: url('../images/intTelInput/flags.png');
+  background-image: url('../images/components/intTelInput/flags.png');
   background-repeat: no-repeat;
   background-color: #dbdbdb;
   background-position: 20px 0;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .iti__flag {
-    background-image: url('../images/intTelInput/flags@2x.png');
+    background-image: url('../images/components/intTelInput/flags@2x.png');
   }
 }
 

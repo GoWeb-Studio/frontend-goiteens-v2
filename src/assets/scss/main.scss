@@ -2,15 +2,15 @@
 
 @import 'aos/dist/aos.css';
 
+@import 'utils/mixins';
+@import 'vendors/tailwind';
+
 /*! purgecss start ignore */
 @import 'vendors/modern-normalize';
 @import 'vendors/intTelInput';
 @import 'vendors/slick';
 @import 'vendors/slick-theme';
 /*! purgecss end ignore */
-
-@import 'utils/mixins';
-@import 'vendors/tailwind';
 
 @import 'components/input';
 @import 'components/form';

@@ -43,8 +43,8 @@ module.exports = {
           DEFAULT: '#000000', // class="bg-black text-black border-black"
           light: '#474747', // class="bg-black-light text-black-light border-black-light"
           dark: '#1A1A1A',
-          '1A': '#1A1A1A',
-          47: '#474747',
+          primary: '#1A1A1A',
+          secondary: '#474747',
         },
         white: {
           DEFAULT: '#ffffff', //
