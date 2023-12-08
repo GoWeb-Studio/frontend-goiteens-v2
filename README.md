@@ -1,6 +1,6 @@
 # ПОСИЛАННЯ НА МАКЕТ
 
-🔗 https://www.figma.com/file/aUvLD5kEKDQMZ1teOwXsDf
+🔗 [Figma Link](https://www.figma.com/file/3zed3CcPZ74vPL7x9Z5U0F/01__%D0%9A%D1%83%D1%80%D1%81%D0%B8-(%D0%A2%D1%80%D0%B0%D1%84%D1%96%D0%BA)?node-id=551%3A10865&mode=dev)
 
 # 🥤 Starter kit for SoftRyzen
 

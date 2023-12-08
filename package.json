@@ -42,6 +42,7 @@
     "gulp-size": "^4.0.1",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-sprite": "^2.0.3",
+    "gulp-webp": "^5.0.0",
     "htmlhint": "^1.1.4",
     "imagemin-webp": "6.1.0",
     "intl-tel-input": "^18.1.8",

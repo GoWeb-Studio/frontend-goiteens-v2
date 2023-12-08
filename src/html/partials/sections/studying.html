@@ -1,66 +1,36 @@
 {% set section = studying %}
-<section
-  class="{{section.id}} scroll-container pt-20 pb-20 md:pb-[132px] container xl:p-0 relative"
->
-  <!-- <div class="mb-[160px] md:mb-[178px] xl:hidden">
-    <h2
-      class="mb-5 text-center font-IBMPlexMono text-[18px] font-semibold uppercase text-purple-D9 md:mb-6 md:text-2xl"
-    >
-      {{section.title}}
-    </h2>
-    <p class="text-center text-[16px]">{{section.subtitle}}</p>
-  </div> -->
-  <!-- <div class="scroll-panel hidden flex-col items-center justify-center xl:flex">
-    <h2
-      class="mb-5 text-center font-IBMPlexMono text-[18px] font-semibold uppercase text-purple-D9 md:mb-6 md:text-2xl xl:mb-10 xl:max-w-[984px] xl:text-[32px]"
-    >
-      {{section.title}}
-    </h2>
-    <p class="text-center text-[16px] xl:max-w-[984px] xl:text-xl">{{section.subtitle}}</p>
-  </div> -->
+<section class="{{section.id}} scroll-container container pt-20 xl:p-0 relative overflow-hidden">
   {% for item in section.items %}
   <div
-    class="studying-box scroll-panel mb-[113px] last:mb-0 xl:m-0 xl:flex xl:flex-row-reverse xl:items-center xl:justify-around xl:gap-[74px] xxl:gap-[160px] smOnly:relative"
+    class="studying-box scroll-panel pb-20 xl:px-10 xl:py-0 xl:m-0 xl:flex xl:flex-row-reverse xl:items-center xl:justify-around xl:gap-[72px] xxl:px-14 xxl:gap-[161px]"
   >
-    <div
-      class="studying-frame mx-auto w-full max-w-[480px] md:max-w-[680px] xl:max-w-[589px] xxl:max-w-[640px]"
-    >
-      <picture>
-        <!-- WEBP -->
-
-        <source
-          type="image/webp"
-          srcset="
-            ./assets/images/studying/{{item.img}}.webp    1x,
-            ./assets/images/studying/{{item.img}}@2x.webp 2x
-          "
-        />
-        <!-- PNG (insert "image/jpeg" for JPEG) -->
-        <img
-          class="w-full max-w-[480px] md:max-w-[680px] xl:max-w-[589px] xxl:max-w-[640px]"
-          width="330"
-          height="207"
-          loading="lazy"
-          alt="фонове зображення {{item.alt}}"
-          src="./assets/images/studying/{{item.img}}.png"
-          srcset="./assets/images/studying/{{item.img}}@2x.png 2x"
-        />
-      </picture>
+    <div class="{{item.class}} studying-image mb-5 w-[323px] relative rounded-3xl md:w-[680px] md:mb-10 xl:w-[589px] xxl:w-[640px]">
+      <img
+        src="./assets/images/sections/studying/{{item.class}}.webp"
+        srcset="./assets/images/sections/studying/{{item.class}}@2x.webp 2x"
+        alt="{{item.imageAlt}}"
+        width="680"
+        height="425"
+        loading="lazy"
+        class="rounded-2xl md:rounded-3xl"
+      />
     </div>
-    <div class="studying-content mdOnly:overflow-hidden">
+
+    <div class="studying-content overflow-hidden xl:overflow-hidden">
       <span
-        class="studying-number font-IBMPlexMono text-[84px] font-medium leading-[1.33] text-black-dark md:text-[148px]"
+        class="studying-number font-IBMPlexMono font-medium text-black-primary text-[84px] leading-[1.33] md:text-[148px] md:leading-[192px]"
       >
         {{ item.id }}
       </span>
 
-      <h3
-        class="studying-subtitle mb-6 font-IBMPlexMono text-xl font-semibold uppercase text-black-dark md:max-w-[365px] md:text-[32px] md:leading-[1.3] xl:text-end"
-      >
+      <h3 class="studying-subtitle mb-6 font-IBMPlexMono uppercase text-black-primary text-[20px] leading-[26px] font-semibold md:text-[32px] md:leading-[42px] xl:text-end">
         {{ item.title }}
       </h3>
-      <p class="studying-text font-normal md:mx-auto md:max-w-[600px] xl:max-w-[849px]">
-        {{item.text}}
+
+      <p class="font-IBMPlexSans text-black-secondary text-base font-normal md:text-xl md:leading-7">
+        {{item.text.preText}}
+        <span class="font-semibold">{{item.text.accent}}</span>
+        {{item.text.afterText}}
       </p>
     </div>
   </div>

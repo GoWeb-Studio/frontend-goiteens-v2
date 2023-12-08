@@ -12,9 +12,9 @@ const imagesWebp = () => {
   return gulp
     .src([
       `${paths.src.images}/*.{jpg,png}`,
-      '!src/assets/images/favicon/**',
-      '!src/assets/images/intTelInput/**',
-      '!src/assets/images/ogp/**',
+      '!src/assets/images/components/favicon/**',
+      '!src/assets/images/components/intTelInput/**',
+      '!src/assets/images/components/ogp/**',
     ])
     .pipe(
       plumber(
