@@ -2,7 +2,7 @@
 <section class="{{section.id}} scroll-container container pt-20 xl:p-0 relative overflow-hidden">
   {% for item in section.items %}
   <div
-    class="studying-box scroll-panel pb-20 xl:px-10 xl:py-0 xl:m-0 xl:flex xl:flex-row-reverse xl:items-center xl:justify-around xl:gap-[72px] xxl:px-14 xxl:gap-[161px]"
+    class="studying-box scroll-panel pb-20 xl:px-10 xl:py-0 xl:m-0 xl:flex xl:flex-row-reverse xl:items-center xl:justify-around xl:gap-[74px] xxl:px-14 xxl:gap-[161px]"
   >
     <div class="{{item.class}} studying-image mb-5 w-[323px] relative rounded-3xl md:w-[680px] md:mb-10 xl:w-[589px] xxl:w-[640px]">
       <img
@@ -27,7 +27,7 @@
         {{ item.title }}
       </h3>
 
-      <p class="font-IBMPlexSans text-black-secondary text-base font-normal md:text-xl md:leading-7">
+      <p class="font-IBMPlexSans text-black-secondary text-base font-normal smOnly:pl-5 md:text-xl md:leading-7">
         {{item.text.preText}}
         <span class="font-semibold">{{item.text.accent}}</span>
         {{item.text.afterText}}
