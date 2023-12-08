@@ -554,8 +554,8 @@
   },
   "about": {
     "id": "about",
-    "title": "Чому батьки обирають для своїх дітей GoITeens?",
-    "text": "<span class=\"font-semibold\">GoITeens</span> — це IT-академія, що надає повноцінну системну IT-освіту дітям від <span class=\"font-semibold\">7 до 17 років.</span> Створена на базі міжнародної платформи GoIT Global, партнера проєктів IT Ukraine та&nbsp;IT&nbsp;Generation. Академія має бездоганну репутацію та всеукраїнське визнання.",
+    "title": "<span class=\"block xxl:hidden\">Про GoITeens</span><span class=\"hidden xxl:block\">Чому батьки обирають для своїх дітей GoITeens?</span>",
+    "text": "<span class=\"font-semibold\">GoITeens</span> — це IT-академія, що надає IT-освіту дітям <span class=\"font-bold md:font-semibold\">від 7 до 17 років</span> за напрямами Scratch, Frontend, Digital Design, GameDev, Minecraft, Roblox та Математика. Наша місія — надати якісну освіту дітям та допомогти створити власну історію успіху.",
     "items": [
       {
         "number": "8+",
@@ -563,40 +563,26 @@
       },
       {
         "number": "45000+",
-        "text": "Дітей навчалося в <br class=\"md:hidden\">академії GoITeens"
+        "text": "Дітей навчалося в <br class=\"mdOnly:hidden\">академії GoITeens"
       },
       {
         "number": "3600+",
         "text": "Проєктів створено"
-      }
-    ],
-    "itemsAwards": [
-      {
-        "img": "award1",
-        "width": "72",
-        "height": "144",
-        "alt": "нагорода BEST IT EDUCATION 2015",
-        "title": "BEST IT EDUCATION 2015",
-        "text": "За внесок у підготовку сильних <br class=\"block\">Junior-фахівців"
       },
       {
-        "img": "award2",
-        "width": "84",
-        "height": "144",
-        "alt": "нагорода UKRAINIAN IT AWARDS 2016",
-        "title": "UKRAINIAN IT AWARDS 2016",
-        "text": "За видатний внесок у IT‑навчання <br class=\"hidden xxl:block\">українських Junior-розробників"
+        "number": "9000+",
+        "text": "Дітей одночасно <br class=\"hidden smOnly:block\">навчаються в академії"
       },
       {
-        "img": "award3",
-        "width": "144",
-        "height": "144",
-        "alt": "нагорода УКРАЇНСЬКА НАРОДНА ПРЕМІЯ",
-        "title": "УКРАЇНСЬКА НАРОДНА<br class=\"block md:hidden\"> ПРЕМІЯ",
-        "text": "Перемога в номінації «ІТ-освіта» за результатами голосування серед споживачів 2018-2022"
+        "number": "500+",
+        "text": "Викладачів"
       },
       {
-        "img": "award4",
+        "number": "56000+",
+        "text": "Занять проведено <br class=\"hidden mdOnly:block xxl:block\">протягом року"
+      },
+      {
+        "img": "award-1",
         "width": "131",
         "height": "130",
         "alt": "нагорода X-RAY AWARD",

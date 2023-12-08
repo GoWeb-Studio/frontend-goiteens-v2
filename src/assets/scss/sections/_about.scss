@@ -1,27 +1,5 @@
 .about {
-  background-repeat: no-repeat;
-  background-image: url('../images/about/bg-mob.svg');
-  background-size: 357px auto;
-  background-position: top 339px right calc(50% - 68px);
-
-  @include mq(tablet) {
-    background-image: url('../images/about/bg-tab.svg');
-    background-size: 772px auto;
-    background-position: top 345px right calc(50% - 48px);
-  }
-
-  @include mq(desktop) {
-    background-image: url('../images/about/bg-desk.svg');
-    background-size: 1267px auto;
-    background-position: top 385px right calc(50% - 83px);
-  }
-
-  @include mq(big-desktop) {
-    background-image: url('../images/about/bg-bigDesk.svg');
-    background-size: 1476px auto;
-    background-position: top 391px right calc(50% - 43px);
-  }
-
+  // START CHILD 1
   &__items:nth-child(1) {
     & .item-number {
       color: #435c1a;
@@ -33,14 +11,57 @@
     padding: 80px 32px 51px 32px;
 
     @include mq(tablet) {
+      width: 219px;
       padding: 43px 0px 46px;
     }
 
     @include mq(desktop) {
+      width: 384px;
       padding: 64px 0px 47px;
     }
-  }
 
+    @include mq(big-desktop) {
+      width: 480px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 210px;
+      height: 248px;
+      top: 0;
+      left: calc(50% - 107px);
+      background-image: url('../images/sections/about/item-bg-1.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include mq(tablet) {
+        width: 210px;
+        height: 177px;
+        top: -3px;
+        left: calc(50% - 94px);
+      }
+
+      @include mq(desktop) {
+        width: 278px;
+        height: 320px;
+        top: -31px;
+        left: calc(50% - 143px);
+      }
+
+      @include mq(big-desktop) {
+        width: 300px;
+        height: 340px;
+        top: -39px;
+        left: calc(50% - 195px);
+      }
+    }
+  }
+  // END CHILD 1
+
+  // START CHILD 2
   &__items:nth-child(2) {
     & .item-number {
       color: #1d4766;
@@ -53,14 +74,50 @@
     padding: 70px 5px 16px 4px;
 
     @include mq(tablet) {
-      padding: 43px 0px 0px 0px;
+      width: 219px;
+      padding: 43px 0px 25px 0px;
     }
 
     @include mq(desktop) {
+      width: 384px;
       padding: 64px 0px 16px;
     }
-  }
 
+    @include mq(big-desktop) {
+      width: 480px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 224px;
+      height: 224px;
+      top: 0;
+      left: calc(50% - 107px);
+      background-image: url('../images/sections/about/item-bg-2.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include mq(tablet) {
+        width: 170px;
+        height: 170px;
+        top: 6px;
+        left: calc(50% - 84px);
+      }
+
+      @include mq(desktop) {
+        width: 290px;
+        height: 290px;
+        top: -1px;
+        left: calc(50% - 147px);
+      }
+    }
+  }
+  // END CHILD 2
+
+  // START CHILD 3
   &__items:nth-child(3) {
     & .item-number {
       color: #66251d;
@@ -72,78 +129,298 @@
     padding: 76px 28px 52px 27px;
 
     @include mq(tablet) {
+      width: 219px;
       padding: 43px 0px 46px;
     }
 
     @include mq(desktop) {
+      width: 384px;
       padding: 64px 0px 47px;
     }
-  }
 
-  .award__item:nth-child(3) .item-img {
-    @include mq(tablet) {
-      width: 144px;
-      height: 144px;
-    }
-  }
-
-  .award__item:nth-child(1) {
-    @include mq(desktop) {
-      padding-bottom: 24px;
-    }
-    & .item-title {
-      @include mq(tablet) {
-        margin-bottom: 20px;
-      }
-      @include mq(desktop) {
-        margin-bottom: 41px;
-      }
-
-      @include mq(big-desktop) {
-        margin-bottom: 12px;
-      }
-    }
-  }
-
-  .award__item:nth-child(2) {
-    @include mq(desktop) {
-      padding-bottom: 24px;
-    }
-    & .item-title {
-      @include mq(tablet) {
-        margin-bottom: 20px;
-      }
-      @include mq(desktop) {
-        margin-bottom: 15px;
-      }
-      @include mq(big-desktop) {
-        margin-bottom: 12px;
-      }
-    }
-  }
-
-  .award__item:nth-child(3) {
-    @include mq(tablet) {
-      padding-bottom: 0;
-    }
     @include mq(big-desktop) {
-      padding-bottom: 21px;
+      width: 480px;
     }
-    & .item-title {
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 224px;
+      height: 224px;
+      top: 0;
+      left: calc(50% + 20px);
+      background-image: url('../images/sections/about/item-bg-3.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+
       @include mq(tablet) {
-        margin-bottom: 16px;
+        width: 170px;
+        height: 170px;
+        top: 4px;
+        left: calc(50% - -7px);
       }
-      @include mq(big-desktop) {
-        margin-bottom: 12px;
+      @include mq(desktop) {
+        width: 300px;
+        height: 300px;
+        top: -20px;
+        left: calc(50% + -3px);
       }
     }
   }
+  // END CHILD 3
 
-  .award__item:nth-child(4) {
-    @include mq(tablet) {
-      padding-top: 55px;
-      padding-bottom: 0;
+  // START CHILD 4
+  &__items:nth-child(4) {
+    & .item-number {
+      font-size: 72px;
+      color: #213075;
+
+      @include mq(tablet) {
+        font-size: 77px;
+        margin-bottom: 8px;
+      }
+
+      @include mq(desktop) {
+        font-size: 72px;
+      }
+
+      @include mq(big-desktop) {
+        font-size: 78px;
+      }
     }
+
+    & .item-text {
+      color: #27398a;
+      font-size: 20px;
+
+      @include mq(big-desktop) {
+        font-size: 24px;
+      }
+    }
+    padding: 68px 28px 38px 27px;
+
+    @include mq(tablet) {
+      width: 340px;
+      padding: 102px 0px 84px;
+    }
+
+    @include mq(desktop) {
+      width: 271px;
+      padding: 105px 0px 88px;
+    }
+
+    @include mq(big-desktop) {
+      width: 360px;
+      padding: 102px 0px 74px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 200px;
+      height: 200px;
+      top: 28px;
+      left: calc(50% - 145px);
+      background-image: url('../images/sections/about/item-bg-4.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include mq(tablet) {
+        width: 265px;
+        height: 265px;
+        top: 8px;
+        left: calc(50% - 170px);
+      }
+
+      @include mq(desktop) {
+        width: 230px;
+        height: 230px;
+        top: 55px;
+        left: calc(50% - 155px);
+      }
+
+      @include mq(big-desktop) {
+        width: 250px;
+        height: 250px;
+        top: 37px;
+        left: calc(50% - 157px);
+      }
+    }
+  }
+  // END CHILD 4
+
+  // START CHILD 5
+  &__items:nth-child(5) {
+    & .item-number {
+      font-size: 72px;
+      color: #7a225d;
+
+      @include mq(tablet) {
+        font-size: 77px;
+        margin-bottom: 8px;
+      }
+
+      @include mq(desktop) {
+        font-size: 72px;
+      }
+
+      @include mq(big-desktop) {
+        font-size: 78px;
+      }
+    }
+
+    & .item-text {
+      font-size: 20px;
+      color: #942971;
+
+      @include mq(big-desktop) {
+        font-size: 24px;
+      }
+    }
+    padding: 48px 28px 56px 27px;
+
+    @include mq(tablet) {
+      width: 340px;
+      padding: 102px 0px 110px;
+    }
+
+    @include mq(desktop) {
+      width: 271px;
+      padding: 105px 0px 114px;
+    }
+
+    @include mq(big-desktop) {
+      width: 360px;
+      padding: 102px 0px 105px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 232px;
+      height: 232px;
+      top: -4px;
+      left: calc(50% - 123px);
+      background-image: url('../images/sections/about/item-bg-5.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include mq(tablet) {
+        width: 232px;
+        height: 232px;
+        top: 40px;
+        left: calc(50% - 157px);
+      }
+
+      @include mq(desktop) {
+        top: 56px;
+      }
+
+      @include mq(big-desktop) {
+        top: 46px;
+      }
+    }
+  }
+  // END CHILD 5
+
+  // START CHILD 6
+  &__items:nth-child(6) {
+    & .item-number {
+      font-size: 72px;
+      color: #997500;
+
+      @include mq(tablet) {
+        font-size: 77px;
+        margin-bottom: 8px;
+      }
+
+      @include mq(desktop) {
+        font-size: 72px;
+      }
+
+      @include mq(big-desktop) {
+        font-size: 78px;
+      }
+    }
+
+    & .item-text {
+      font-size: 20px;
+      color: #b28800;
+
+      @include mq(big-desktop) {
+        font-size: 24px;
+      }
+    }
+    padding: 47px 28px 23px 27px;
+
+    @include mq(tablet) {
+      width: 340px;
+      padding: 97px 0px 79px;
+    }
+
+    @include mq(desktop) {
+      width: 271px;
+      padding: 105px 0px 88px;
+    }
+
+    @include mq(big-desktop) {
+      width: 360px;
+      padding: 102px 0px 74px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 215px;
+      height: 215px;
+      top: 0px;
+      left: calc(50% - 159px);
+      background-image: url('../images/sections/about/item-bg-6.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include mq(tablet) {
+        width: 220px;
+        height: 220px;
+        top: 43px;
+        left: calc(50% - 162px);
+      }
+      @include mq(desktop) {
+        top: 59px;
+      }
+
+      @include mq(big-desktop) {
+        top: 54px;
+      }
+    }
+  }
+  // END CHILD 6
+
+  // START CHILD 7
+  &__items:nth-child(7) {
+    @include mq(tablet) {
+      max-width: 340px;
+      padding-top: 55px;
+      padding-bottom: 49px;
+    }
+
+    @include mq(desktop-only) {
+      width: 271px;
+    }
+
+    @include mq(big-desktop) {
+      min-width: 360px;
+      padding-bottom: 43px;
+    }
+
     & .item-img {
       @include mq(tablet) {
         width: 131px;
@@ -155,18 +432,12 @@
         margin-bottom: 29px;
       }
     }
+
     & .item-title {
       @include mq(tablet) {
-        margin-bottom: 40px;
-      }
-
-      @include mq(desktop) {
-        margin-bottom: 41px;
-      }
-
-      @include mq(big-desktop) {
-        margin-bottom: 12px;
+        margin-bottom: 16px;
       }
     }
   }
+  // END CHILD 7
 }
