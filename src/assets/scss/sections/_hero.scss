@@ -13,21 +13,19 @@
   @include mq(tablet) {
     background-repeat: no-repeat;
     background-image: image-set(url("../images/sections/hero/hero-bg-md.webp") 1x,url("../images/sections/hero/hero-bg-md@2x.webp") 2x);
-    background-position: top -280px left 28%;
+    background-position: top -240px left 25%;
   }
 
   @include mq(desktop) {
     background-repeat: no-repeat;
     background-image: image-set(url("../images/sections/hero/hero-bg-xl.webp") 1x,url("../images/sections/hero/hero-bg-xl@2x.webp") 2x);
-    background-size: 2040px auto;
-    background-position: top -200px left 36%;
+    background-position: top -210px left 41%;
   }
 
   @include mq(big-desktop) {
     background-repeat: no-repeat;
     background-image: image-set(url("../images/sections/hero/hero-bg-xxl.webp") 1x,url("../images/sections/hero/hero-bg-xxl@2x.webp") 2x);
-    background-size: cover;
-    background-position: top -210px left 20%;
+    background-position: top -232px left 25%;
 
     @media (min-width: 2500px) {
       background-position: top -360px left 50%;
@@ -58,13 +56,13 @@
     @include mq(tablet) {
       -webkit-clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
       clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
-      min-height: 60%;
+      min-height: 58%;
 
       background-size: 250%;
     }
 
     @include mq(desktop) {
-      min-height: 49%;
+      min-height: 47%;
       -webkit-clip-path: polygon(90% 0, 100% 22%, 100% 100%, 0 100%, 0 17%);
       clip-path: polygon(90.68% 2.3%, 100.23% 16.04%, 100.23% 100.26%, 0% 100.26%, 0% 14.04%);
 
@@ -73,7 +71,7 @@
     }
 
     @include mq(big-desktop) {
-      min-height: 46%;
+      min-height: 45%;
       background-size: 100%;
     }
   }
@@ -89,9 +87,17 @@
       padding: 8px 24px;
 
       border-radius: 104px;
-      background-color: #FEC830;
-      color: #1A1A1A;
+      background-color: #5331B2;
+      color: #fff;
       line-height: 32px;
+
+      &:hover, &:focus {
+        background-color: #653CD9;
+      }
+
+      &:active {
+        background-color: #8160E0;
+      }
 
       @include mq(tablet) {
         margin-top: 32px;

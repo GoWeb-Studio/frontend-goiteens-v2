@@ -2,13 +2,13 @@
 {% set formId = section.id %}
 
 <section
-  class="{{section.id}} pt-6 pb-20 relative hero-clip"
+  class="{{section.id}} pt-6 pb-20 relative hero-clip md:pt-10"
 >
   <div class="container">
     <!-- TOP PART: MAIN TITLES -->
-    <div class="boy-img mb-[453px] md:mb-[921px] xl:mb-[826px]">
+    <div class="boy-img mb-[453px] md:mb-[921px] xl:mb-[854px] xxl:mb-[866px]">
       <h1
-        class="smOnly:-mx-2 text-center text-black-secondary font-IBMPlexMono text-[24px] font-medium leading-7 md:mb-0 md:text-[40px] md:leading-[48px] xl:mx-auto xl:w-[864px] xl:text-[48px] xl:leading-[56px]"
+        class="smOnly:-mx-2 text-center text-black-secondary font-IBMPlexMono text-[24px] font-medium leading-7 md:text-[40px] md:leading-[48px] xl:mx-auto xl:text-[48px] xl:leading-[56px] xl:mb-3 xxl:mb-0"
       >
         {{section.title}}
       </h1>
@@ -20,13 +20,13 @@
     </div>
 
     <!-- BOTTOM PART -->
-    <div class="relative z-[3] xl:pt-[45px] xl:flex xl:items-center xl:gap-6 xxl:gap-[44px]">
+    <div class="relative z-[3] xl:pt-[49px] xl:flex xl:items-center xl:gap-6 xxl:gap-[44px]">
       <!-- TEXT BLOCK -->
       <div class="xl:w-[576px] xxl:w-[688px]">
         <!-- TITLE & DESCRIPTION -->
-        <div class="mb-6 md:mb-10 xl:mb-8">
+        <div class="mb-6 md:mb-[52px] xl:mb-8">
           <h2
-            class="mb-5 font-IBMPlexMono text-[18px] font-semibold uppercase leading-6 text-white md:mb-8 md:text-[24px] md:leading-[34px]"
+            class="mb-5 font-IBMPlexMono text-[18px] font-semibold uppercase leading-6 text-white md:mb-8 md:text-[24px] md:leading-[34px] xxl:w-[619px]"
           >
             {{section.textTitle}}
           </h2>
@@ -37,7 +37,7 @@
 
         <!-- CONDITIONS -->
           <ul
-            class="grid grid-cols-2 gap-y-8 gap-x-[37px] border-[#452994] pt-6 font-IBMPlexMono md:gap-x-[61px] md:gap-y-[48px] md:pt-10 xl:gap-x-[42px] xl:grid-cols-[305px_1fr] xl:pt-0 notXl:border-t"
+            class="grid grid-cols-2 gap-y-8 gap-x-[37px] border-[#6B9429] pt-6 font-IBMPlexMono md:gap-x-[61px] md:gap-y-[48px] md:pt-10 xl:gap-x-[42px] xl:grid-cols-[305px_1fr] xl:pt-0 notXl:border-t"
           >
             {% for list in section.items %}
             <li class="hero__list">
@@ -69,7 +69,7 @@
 
       <!-- FORM -->
       <div
-        class="mt-10 md:mt-[64px] xl:w-[579px] xl:border-l xl:border-[#452994] xl:mt-0 xl:pl-[29px] xxl:w-[734px] xxl:pl-[46px]"
+        class="mt-6 md:mt-[64px] xl:w-[579px] xl:border-l xl:border-[#6B9429] xl:mt-0 xl:pl-[29px] xxl:w-[734px] xxl:pl-[46px]"
       >
         {% include 'components/formFields.njk' %}
       </div>
