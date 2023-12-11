@@ -8,11 +8,11 @@ node("all-biulds"){
             string(credentialsId: 'telegramChatIdJenkinsSoftryzen', variable: 'telegramNotifyChannelChatId'),
 
             //ADD FTP CREDENTIAL
-            string(credentialsId: 'ftp_user_pass_host_for_design', variable: 'ftpUserAndPass')
+            string(credentialsId: 'ftp_user_pass_host_for_frontend', variable: 'ftpUserAndPass')
         ]) {
-                env.gitRepository = 'git@github.com:GoWeb-Studio/design-goiteens.git';
+                env.gitRepository = 'https://github.com/GoWeb-Studio/frontend-goiteens-v2.git';
                 env.gitBranch = 'main';
-                env.folderPath = './';
+                env.folderPath = './v2/';
                 //
                 env.telegramNotifyChannelBotApiToken = telegramNotifyChannelBotApiToken;
                 env.telegramNotifyChannelChatId = telegramNotifyChannelChatId;
