@@ -1,63 +1,44 @@
 {% set section = learn %}
-<section
-  class="{{section.id}} py-20 md:pb-[79px] xl:pt-[170px] xl:pb-[287px] xxl:pb-[331px] overflow-hidden"
->
-  <div class="container">
-    <h2 class="section-title mb-6 md:mb-10 xl:mb-[180px] text-end xxl:mb-10">
+
+<section class="{{section.id}} overflow-hidden py-20 md:pt-[152px] xl:py-[172px] xxl:pb-[213px] xxl:pt-[218px]">
+  <div class="container font-IBMPlexSans">
+
+    <h2 class="mb-6 text-black-primary font-IBMPlexMono uppercase text-xl leading-[26px] font-semibold md:mb-10 md:text-[32px] md:leading-[42px] xl:text-right xl:mb-[180px] xl:ml-auto xxl:w-auto xxl:mb-[46px]">
       {{section.title}}
     </h2>
-    <div class="relative flex flex-col gap-5 xxl:pl-[490px]">
-      <div class="hidden xl:relative xl:z-10 xl:block xxl:w-[437px]">
-        <picture>
-          <!-- WEBP -->
-          <source
-            media="(min-width: 1600px)"
-            type="image/webp"
-            srcset="
-              ./assets/images/learn/bg-girl-desk.webp    1x,
-              ./assets/images/learn/bg-girl-desk@2x.webp 2x
-            "
-          />
-          <source
-            media="(min-width: 320px)"
-            type="image/webp"
-            srcset="./assets/images/learn/bg-girl.webp 1x, ./assets/images/learn/bg-girl@2x.webp 2x"
-          />
-          <!-- PNG (insert "image/jpeg" for JPEG) -->
-          <source
-            media="(min-width: 1600px)"
-            type="image/png"
-            srcset="
-              ./assets/images/learn/bg-girl-desk.png    1x,
-              ./assets/images/learn/bg-girl-desk@2x.png 2x
-            "
-          />
 
+    <div class="relative flex flex-col gap-5">
+
+      <div class="hidden learn__img xl:mx-auto xl:relative xl:z-10 xl:block xl:mb-[117px] xxl:w-[517px] xxl:mb-[133px]">
           <img
-            class="hidden xl:mx-auto xl:block xxl:w-[437px]"
+            class="hidden xl:block xl:relative xxl:w-[437px]"
             width="359"
             height="540"
             loading="lazy"
             alt="{{section.imgAlt}}"
-            src="./assets/images/learn/bg-girl.png"
-            srcset="./assets/images/learn/bg-girl@2x.png 2x"
+            src="./assets/images/sections/learn/learn-girl.webp"
+            srcset="./assets/images/sections/learn/learn-girl@2x.webp 2x"
           />
-        </picture>
       </div>
+
       {% for item in section.items %}
       <div
-        class="learn__item border-2 border-black-dark px-[16px] py-6 md:border-4 md:p-[32px] min-h-[155px] xl:min-h-none md:min-h-[175px]"
-        data-aos="{{item.data}}"
+        class="learn__item {{item.class}} px-4 py-6 min-h-[155px] border-2 border-black-primary md:p-7 md:border-4 md:min-h-[167px] xl:min-h-none"
+        data-aos="{{'' if loop.index == 1 else 'fade-up'}}"
         data-aos-delay="1000"
       >
         <h3
-          class="mb-4 font-IBMPlexMono text-[18px] font-semibold uppercase leading-[1.3] text-black-dark md:mb-4 md:text-[24px] xxl:text-black-light"
+          class="mb-4 font-IBMPlexMono smOnly:text-black-primary {{'text-black-primary' if loop.index == 1 else 'text-black-secondary'}} text-[18px] font-semibold uppercase leading-[23px md:mb-4 md:text-[24px] md:leading-[31px]"
         >
           {{item.title}}
         </h3>
-        <p class="learn__text text-textColor md:text-[20px] md:leading-[1.4]">{{item.text}}</p>
+
+        <p class="learn__text {{'text-[#6E6E6E]' if loop.index == 1 else 'text-black-secondary'}} text-base font-normal md:text-[20px] md:leading-[28px]">
+          {{item.text}}
+        </p>
       </div>
       {% endfor %}
+
     </div>
   </div>
 </section>

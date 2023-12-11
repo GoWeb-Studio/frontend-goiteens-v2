@@ -1,9 +1,11 @@
 .learn {
-  background-image: url('../images/learn/bg-mob.svg');
+  background-image: url('../images/sections/learn/bg-sm.svg');
   background-repeat: no-repeat;
-  background-position: top 0px center;
+
   @include mq(tablet) {
-    background-size: 1200px auto;
+    background-image: url('../images/sections/learn/bg.svg');
+    background-size: 150%;
+    background-position: top center;
   }
   @include mq(desktop) {
     background-position: top -30px center;
@@ -14,29 +16,32 @@
     background-size: 1400px auto;
   }
 
-  // &__item:nth-child(1) {
-  //   background-color: #faf5e6;
-  // }
-  &__item:nth-child(2) {
-    background-color: #faeee6;
-    color: #6e6e6e;
+  &__item {
+    background-color: #fff;
+  }
+
+  &__item.card-1 {
+    background-color: #E6F2FA;
+    background-image: url('../images/sections/learn/dots.svg');
+    background-repeat: no-repeat;
+    background-position: top -37px right -171px;
 
     @include mq(tablet) {
-      background-image: url('../images/learn/circles-tab.svg');
-      background-repeat: no-repeat;
-      background-position: right 19px top;
+      background-position: top -37px right -10px;
     }
 
     @include mq(desktop) {
       @apply flex flex-col justify-end;
-      background-image: url('../images/learn/circles-desk.svg');
+
       width: 437px;
       height: 492px;
+
       position: absolute;
       top: -135px;
       left: 51px;
-      background-position: top right;
       z-index: 1;
+
+      background-position: top 12px right 110px;
 
       .learn__text {
         width: 301px;
@@ -45,22 +50,19 @@
 
     @include mq(big-desktop) {
       top: -82px;
-      left: 83px;
-      & h3 {
-        color: #1a1a1a;
-      }
+      left: 75px;
+
       .learn__text {
-        color: #6e6e6e;
-        width: 352px;
+        width: 354px;
       }
     }
   }
 
-  &__item:nth-child(3) {
+  &__item.card-2 {
     @include mq(desktop) {
       width: 501px;
-      height: 279px;
-      padding-bottom: 82px;
+      height: 245px;
+
       position: absolute;
       top: 380px;
 
@@ -71,31 +73,34 @@
 
     @include mq(big-desktop) {
       top: 470px;
-      left: 32px;
+      left: 24px;
 
       .learn__text {
-        width: 346px;
+        width: 392px;
       }
     }
   }
 
-  &__item:nth-child(4) {
+  &__item.card-3 {
     @include mq(desktop) {
       width: 420px;
       height: 237px;
-      padding-bottom: 70px;
+
+      padding-bottom: 43px;
+
       position: absolute;
-      top: -14px;
+      top: -29px;
       right: 58px;
       z-index: 11;
-      background-color: white;
     }
 
     @include mq(big-desktop) {
-      width: 497px;
-      height: 279px;
-      top: 70px;
-      right: 80px;
+      width: 480px;
+
+      top: 100px;
+      right: 104px;
+
+      padding-right: 36px;
 
       .learn__text {
         max-width: 408px;
@@ -103,15 +108,17 @@
     }
   }
 
-  &__item:nth-child(5) {
-    background-color: #ebe6fa;
+  &__item.card-4 {
+    background-color: #F2FAE6;
 
     @include mq(desktop) {
       width: 580px;
       height: 237px;
-      padding-bottom: 74px;
+
+      padding-bottom: 18px;
+
       position: absolute;
-      top: 249px;
+      top: 232px;
       right: -44px;
       z-index: 11;
 
@@ -122,59 +129,66 @@
 
     @include mq(big-desktop) {
       width: 611px;
+
       top: 369px;
-      right: 10px;
+      right: 24px;
     }
   }
 
-  &__item:last-child {
-    background-image: url('../images/learn/waves-mob.svg');
+  &__item.card-5 {
+    background-image: url('../images/sections/learn/circles.svg');
     background-repeat: no-repeat;
-    background-position: right top 0;
-    background-size: 141px auto;
-    @include mq(tablet) {
-      background-image: url('../images/learn/waves-tab.svg');
-      background-size: 152px auto;
-    }
+    background-position: right -40px top -75px;
+    background-size: 181px auto;
 
     @include mq(desktop) {
       width: 792px;
+
       position: absolute;
-      bottom: -154px;
+      bottom: 0px;
       right: 0;
       z-index: 11;
-      background-color: white;
-      background-image: url('../images/learn/waves-desk.svg');
-      background-position: right 0px center;
 
+      background-position: right 0px center;
       .learn__text {
-        width: 622px;
+        width: 623px;
       }
     }
 
     @include mq(big-desktop) {
       width: 900px;
-      bottom: -121px;
+
+      bottom: 0;
       right: 146px;
-      background-size: 160px auto;
-      background-position: right top 0;
-      background-image: url('../images/learn/waves-big-desk.svg');
 
       .learn__text {
-        width: 791px;
+        width: 615px;
       }
     }
   }
-  &__item:nth-child(2) {
-    background-image: url('../images/learn/circle-mob.svg');
+
+  &__img::after {
+    content: '';
+
+    width: 214px;
+    height: 107px;
+
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+
+    background-image: url('../images/sections/learn/learn-img.svg');
     background-repeat: no-repeat;
-    background-position: right top;
-    @include mq(tablet) {
-      background-image: url('../images/learn/circles-tab.svg');
-    }
-    @include mq(desktop) {
-      background-image: url('../images/learn/circles-desk.svg');
-      background-position: left 32px top 12px;
+    background-size: 100%;
+
+    @include mq(big-desktop) {
+      background-image: url('../images/sections/learn/learn-img-xxl.svg');
+
+      width: 253px;
+      height: 183px;
+
+      bottom: -18px;
+      left: 4px;
     }
   }
 }
