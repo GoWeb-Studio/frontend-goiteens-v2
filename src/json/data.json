@@ -837,7 +837,7 @@
   "form": {
     "id": "modalForm",
     "btnCloseAria": "Запис на безоплатне заняття",
-    "title": "Запис на безоплатне заняття",
+    "title": "Запис <br class=\"hidden smOnly:block\">на безоплатний урок",
     "text": "*Записавшись це заняття, ви також <span class=\"font-bold\">безкоштовно отримаєте презентацію</span> з детальним описом програми всього курсу",
     "steps": ["1", "2", "3"],
     "INPUTS_EXPAMPLE": "Все доступные поля для формы лежат в файле 'allFormInputs.json' - скопируйте нужный обьект, и вставьте его ниже в массив inputs",
@@ -854,7 +854,7 @@
         "title": "",
         "type": "tel",
         "name": "phone",
-        "placeholder": "",
+        "placeholder": "+38 (066) 123 45 67",
         "dataField": "phone",
         "required": true
       },

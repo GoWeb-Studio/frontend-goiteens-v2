@@ -8,23 +8,64 @@
 }
 
 .modal-close-btn {
-  @apply absolute right-5 top-7 grid h-10 w-10 place-items-center rounded-full fill-black-light p-0 duration-300 ease-linear hover:fill-accent focus:fill-accent md:right-6 md:top-6;
+  @apply absolute right-8 top-6 grid h-6 w-6 place-items-center rounded-full fill-black-light p-0 duration-300 ease-linear hover:fill-accent focus:fill-accent md:right-9 md:top-6;
 }
 
+// .modal-close-btn {
+//   @apply absolute right-5 top-7 grid h-10 w-10 place-items-center rounded-full fill-black-light p-0 duration-300 ease-linear hover:fill-accent focus:fill-accent md:right-6 md:top-6;
+// }
+
+// .modal {
+//   @apply m-auto flex w-full max-w-[336px] translate-x-0 translate-y-0 scale-100 flex-col justify-evenly rounded-3xl p-5 pb-6 ease-linear only:duration-300 md:max-w-[640px] md:rounded-[40px] md:px-20 md:pb-10 md:pt-6;
+
+//   background-repeat: no-repeat;
+//   background-image: url('../images/form/bg-modal.svg');
+//   background-size: 104px auto;
+//   background-position: top 6px left;
+
+//   @include mq(tablet) {
+//     background-position: top -24px left;
+//      background-size:200px auto;
+//   }
+
+//   .is-hidden & {
+//     @apply opacity-0 duration-300 ease-linear;
+//   }
+// }
+
 .modal {
-  @apply m-auto flex w-full max-w-[336px] translate-x-0 translate-y-0 scale-100 flex-col justify-evenly rounded-3xl p-5 pb-6 ease-linear only:duration-300 md:max-w-[640px] md:rounded-[40px] md:px-20 md:pb-10 md:pt-6;
-
-  background-repeat: no-repeat;
-  background-image: url('../images/form/bg-modal.svg');
-  background-size: 104px auto;
-  background-position: top 6px left;
-
-  @include mq(tablet) {
-    background-position: top -24px left;
-     background-size:200px auto;
-  }
+  @apply m-auto flex w-full max-w-[340px] translate-x-0 translate-y-0 flex-col rounded-3xl px-5 pt-5 pb-6 opacity-100 duration-300 ease-linear md:max-w-[640px] md:px-20 md:pt-6 md:pb-10;
 
   .is-hidden & {
     @apply opacity-0 duration-300 ease-linear;
+  }
+
+  & form .inputs-container {
+    @apply gap-[37px] md:px-2 md:gap-[52px]
+  }
+
+  & .input-field {
+    @apply min-w-[300px] py-[15px] px-4 text-[#999] font-IBMPlexSans text-sm font-normal leading-[18px] md:py-[17px] md:px-8 md:text-[24px] md:leading-8;
+
+    &::placeholder {
+      @apply text-[#999] font-IBMPlexSans text-sm font-normal leading-[18px] md:text-[24px] md:leading-8;
+    }
+  }
+
+  & input[type='tel'].input-field {
+    @apply pl-14 md:pl-[60px] min-w-[300px] md:min-w-[465px] ;
+  }
+
+  & .btnSubmit {
+    @apply mt-[37px] mb-3 text-white font-normal text-[16px] leading-[21px] py-[14px] rounded-[144px] bg-[#5331B2] md:text-[24px] md:leading-8 md:py-[18px] md:mb-6 md:mt-[54px] md:max-w-[465px] md:mx-2;
+  }
+}
+
+.modal {
+  @include mq(tablet) {
+    background-image: url("../images/sprite.svg#modal-bg");
+    background-repeat: no-repeat;
+    background-position: left -145px top 0;
+    background-size: contain;
   }
 }
