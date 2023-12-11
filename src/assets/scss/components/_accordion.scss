@@ -24,14 +24,14 @@
 .program {
   .accordion-item {
     &[aria-expanded='true'] .accordion-btn {
-      color: #653cd9;
+      color: #82B232;
     }
 
     &[aria-expanded='true'] .accordion-svg {
       transform: translateY(-50%) rotate(180deg);
       transform-origin: center;
-      fill: #653cd9;
-      stroke: #653cd9;
+      fill: #82B232;
+      stroke: #82B232;
     }
     &[aria-expanded='true'] .accordion-answer {
       padding-top: 4px;

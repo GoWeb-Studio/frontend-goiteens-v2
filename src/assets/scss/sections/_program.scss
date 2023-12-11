@@ -1,12 +1,12 @@
 .program {
   background-repeat: no-repeat;
-  background-image: url('../images/program/bg.svg');
+  background-image: url('../images/sections/program/bg.svg');
   background-size: cover;
   // background-position: top -32px left calc(50% + 101px);
 
   @include mq(tablet) {
     background-size: cover;
-    background-position: top left calc(50% + 360px);
+    background-position: top left 50%;
   }
 
   @include mq(desktop) {
@@ -22,22 +22,22 @@
   &-wrapper {
     @include mq(big-desktop) {
       background-repeat: no-repeat;
-      background-image: url('../images/program/bg.svg');
+      background-image: url('../images/sections/program/bg.svg');
       background-size: 1478px auto;
-      background-position: top -150px left;
+      background-position: top -150px left 58px;
     }
   }
   .program-bg[aria-expanded='true'] {
-    @include mq(tablet) {
+    @include mq(desktop) {
       background-repeat: no-repeat;
-      background-image: url('../images/program/bg-card.svg');
+      background-image: image-set(url("../images/sections/program/bg-card.webp") 1x,url("../images/sections/program/bg-card@2x.webp") 2x);
       background-size: 193px auto;
 
       background-position: bottom right;
     }
-    @include mq(desktop) {
+    @include mq(big-desktop) {
       background-repeat: no-repeat;
-      background-image: url('../images/program/bg-card.svg');
+      background-image: image-set(url("../images/sections/program/bg-card.webp") 1x,url("../images/sections/program/bg-card@2x.webp") 2x);
 
       background-position: bottom right;
     }
@@ -75,23 +75,23 @@
   }
 
   .item-click > .accordion-btn {
-    fill: #a38aed;
-    color: #a38aed;
-    stroke: #a38aed;
+    fill: #82B232;
+    color: #82B232;
+    stroke: #82B232;
   }
-  .item-click:hover > .accordion-btn {
-    fill: #5331b2;
-    color: #5331b2;
-    stroke: #5331b2;
-  }
-  .item-click:active > .accordion-btn {
-    fill: #452994;
-    color: #452994;
-    stroke: #452994;
-  }
-  .accordion-item[aria-expanded='true'] > .accordion-btn {
-    fill: #452994 !important;
-    color: #452994 !important;
-    stroke: #452994 !important;
-  }
+  // .item-click:hover > .accordion-btn {
+  //   fill: #5331b2;
+  //   color: #5331b2;
+  //   stroke: #5331b2;
+  // }
+  // .item-click:active > .accordion-btn {
+  //   fill: #452994;
+  //   color: #452994;
+  //   stroke: #452994;
+  // }
+  // .accordion-item[aria-expanded='true'] > .accordion-btn {
+  //   fill: #452994 !important;
+  //   color: #452994 !important;
+  //   stroke: #452994 !important;
+  // }
 }
