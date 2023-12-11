@@ -5,17 +5,18 @@
     <h2 class="section-title mb-8 xl:hidden">{{section.title}}</h2>
     <div class="mobile-wrapper xl:grid xl:grid-cols-2 xl:gap-x-6">
       <div class="bg-dots">
-        <div class="-mx-5 mb-10 bg-[#EBE6FA] px-5 py-6 md:mx-0 md:px-8 md:py-10 xl:mb-0">
+        <!-- TOP PART -->
+        <div class="-mx-5 mb-10 bg-[#F2FAE6] px-5 py-6 md:mx-0 md:px-8 md:py-10 xl:mb-0">
           <h3
             class="mb-7 font-IBMPlexMono text-[18px] font-semibold uppercase text-black-1A md:mb-6 md:text-2xl xxl:text-center"
           >
             {{mob.title}}
           </h3>
 
-          <ul class="mb-6 flex flex-wrap gap-y-6 text-[12px] text-black-1A md:mb-10 md:text-xl xl:justify-center">
+          <ul class="mb-6 flex flex-wrap gap-y-6 text-[12px] text-black-primary md:mb-10 md:text-xl xl:justify-center">
             {% for item in mob.list %}
             <li
-              class="rounded-[16px] bg-[#C2B0F5] px-3 py-1 odd:mr-2 md:rounded-3xl md:px-6 md:py-3 md:odd:mr-6"
+              class="rounded-[16px] bg-[#C7ED8A] px-3 py-1 odd:mr-2 md:rounded-3xl md:px-6 md:py-3 md:odd:mr-6"
             >
               {{item}}
             </li>
@@ -26,17 +27,28 @@
           <ul class="program-list-top text-[14px] md:text-[16px] text-[#6E6E6E]">
             {% for item in mob.learnList %}
             <li
-              class="program-item mb-5 before:mb-2 before:block before:h-7 after:mt-4 after:block after:h-[1px] after:bg-[#C2B0F5] last:after:content-none"
+              class="program-item mb-5 after:mt-4 after:block after:h-[1px] after:bg-[#C7ED8A] last:after:content-none"
+            >
+              <h4
+                class="title mb-[4px] flex items-center gap-x-3 font-semibold before:inline-block before:h-8 before:w-8"
+              >
+                {{item.title}}
+              </h4>
+              <p class="text-[#6E6E6E]">{{item.text}}</p>
+            </li>
+            <!-- <li
+              class="program-item mb-5 before:mb-2 before:block before:h-7 after:mt-4 after:block after:h-[1px] after:bg-[#C7ED8A] last:after:content-none"
             >
               {{item.text}}
-            </li>
+            </li> -->
             {% endfor %}
           </ul>
         </div>
       </div>
       <div>
         <h2 class="section-title mb-[56px] hidden text-end xl:block">{{section.title}}</h2>
-        <div class="-mx-5 bg-[#FAEEE6] px-5 py-6 md:mx-0 md:px-8 md:py-10">
+        <!-- BOTTOM PART -->
+        <div class="-mx-5 bg-[#E6F2FA] px-5 py-6 md:mx-0 md:px-8 md:py-10">
           <h3
             class="mb-7 font-IBMPlexMono text-[18px] font-semibold uppercase text-black-1A md:mb-6 md:text-2xl xxl:text-center"
           >
@@ -46,7 +58,7 @@
           <ul class="mb-6 flex flex-wrap gap-y-6 text-[12px] text-black-1A md:mb-10 md:text-xl xl:justify-center">
             {% for item in bott.list %}
             <li
-              class="rounded-[16px] bg-[#F5BFB8] px-3 py-1 odd:mr-2 md:rounded-3xl md:px-6 md:py-3 md:odd:mr-6"
+              class="rounded-[16px] bg-[#90C8F0] px-3 py-1 odd:mr-2 md:rounded-3xl md:px-6 md:py-3 md:odd:mr-6"
             >
               {{item}}
             </li>
@@ -57,7 +69,7 @@
           <ul class="program-list-bott">
             {% for item in bott.learnList %}
             <li
-              class="program-item mb-5 after:mt-4 after:block after:h-[1px] after:bg-[#F5D1B8] last:after:content-none"
+              class="program-item mb-5 after:mt-4 after:block after:h-[1px] after:bg-[#C2B0F5] last:after:content-none"
             >
               <h4
                 class="title mb-[4px] flex items-center gap-x-3 font-semibold before:inline-block before:h-8 before:w-8"

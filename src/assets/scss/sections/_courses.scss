@@ -1,20 +1,52 @@
 .courses {
   .program-list-top {
-    @for $i from 1 to 4 {
-      .program-item:nth-child(#{$i})::before {
-        background-image: url('../images/sections/courses/#{$i}.png');
+    @for $i from 1 to 7 {
+      .program-item:nth-child(#{$i}) .title::before {
+        background-image: url('../images/sections/courses/#{$i}.webp');
         background-repeat: no-repeat;
         background-size: contain;
       }
+    }
+
+    .program-item:nth-child(#{3}) .title::before {
+      display: none;
+    }
+
+    .program-item:nth-child(#{3})::before {
+      content: '';
+
+      display: block;
+      height: 28px;
+      margin-bottom: 8px;
+
+      background-image: url('../images/sections/courses/3.webp');
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
   .program-list-bott {
     @for $i from 1 to 7 {
       .program-item:nth-child(#{$i}) .title::before {
-        background-image: url('../images/sections/courses/bott/#{$i}.svg');
+        background-image: url('../images/sections/courses/bott/#{$i}.webp');
         background-repeat: no-repeat;
         background-size: contain;
       }
+    }
+
+    .program-item:nth-child(#{7}) .title::before {
+      display: none;
+    }
+
+    .program-item:nth-child(#{7})::before {
+      content: '';
+
+      display: block;
+      height: 28px;
+      margin-bottom: 8px;
+
+      background-image: url('../images/sections/courses/bott/7.webp');
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 
