@@ -31,8 +31,4 @@
     height: 16px;
     margin-top: 6px;
   }
-  @include mq(tablet) {
-    padding-top: 212px;
-    padding-bottom: 212px;
-  }
 }

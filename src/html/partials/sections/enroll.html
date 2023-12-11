@@ -1,11 +1,11 @@
 {% set section = enroll %}
 <section
-  class="{{section.id}} bg-[#F2FAE6] pt-20 pb-10 md:pb-[100px] xl:pt-[130px] xl:pb-[130px] xxl:pb-[156px] md:pt-[72px]"
+  class="{{section.id}} bg-[#FAEEE6] py-20 xl:pt-[130px] xl:pb-[130px] xxl:pb-[156px] md:pt-[72px]"
 >
   <div class="container">
     <div class="xl:mx-auto xl:max-w-[982px]">
       <h2
-        class="section-title mb-5 text-center md:mb-10 md:max-w-[600px] md:text-start xl:mb-[56px] xl:max-w-none smOnly:text-[18px] smOnly:leading-[1.3]"
+        class="section-title mb-12 text-center md:mb-10 md:text-start xl:mb-[56px] xl:max-w-none smOnly:text-[18px] smOnly:leading-[1.3]"
       >
         {{section.title}}
       </h2>
@@ -19,6 +19,7 @@
         {% for item in section.items %}
         <li>
           <p class="mb-10 font-IBMPlexMono text-lg font-semibold md:mb-8 md:text-2xl xxl:mb-[56px]">
+            <span class="block mb-2 text-[14px] md:text-xl font-normal">{{item.subtitle}}</span>
             {{item.format}}
           </p>
           <h3 class="mb-2 font-IBMPlexMono text-[14px] font-normal md:text-xl">{{item.title}}</h3>
