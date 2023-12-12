@@ -13,30 +13,19 @@
           <li class="xl:flex xl:gap-11">
             <div class="reviews-img relative mb-6 inline-block pb-4 pl-4 md:mb-10">
               <div class="relative border-b-[3px] border-l-[3px] border-black-dark pb-2 pl-2">
-                <picture>
-                  <!-- WEBP -->
-                  <source
-                    type="image/webp"
-                    srcset="
-										./assets/images/reviews/{{ card.img }}.webp 1x,
-										./assets/images/reviews/{{ card.img }}@2x.webp 2x
-									"
-                  />
-                  <!-- PNG -->
-                  <img
-                    width="299"
-                    height="438"
-                    loading="lazy"
-                    alt="{{ card.alt }}"
-                    src="./assets/images/reviews/{{ card.img }}.png"
-                    srcset="./assets/images/reviews/{{ card.img }}@2x.png 2x"
-                  />
-                </picture>
-              </div>
+                <img
+                   width="299"
+                   height="438"
+                   loading="lazy"
+                   alt="{{ card.alt }}"
+                   src="./assets/images/sections/reviews/{{ card.img }}.webp"
+                   srcset="./assets/images/sections/reviews/{{ card.img }}@2x.webp 2x"
+                 />
+             </div>
               <a
                 class="group absolute bottom-0 left-0 z-[2] flex h-[84px] w-[84px] transform items-center justify-center bg-[#FEC830] duration-500 hover:rotate-45 focus:rotate-45 active:bg-[#F0CD60]"
                 rel="noopener noreferrer nofollow"
-                href="https://www.youtube.com/watch?v=jQpQLBlDHW0&ab_channel=GoITeens"
+                href="{{ card.link }}"
                 target="_blank"
                 aria-label="Кнопка програвання відео"
               >
