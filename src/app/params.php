@@ -39,17 +39,17 @@ $ini_array = parse_ini_file('params.ini');
       <input type="text" name="PRODUCT_ID" value="<?= $ini_array['PRODUCT_ID'] ?>" placeholder="<?= $ini_array['PRODUCT_ID'] ?>" />
     </label>
 
-    <div style="display: flex; flex-direction: row; gap: 20px">
-      <!-- <label style="width: 50%">
+    <!-- <div style="display: flex; flex-direction: row; gap: 20px">
+      <label style="width: 50%">
         Leeloo Hash
         <input type="text" name="LEELOO_HASH" value="<?= $ini_array['LEELOO_HASH'] ?>" placeholder="<?= $ini_array['LEELOO_HASH'] ?>" />
-      </label> -->
+      </label>
 
       <label style="width: 50%">
         Elza Token
         <input type="text" name="ELZA_TOKEN" value="<?= $ini_array['ELZA_TOKEN'] ?>" placeholder="<?= $ini_array['ELZA_TOKEN'] ?>" />
       </label>
-    </div>
+    </div> -->
 
     <label>
       GTM
