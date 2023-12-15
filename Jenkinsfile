@@ -10,7 +10,7 @@ node("all-biulds"){
             //ADD FTP CREDENTIAL
             string(credentialsId: 'ftp_user_pass_host_for_frontend', variable: 'ftpUserAndPass')
         ]) {
-                env.gitRepository = 'https://github.com/GoWeb-Studio/frontend-goiteens-v2.git';
+                env.gitRepository = 'git@github.com:GoWeb-Studio/frontend-goiteens-v2.git';
                 env.gitBranch = 'main';
                 env.folderPath = './v2/';
                 //
