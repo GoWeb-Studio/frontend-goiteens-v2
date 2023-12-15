@@ -50,12 +50,32 @@
   z-index: -2;
 }
 
-// .reviews-btn-prev {
-//   background-image: url(../images/sections/reviews/reviews-left-btn.svg);
-//   background-repeat: no-repeat;
-// }
+.reviews-btn-prev {
+  background-image: url(../images/sections/reviews/reviews-left-btn.svg);
+  background-repeat: no-repeat;
 
-// .reviews-btn-next {
-//   background-image: url(../images/sections/reviews/reviews-right-btn.svg);
-//   background-repeat: no-repeat;
-// }
+  transition: all 300ms ease-in;
+
+  &:hover, &:focus {
+    background-image: url(../images/sections/reviews/reviews-left-btn-hov.svg);
+  }
+
+  &:active {
+    background-image: url(../images/sections/reviews/reviews-left-btn-act.svg);
+  }
+}
+
+.reviews-btn-next {
+  background-image: url(../images/sections/reviews/reviews-right-btn.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover, &:focus {
+    background-image: url(../images/sections/reviews/reviews-right-btn-hov.svg);
+  }
+
+  &:active {
+    background-image: url(../images/sections/reviews/reviews-right-btn-act.svg);
+  }
+}

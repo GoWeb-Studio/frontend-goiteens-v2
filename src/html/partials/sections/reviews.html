@@ -8,7 +8,7 @@
         {{ section.title }}
       </h2>
       <div class="relative">
-        <ul>
+        <ul class="review-slider-js xl:ml-[27px] xl:max-w-[968px] xxl:ml-5">
           {% for card in section.cards %}
           <li class="xl:flex xl:gap-11">
             <div class="reviews-img relative mb-6 inline-block pb-4 pl-4 md:mb-10">
@@ -22,6 +22,7 @@
                    srcset="./assets/images/sections/reviews/{{ card.img }}@2x.webp 2x"
                  />
              </div>
+             <!-- PLAY BUTTON -->
               <a
                 class="group absolute bottom-0 left-0 z-[2] flex h-[84px] w-[84px] transform items-center justify-center bg-[#FEC830] duration-500 hover:rotate-45 focus:rotate-45 active:bg-[#F0CD60]"
                 rel="noopener noreferrer nofollow"
@@ -38,7 +39,7 @@
                   <use href="./assets/images/sprite.svg#{{ section.svgPlay }}"></use>
                 </svg>
               </a>
-              <!-- END PLAY BUTTON -->
+
               <span class="absolute bottom-9 left-[136px] font-IBMPlexMono text-sm text-white">
                 {{ card.imgTitle }}
               </span>
@@ -52,25 +53,23 @@
           </li>
           {% endfor %}
         </ul>
-        <!-- SLIDER BUTTONS -->
 
-        {#
+        <!-- SLIDER BUTTONS -->
         <div
           class="mt-10 flex items-center justify-center gap-2 md:absolute md:right-0 md:top-[387px] md:mt-0 xl:left-0"
         >
           <button
-            class="reviews-btn-prev h-[62px] w-[111px] rounded-full"
+            class="review-prev-but-js reviews-btn-prev h-[62px] w-[111px] rounded-full"
             aria-label="кнопка попередній слайд"
             type="button"
           ></button>
           <button
-            class="reviews-btn-next h-[62px] w-[111px] rounded-full"
+            class="review-next-but-js reviews-btn-next h-[62px] w-[111px] rounded-full"
             aria-label="кнопка наступний слайд"
             type="button"
           ></button>
         </div>
-        #}
-        <!-- END SLIDER BUTTONS -->
+
       </div>
     </div>
   </div>
