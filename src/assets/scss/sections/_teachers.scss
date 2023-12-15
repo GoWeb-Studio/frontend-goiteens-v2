@@ -1,21 +1,24 @@
+/*! purgecss start ignore */
+
 .teachers {
   @include mq(tablet) {
-    background: url('../images/teachers/bg-tab.svg');
+    background: image-set(url('../images/sections/teachers/teachers-bg-md.webp') 1x,url('../images/sections/teachers/teachers-bg-md@2x.webp') 2x);
     background-repeat: no-repeat;
-    background-size: 276px auto;
-    background-position: right top;
+    background-size: contain;
+    background-position: right;
   }
 
   @include mq(desktop) {
-    background: url('../images/teachers/bg-desk.svg');
-    background-size: 788px auto;
+    background: image-set(url('../images/sections/teachers/teachers-bg-xl.webp') 1x,url('../images/sections/teachers/teachers-bg-xl@2x.webp') 2x);
     background-repeat: no-repeat;
+    background-size: contain;
     background-position: right;
   }
+
   @include mq(big-desktop) {
-    background: url('../images/teachers/bg-big.svg');
-    background-size: 770px auto;
+    background: image-set(url('../images/sections/teachers/teachers-bg-xxl.webp') 1x,url('../images/sections/teachers/teachers-bg-xxl@2x.webp') 2x);
     background-repeat: no-repeat;
+    background-size: contain;
     background-position: right;
   }
 
@@ -33,3 +36,4 @@
     // filter: blur(22px);
   }
 }
+/*! purgecss end ignore */

@@ -1,46 +1,46 @@
 {% set section = teachers %}
-<section class="{{section.id}} py-10 relative overflow-hidden md:pt-[156px] md:pb-[190px] xl:pt-[248px] xl:pb-[112px]">
+<!-- purgecss start ignore -->
+<section class="{{section.id}} pb-20 relative overflow-hidden md:pt-[262px] md:pb-10 xl:pt-[306px] xxl:pt-[348px]">
   <div class="container">
-    <h2 class="section-title mb-12 md:mb-[84px] xl:mb-20 xxl:pl-[350px] xxl:mb-[40px]">{{section.title}}</h2>
+    <h2 class="mb-[60px] font-IBMPlexMono text-[20px] font-semibold uppercase leading-[26px] text-black-primary md:text-[32px] md:leading-[42px] md:mb-[84px] mdOnly:w-[307px] xl:mb-[82px] xxl:pl-[274px] xxl:mb-[40px]">
+      {{section.title}}
+    </h2>
     <ul class="teachers-slider">
       {% for item in section.items %}
       <li
-        class="teachers-item group relative min-w-[340px] cursor-pointer overflow-hidden smOnly:mx-auto"
+        class="teachers-item group relative min-w-[340px] max-h-[430px] cursor-pointer overflow-hidden smOnly:mx-auto"
       >
-        <picture>
-          <!-- WEBP -->
-          <source
-            type="image/webp"
-            srcset="
-              ./assets/images/teachers/{{ item.img }}.webp 1x,
-              ./assets/images/teachers/{{ item.img }}@2x.webp 2x
-            "
-          />
-          <!-- PNG -->
-          <img
-            width="340"
-            height="430"
-            loading="lazy"
-            alt="{{ item.name }}"
-            src="./assets/images/teachers/{{ item.img }}.png"
-            srcset="./assets/images/teachers/{{ item.img }}@2x.png 2x"
-            class="w-full"
-          />
-        </picture>
+        <img
+          width="340"
+          height="430"
+          loading="lazy"
+          alt="{{ item.name }}"
+          src="./assets/images/sections/teachers/{{ item.img }}.webp"
+          srcset="./assets/images/sections/teachers/{{ item.img }}@2x.webp 2x"
+          class="w-full"
+        />
+        {% if item.title%}
+        <h3 class="absolute bottom-[55px] right-20 xs:right-5 z-[2] text-xl font-normal leading-[26px] normal-case text-[#A38AED]">
+          {{ item.title }}
+        </h3>
+        {% endif %}
+
         {% if item.name%}
-        <h3 class="absolute bottom-5 right-5 z-[2] text-2xl font-medium normal-case text-white">
+        <h3 class="absolute bottom-5 right-20 xs:right-5 z-[2] text-2xl font-medium normal-case text-white">
           {{ item.name }}
         </h3>
         {% endif %}
 
         <div
-          class="teachers-wrapper absolute left-0 top-0 z-[1] h-full w-full opacity-0 shadow-black duration-300 ease-out group-hover:opacity-100 group-focus:opacity-100"
+          class="teachers-wrapper absolute left-0 top-0 z-[1] h-full w-[280px] xs:w-full opacity-0 shadow-black duration-300 ease-out bg-cardGradient group-hover:opacity-100 group-focus:opacity-100"
         >
           <ul
             class="absolute left-0 top-0 z-[2] h-full w-full space-y-2 px-6 py-8 text-white marker:w-[6px] marker:pl-6 marker:text-white"
           >
             {% for skill in item.skills %}
-            <li class="ml-6 list-disc">{{ skill.text }}</li>
+            <li class="ml-6 list-disc text-base font-IBMPlexSans font-normal leading-[21px]">
+              {{ skill.text }}
+            </li>
             {% endfor %}
           </ul>
         </div>
@@ -49,3 +49,4 @@
     </ul>
   </div>
 </section>
+<!-- purgecss end ignore -->
