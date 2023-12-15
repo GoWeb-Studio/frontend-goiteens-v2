@@ -4,14 +4,14 @@
     position: absolute;
 
     left: 16px;
-    background-image: url('../images/wait/arrow-violet.svg');
+    background-image: url('../images/sections/wait/arrow-violet.svg');
   }
   .wait-list-item:nth-child(1)::before {
     content: '';
     position: absolute;
 
     right: 125px;
-    background-image: url('../images/wait/arrow-orange.svg');
+    background-image: url('../images/sections/wait/arrow-orange.svg');
     @include mq(tablet) {
       right: 255px;
     }
@@ -27,7 +27,7 @@
     position: absolute;
 
     right: 125px;
-    background-image: url('../images/wait/arrow-orange.svg');
+    background-image: url('../images/sections/wait/arrow-orange.svg');
     @include mq(tablet) {
       right: 255px;
     }
@@ -44,7 +44,7 @@
     position: absolute;
 
     left: 16px;
-    background-image: url('../images/wait/arrow-violet.svg');
+    background-image: url('../images/sections/wait/arrow-violet.svg');
   }
   .wait-list-item:nth-child(5)::after {
     content: '';
@@ -52,30 +52,30 @@
 
     left: 50%;
 
-    background-image: url('../images/wait/arrow-violet.svg');
+    background-image: url('../images/sections/wait/arrow-violet.svg');
   }
   .wait-list-item:nth-child(6) {
     background-repeat: no-repeat;
-    background-image: url('../images/wait/bg-6.svg');
+    background-image: url('../images/sections/wait/bg-6.svg');
     background-position: bottom left;
     @include mq(tablet) {
-      background-image: url('../images/wait/bg-6-tab.svg');
+      background-image: url('../images/sections/wait/bg-6-tab.svg');
     }
     @include mq(desktop) {
-      background-image: url('../images/wait/bg-6-desk.svg');
+      background-image: url('../images/sections/wait/bg-6-desk.svg');
       background-position: top left;
     }
   }
   .wait-list-item:nth-child(2) {
     background-repeat: no-repeat;
     color: #1A1A1A;
-    background-image: url('../images/wait/bg-2.svg');
+    background-image: url('../images/sections/wait/bg-2.svg');
     background-position: top right;
     @include mq(tablet) {
-      background-image: url('../images/wait/bg-2-tab.svg');
+      background-image: url('../images/sections/wait/bg-2-tab.svg');
     }
     @include mq(desktop) {
-      background-image: url('../images/wait/bg-2-desk.svg');
+      background-image: url('../images/sections/wait/bg-2-desk.svg');
     }
   }
   .wait-list-item::after {

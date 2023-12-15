@@ -505,14 +505,14 @@
 
   "wait": {
     "id": "wait",
-    "title": "Що чекає на вашу дитину, якщо вже зараз ви подаруєте<br class=\"hidden xxl:block\"> їй можливість вивчати Digital Design в IT&#8212;академії GoITeens?",
+    "title": "Яким може бути майбутнє підлітка, <br class=\"hidden xxl:block\">якщо вже зараз він почне вивчати Frontend в IT-академії GoITeens?",
     "grid": {
-      "first": "<span class=\"font-semibold\">Зараз дитина тут:</span><br> Бажання познайомитися зі сферою цифрового дизайну та реалізувати творчий потенціал",
-      "second": "В 13-16 років<br class=\"hidden xl:block\"> Професійний курс <span class=\"font-semibold\">Digital Design</span>",
-      "third": "В 10-12 років<br class=\"hidden md:block\"> початковий курс <span class=\"font-semibold\">Design Junior</span>",
-      "fourth": "В 13-16 років<br class=\"hidden md:block\"> Професійний курс<br class=\"hidden md:block xl:hidden\"> <span class=\"font-semibold\">Digital Design</span>",
-      "fifth": "Робота в комерційному проєкті на посаді <span class=\"font-semibold\">Junior Designer</span> aбо <span class=\"font-semibold\">фриланс. <br class=\"hidden xl:block\">30%</span> наших студентів починають заробляти перші гроші вже під час навчання",
-      "sixth": "Стрімкий розвиток кар’єри, заробітна плата від <span class=\"font-semibold\">$2300</span><br class=\"hidden xl:block\"> та можливість працювати віддалено,подорожуючи світом"
+      "first": "<span class=\"font-semibold\">Зараз дитина тут:</span><br>Цікавиться технологіями, багато часу проводить за комп’ютером та мріє стати айтівцем",
+      "second": "В 12-17 років<br class=\"hidden md:block\"> Професійний курс <span class=\"font-semibold\">Frontend</span>",
+      "third": "В 10-11 років<br class=\"hidden xl:block\"> початковий курс <span class=\"font-semibold\">Frontend Junior</span>",
+      "fourth": "В 12-17 років<br class=\"hidden md:block\"> Професійний курс <span class=\"font-semibold\">Frontend</span>",
+      "fifth": "Посада <span class=\"font-semibold\">Junior frontend developer</span> в IT компанії, агенції чи стартапі або робота на фрилансі <br class=\"hidden xl:block\"><span class=\"font-semibold\">30% наших студентів починають заробляти перші гроші вже під час навчання</span>",
+      "sixth": "Стрімкий розвиток кар’єри, заробітна плата від <span class=\"font-semibold\">$2500</span><br class=\"hidden xl:block\"> та можливість працювати з будь-якою компанією світу"
     }
   },
   "teachers": {
