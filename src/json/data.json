@@ -49,7 +49,7 @@
   },
   "courses": {
     "id": "courses",
-    "title": "дитина цікавиться технологіями? <br>Варто спробувати Frontend",
+    "title": "дитина цікавиться технологіями? <br class=\"smOnly:hidden\">Варто спробувати Frontend",
     "mobWrapper": {
       "top": {
         "title": "Початковий курс Frontend Junior",
