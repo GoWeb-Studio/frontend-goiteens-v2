@@ -652,35 +652,37 @@
     "items": [
       {
         "number": "8+",
-        "text": "Років навчаємо дітей"
+        "text": "Років навчаємо дітей",
+        "class": "item-1"
       },
       {
-        "number": "45000+",
-        "text": "Дітей навчалося в <br class=\"mdOnly:hidden\">академії GoITeens"
+        "number": "50000+",
+        "text": "Дітей навчалося в <br class=\"hidden mdOnly:block\">академії GoITeens",
+        "class": "item-2"
       },
       {
         "number": "3600+",
-        "text": "Проєктів створено"
-      },
-      {
-        "number": "9000+",
-        "text": "Дітей одночасно <br class=\"hidden smOnly:block\">навчаються в академії"
-      },
-      {
-        "number": "500+",
-        "text": "Викладачів"
+        "text": "Проєктів створено",
+        "class": "item-3"
       },
       {
         "number": "56000+",
-        "text": "Занять проведено <br class=\"hidden mdOnly:block xxl:block\">протягом року"
+        "text": "Занять проведено <br>протягом року",
+        "class": "item-4"
+      },
+      {
+        "number": "500+",
+        "text": "Викладачів",
+        "class": "item-5"
       },
       {
         "img": "award-1",
-        "width": "131",
+        "width": "118",
         "height": "130",
         "alt": "нагорода X-RAY AWARD",
-        "title": "X-RAY AWARD",
-        "text": "Переможці премії X-RAY в номінації «Метавсесвіт та штучний інтелект»"
+        "title": "X-RAY award",
+        "text": "Переможці премії X-RAY в номінації <br>«Метавсесвіт та штучний інтелект»",
+        "class": "item-6"
       }
     ]
   },
