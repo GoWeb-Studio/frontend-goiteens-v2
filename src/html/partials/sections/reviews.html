@@ -10,7 +10,7 @@
       <div class="relative">
         <ul class="review-slider-js xl:ml-[27px] xl:max-w-[968px] xxl:ml-5">
           {% for card in section.cards %}
-          <li class="xl:flex xl:gap-11">
+          <li class="xl:!flex xl:!gap-11">
             <div class="reviews-img relative mb-6 inline-block pb-4 pl-4 md:mb-10">
               <div class="relative border-b-[3px] border-l-[3px] border-black-dark pb-2 pl-2">
                 <img
@@ -31,7 +31,7 @@
                 aria-label="Кнопка програвання відео"
               >
                 <svg
-                  class="transform duration-500 group-hover:-rotate-45 group-focus:-rotate-45"
+                  class="transform duration-500 group-hover:-rotate-45 group-focus:-rotate-45 cursor-pointer"
                   width="48"
                   height="48"
                   aria-label="Іконка плей"
@@ -56,15 +56,15 @@
 
         <!-- SLIDER BUTTONS -->
         <div
-          class="mt-10 flex items-center justify-center gap-2 md:absolute md:right-0 md:top-[387px] md:mt-0 xl:left-0"
+          class="mt-10 flex items-center justify-center gap-2 md:absolute md:right-0 md:top-[387px] md:mt-0 md:w-[230px] xl:left-[400px] xl:right-auto"
         >
           <button
-            class="review-prev-but-js reviews-btn-prev h-[62px] w-[111px] rounded-full"
+            class="review-prev-but-js reviews-btn-prev relative h-[62px] w-[111px] rounded-full"
             aria-label="кнопка попередній слайд"
             type="button"
           ></button>
           <button
-            class="review-next-but-js reviews-btn-next h-[62px] w-[111px] rounded-full"
+            class="review-next-but-js reviews-btn-next relative h-[62px] w-[111px] rounded-full"
             aria-label="кнопка наступний слайд"
             type="button"
           ></button>

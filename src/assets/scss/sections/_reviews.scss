@@ -51,31 +51,93 @@
 }
 
 .reviews-btn-prev {
-  background-image: url(../images/sections/reviews/reviews-left-btn.svg);
+  background-image: url(../images/sections/reviews/reviews-left-arr.svg);
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 
   transition: all 300ms ease-in;
 
-  &:hover, &:focus {
-    background-image: url(../images/sections/reviews/reviews-left-btn-hov.svg);
+  &::before {
+    content: "";
+
+    width: 111px;
+    height: 62px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    clip-path: polygon(58.62% 0%, 100% 0%, 100% 100%, 41.61% 100%);
+    background-color: #c2b0f5;
+
+    border-radius: 104px;
+
+    transition: all 300ms ease-in;
   }
 
-  &:active {
-    background-image: url(../images/sections/reviews/reviews-left-btn-act.svg);
+  &:hover, &:focus {
+    &::before {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      background-color: #653CD9;
+    }
+
+    background-image: url(../images/sections/reviews/reviews-left-arr-hov.svg);
+  }
+
+  &:active, &:focus-within {
+    &::before {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      background-color: #8160E0;
+    }
+
+    background-image: url(../images/sections/reviews/reviews-left-arr-hov.svg);
   }
 }
 
 .reviews-btn-next {
-  background-image: url(../images/sections/reviews/reviews-right-btn.svg);
-  background-size: 100%;
+  background-image: url(../images/sections/reviews/reviews-right-arr.svg);
   background-repeat: no-repeat;
+  background-size: 100%;
   background-position: center;
 
-  &:hover, &:focus {
-    background-image: url(../images/sections/reviews/reviews-right-btn-hov.svg);
+  transition: all 300ms ease-in;
+
+  &::before {
+    content: "";
+
+    width: 111px;
+    height: 62px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    clip-path: polygon(0% 0%, 58.62% 0%, 41.61% 100%, 0% 100%);
+    background-color: #c2b0f5;
+
+    border-radius: 104px;
+
+    transition: all 300ms ease-in;
   }
 
-  &:active {
-    background-image: url(../images/sections/reviews/reviews-right-btn-act.svg);
+  &:hover, &:focus {
+    &::before {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      background-color: #653CD9;
+    }
+
+    background-image: url(../images/sections/reviews/reviews-right-arr-hov.svg);
+  }
+
+  &:active, &:focus-within {
+    &::before {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      background-color: #8160E0;
+    }
+
+    background-image: url(../images/sections/reviews/reviews-right-arr-hov.svg);
   }
 }
