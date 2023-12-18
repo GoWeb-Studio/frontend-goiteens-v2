@@ -456,7 +456,7 @@
   },
   "reviews": {
     "id": "reviews",
-    "title": "Проєкти та відгуки студентів на курсі від GoITeens",
+    "title": "Проєкти та відгуки студентів на курсах GoITeens",
     "cards": [
       {
         "img": "reviews-dmytro",
@@ -626,26 +626,10 @@
       }
     ]
   },
-  "before": {
-    "id": "before",
-    "title": "Перед випускником курсу з дизайну<br class=\"hidden xl:block\"> відчинені двері до будь-якого напряму",
-    "list": [
-      "Вебдизайн",
-      "Графічний дизайн",
-      "Мобільний дизайн",
-      "Реклама",
-      "UX/UI-дизайн",
-      "Ігрова індустрія",
-      "Моушн-дизайн",
-      "3D-моделювання",
-      "VR/AR-дизайн та ін."
-    ],
-    "btnText": "Записатись на безоплатне заняття"
-  },
   "about": {
     "id": "about",
-    "title": "<span class=\"block xxl:hidden\">Про GoITeens</span><span class=\"hidden xxl:block\">Чому батьки обирають для своїх дітей GoITeens?</span>",
-    "text": "<span class=\"font-semibold\">GoITeens</span> — це IT-академія, що надає IT-освіту дітям <span class=\"font-bold md:font-semibold\">від 7 до 17 років</span> за напрямами Scratch, Frontend, Digital Design, GameDev, Minecraft, Roblox та Математика. Наша місія — надати якісну освіту дітям та допомогти створити власну історію успіху.",
+    "title": "Про GoITeens",
+    "text": "<span class=\"font-semibold\">GoITeens</span> — це IT-академія, що надає IT-освіту дітям від 7 до 17 років за напрямами Scratch, Frontend, Digital Design, GameDev, Minecraft, Roblox та Математика. Наша місія — надати якісну освіту дітям та допомогти створити власну історію успіху.",
     "items": [
       {
         "number": "8+",
@@ -759,7 +743,7 @@
         "class": "minecraft"
       },
       {
-        "age": "8-11 років",
+        "age": "11-13 років",
         "title": "Roblox",
         "text": "3D-моделювання та розробка ігор в Roblox. Учень засвоїть основи Game та Level-дизайну, кодування на Lua, створення анімації та спецефектів.",
         "class": "roblox"
@@ -777,7 +761,7 @@
         "class": "math"
       },
       {
-        "age": "13-17 років",
+        "age": "12-17 років",
         "title": "GameDev",
         "text": "Курс розробки комп’ютерних та мобільних ігор. Учень опанує кодування на C# та зможе створювати ігрові світи на Unity.",
         "class": "gameDev"
@@ -789,7 +773,7 @@
         "class": "design"
       },
       {
-        "age": "13-17 років",
+        "age": "12-17 років",
         "title": "Python",
         "text": "Профільний курс з програмування мовою Python для підлітків. Учень вивчить алгоритми та структуру мови Python, опанує напрям FullStack.",
         "class": "python"
@@ -881,7 +865,7 @@
   "form": {
     "id": "modalForm",
     "btnCloseAria": "Запис на безоплатне заняття",
-    "title": "Запис <br class=\"hidden smOnly:block\">на безоплатний урок",
+    "title": "Запис <br class=\"hidden smOnly:block\">на безоплатний <br class=\"xs:hidden\">урок",
     "text": "*Записавшись це заняття, ви також <span class=\"font-bold\">безкоштовно отримаєте презентацію</span> з детальним описом програми всього курсу",
     "steps": ["1", "2", "3"],
     "INPUTS_EXPAMPLE": "Все доступные поля для формы лежат в файле 'allFormInputs.json' - скопируйте нужный обьект, и вставьте его ниже в массив inputs",

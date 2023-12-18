@@ -35,7 +35,7 @@
 }
 
 input[type='tel'].input-field {
-  @apply pl-14 pr-4 min-w-[335px] md:min-w-[704px] xl:pl-[60px] xl:min-w-[550px] xxl:min-w-[688px];
+  @apply pl-14 pr-4 xs:min-w-[335px] md:min-w-[704px] xl:pl-[60px] xl:min-w-[550px] xxl:min-w-[688px];
 }
 
 .checkbox {

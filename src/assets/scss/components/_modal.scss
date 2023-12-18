@@ -45,7 +45,7 @@
   }
 
   & .input-field {
-    @apply min-w-[300px] py-[15px] px-4 text-[#999] font-IBMPlexSans text-sm font-normal leading-[18px] md:py-[17px] md:px-8 md:text-[24px] md:leading-8;
+    @apply xs:min-w-[300px] py-[15px] px-4 text-[#999] font-IBMPlexSans text-sm font-normal leading-[18px] md:py-[17px] md:px-8 md:text-[24px] md:leading-8;
 
     &::placeholder {
       @apply text-[#999] font-IBMPlexSans text-sm font-normal leading-[18px] md:text-[24px] md:leading-8;
@@ -53,7 +53,7 @@
   }
 
   & input[type='tel'].input-field {
-    @apply pl-14 md:pl-[60px] min-w-[300px] md:min-w-[465px] ;
+    @apply pl-14 md:pl-[60px] xs:min-w-[300px] md:min-w-[465px] ;
   }
 
   & .btnSubmit {

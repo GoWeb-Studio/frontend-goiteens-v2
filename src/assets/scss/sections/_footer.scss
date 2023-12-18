@@ -1,0 +1,21 @@
+.footer-phone {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    width: 24px;
+    height: 24px;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+
+    background-image: url('../images/sprite.svg#smartphone');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
