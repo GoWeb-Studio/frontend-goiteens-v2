@@ -30,6 +30,9 @@ function generateData(
     leadFBP: getCookie('_fbp'),
     leadFBC: getCookie('_fbc'),
     leadIP: window.ipData.ip || '',
+    esputnik: true,
+    esputnik_formType: window.esputnik_formType || null,
+    esputnik_groups_name: window.esputnik_groups_name || null,
   };
   return ensureUtmData(data);
 }

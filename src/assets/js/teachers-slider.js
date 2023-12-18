@@ -23,15 +23,3 @@ $('.teachers-slider').slick({
     },
   ],
 });
-// $('.teachers-slider').slick({
-//   lazyLoad: 'ondemand',
-//   mobileFirst: true,
-//   infinite: true,
-//   dots: true,
-//   arrows: false,
-//   autoplay: true,
-//   autoplaySpeed: 2000,
-//   cssEase: 'ease-out',
-//   slidesToShow: 2,
-//   slidesToScroll: 1,
-// });

@@ -184,6 +184,9 @@ telegram backend. */
       .onSuccess(async function (event) {
         event.preventDefault();
 
+        window.esputnik_formType = 'segment_13_17';
+        window.esputnik_groups_name = 'GoITeens_FrontEnd';
+
         /* Adds "disabled" attribute to button with type submit. */
         service.addDisabledAttributeToSubmitBtn();
 
@@ -327,7 +330,7 @@ telegram backend. */
                   service.showSuccess(service.translate('reply'), true, loading, true);
 
                   /* That redirects user to some URL after send form. */
-                  // window.location.href = 'https://design.goiteens.com/success/';
+                  window.location.href = 'https://frontend.goiteens.com/v2/success/';
                 } else {
                   console.log('error ', resp.statusText);
                   $(form).css('display', 'block');
