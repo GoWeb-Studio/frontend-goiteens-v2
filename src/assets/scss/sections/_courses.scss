@@ -52,10 +52,12 @@
 
   @include mq(desktop) {
     background-image: url('../images/sections/courses/bg.svg');
-    background-position: bottom 210px left calc(50% - 396px);
+    background-position: bottom 90px left calc(50% - 396px);
     background-repeat: no-repeat;
   }
+
   @include mq(big-desktop) {
-    background-position: bottom 30px left calc(50% - 484px);
+    background-image: none;
+    // background-position: bottom 30px left calc(50% - 484px);
   }
 }
