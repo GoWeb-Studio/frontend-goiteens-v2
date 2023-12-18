@@ -28,11 +28,13 @@
             <li
               class="program-item mb-5 after:mt-4 after:block after:h-[1px] after:bg-[#C7ED8A] last:after:content-none"
             >
+              {% if item.title %}
               <h4
                 class="title mb-[4px] flex items-center gap-x-3 font-semibold text-base before:inline-block before:h-8 before:w-8"
               >
                 {{item.title}}
               </h4>
+              {% endif %}
               <p class="text-[#6E6E6E] text-base">{{item.text}}</p>
             </li>
             {% endfor %}
@@ -65,11 +67,13 @@
             <li
               class="program-item mb-5 after:mt-4 after:block after:h-[1px] after:bg-[#C2B0F5] last:after:content-none"
             >
+              {% if item.title %}
               <h4
                 class="title mb-[4px] flex items-center gap-x-3 font-semibold text-base before:inline-block before:h-8 before:w-8"
               >
                 {{item.title}}
               </h4>
+              {% endif %}
               <p class="text-base text-[#6E6E6E]">{{item.text}}</p>
             </li>
             {% endfor %}
