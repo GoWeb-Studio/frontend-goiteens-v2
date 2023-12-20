@@ -45,7 +45,7 @@
   }
 
   & .input-field {
-    @apply xs:min-w-[300px] py-[15px] px-4 text-[#999] font-IBMPlexSans text-sm font-normal leading-[18px] md:py-[17px] md:px-8 md:text-[24px] md:leading-8;
+    @apply xs:min-w-[300px] py-[15px] px-4 text-[#1A1A1A] font-IBMPlexSans text-sm font-normal leading-[18px] md:py-[17px] md:px-8 md:text-[24px] md:leading-8;
 
     &::placeholder {
       @apply text-[#999] font-IBMPlexSans text-sm font-normal leading-[18px] md:text-[24px] md:leading-8;

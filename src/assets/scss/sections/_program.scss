@@ -10,6 +10,7 @@
   }
 
   @include mq(desktop) {
+    background-repeat: repeat;
     background-size: 1478px auto;
     background-position: top -150px left calc(50% + 110px);
   }
@@ -21,7 +22,7 @@
 
   &-wrapper {
     @include mq(big-desktop) {
-      background-repeat: no-repeat;
+      // background-repeat: no-repeat;
       background-image: url('../images/sections/program/bg.svg');
       background-size: 1478px auto;
       background-position: top -150px left 58px;
@@ -60,8 +61,8 @@
   }
   .tab-btn {
     border: 1px solid transparent;
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
     transition:
       background 0.3s ease,
       border-radius 0.3s ease,

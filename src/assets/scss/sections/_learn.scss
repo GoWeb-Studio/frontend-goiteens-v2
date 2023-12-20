@@ -1,6 +1,7 @@
 .learn {
   background-image: url('../images/sections/learn/bg-sm.svg');
   background-repeat: no-repeat;
+  background-position: top -82px center;
 
   @include mq(tablet) {
     background-image: url('../images/sections/learn/bg.svg');

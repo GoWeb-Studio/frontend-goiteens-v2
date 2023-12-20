@@ -7,7 +7,7 @@
         <!-- TOP PART -->
         <div class="-mx-5 bg-[#F2FAE6] px-5 py-10 md:mx-0 md:px-8 md:pb-[68px] xl:mb-0 xl:pb-10">
           <h3
-            class="mb-[13px] w-[173px] font-IBMPlexMono text-[18px] font-semibold uppercase text-black-1A md:mb-6 md:w-auto md:text-2xl xxl:text-center"
+            class="mb-[13px] w-[173px] font-IBMPlexMono text-[18px] font-semibold uppercase text-black-dark md:mb-6 md:w-auto md:text-2xl xxl:text-center"
           >
             {{mob.title}}
           </h3>
@@ -30,7 +30,7 @@
             >
               {% if item.title %}
               <h4
-                class="title mb-[4px] flex items-center gap-x-3 font-semibold text-base before:inline-block before:h-8 before:w-8"
+                class="title mb-[4px] flex items-center gap-x-3 font-semibold text-base before:inline-block before:h-8 before:w-8 text-black-secondary"
               >
                 {{item.title}}
               </h4>
@@ -46,12 +46,12 @@
         <!-- BOTTOM PART -->
         <div class="-mx-5 bg-[#E6F2FA] px-5 py-6 md:mx-0 md:px-8 md:py-10">
           <h3
-            class="mb-7 font-IBMPlexMono text-[18px] font-semibold uppercase text-black-1A md:mb-6 md:text-2xl xxl:text-center"
+            class="mb-7 font-IBMPlexMono text-[18px] font-semibold uppercase text-black-dark md:mb-6 md:text-2xl xxl:text-center"
           >
             {{bott.title}}
           </h3>
 
-          <ul class="mb-6 flex flex-wrap gap-y-6 text-[12px] text-black-1A md:mb-10 md:text-xl xxl:justify-center">
+          <ul class="mb-6 flex flex-wrap gap-y-6 text-[12px] text-black-primary md:mb-10 md:text-xl xxl:justify-center">
             {% for item in bott.list %}
             <li
               class="rounded-[16px] bg-[#90C8F0] px-3 py-1 leading-[26px] odd:mr-2 md:rounded-3xl md:px-6 md:py-3 md:odd:mr-6"
@@ -69,7 +69,7 @@
             >
               {% if item.title %}
               <h4
-                class="title mb-[4px] flex items-center gap-x-3 font-semibold text-base before:inline-block before:h-8 before:w-8"
+                class="title mb-[4px] flex items-center gap-x-3 font-semibold text-base before:inline-block before:h-8 before:w-8 text-black-secondary"
               >
                 {{item.title}}
               </h4>

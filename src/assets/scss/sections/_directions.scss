@@ -1,23 +1,19 @@
 .directions {
   background-repeat: no-repeat;
-  background-image: url('../images/sections/directions/bg.svg');
+  background-image: url('../images/sprite.svg#directions-bg');
   background-size: 1761px auto;
-  background-position: bottom -536px left;
+  background-position: bottom -970px left;
 
   @include mq(tablet) {
-    background-position: bottom -680px left;
+    background-position: bottom -1180px left;
   }
 
   @include mq(desktop) {
-    background-position: bottom -722px left;
+    background-position: bottom -1192px left;
   }
 
   @include mq(big-desktop) {
-    background-position: bottom -722px left calc(50% + 53px);
-  }
-
-  .title {
-    color: #474747;
+    background-position: bottom -1200px left calc(50% + 53px);
   }
 
   .slick-slide .directions__items {
@@ -29,7 +25,7 @@
       width: 374px !important;
     }
      @include mq(desktop) {
-      width: 396px !important;
+      width: 390px !important;
     }
   }
   .slick-slide {

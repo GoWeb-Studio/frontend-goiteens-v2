@@ -23,6 +23,11 @@
       background-repeat: no-repeat;
       background-size: contain;
     }
+
+    .program-item:nth-child(#{4}) .title::before {
+      width: 51px;
+      height: 32px;
+    }
   }
   .program-list-bott {
     @for $i from 1 to 7 {
