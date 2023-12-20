@@ -32,19 +32,19 @@ const css = () => {
         errLogToConsole: true,
       }).on('error', sass.logError)
     )
-    .pipe(
-      mode.production(
-        purgecss({
-          content: ['src/**/*.{html,js,njk,json}'],
-          skippedContentGlobs: ['node_modules/**'],
-          defaultExtractor: content => {
-            const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
-            const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
-            return broadMatches.concat(innerMatches);
-          },
-        })
-      )
-    )
+    // .pipe(
+    //   mode.production(
+    //     purgecss({
+    //       content: ['src/**/*.{html,js,njk,json}'],
+    //       skippedContentGlobs: ['node_modules/**'],
+    //       defaultExtractor: content => {
+    //         const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
+    //         const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
+    //         return broadMatches.concat(innerMatches);
+    //       },
+    //     })
+    //   )
+    // )
     .pipe(
       postcss(
         [
