@@ -626,12 +626,7 @@
         "class": "item-2"
       },
       {
-        "number": "10000+",
-        "text": "Проєктів створено",
-        "class": "item-3"
-      },
-      {
-        "number": "143000+",
+        "number": "250000+",
         "text": "Занять проведено <br />протягом року",
         "class": "item-4"
       },
@@ -645,13 +640,22 @@
         "class": "item-5"
       },
       {
+        "img": "award-3",
+        "width": "335",
+        "height": "260",
+        "alt": "Список Forbes 2024",
+        "title": "",
+        "text": "",
+        "class": "item-6"
+      },
+      {
         "img": "award-2",
         "width": "112",
         "height": "124",
         "alt": "нагорода X-RAY AWARD",
         "title": "X-RAY award",
         "text": "Переможці премії X-RAY в номінації «Метавсесвіт та штучний інтелект»",
-        "class": "item-6"
+        "class": "item-7"
       }
     ]
   },

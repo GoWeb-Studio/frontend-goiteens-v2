@@ -46,7 +46,7 @@
     }
 
     @include mq(desktop) {
-      background-size: contain;
+      background-size: 280px;
       background-position: center;
     }
   }
@@ -87,11 +87,11 @@
 
     background-image: url(../images/sections/about/item-4.svg);
     background-repeat: no-repeat;
-    background-size: 224px auto;
+    background-size: 255px auto;
     background-position: center;
 
     @include mq(tablet) {
-      background-size: 170px auto;
+      background-size: 190px auto;
       background-position: center;
     }
 
@@ -116,21 +116,23 @@
 
     background-image: url(../images/sections/about/item-5.svg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 224px;
     background-position: center;
 
     @include mq(tablet) {
-      background-size: 192px auto;
+      background-size: 170px auto;
       background-position: center;
     }
 
     @include mq(desktop) {
-      background-size: contain;
+      background-size: 280px;
       background-position: center;
+      position: relative;
+      top: -15px;
     }
   }
 
-  .item-6 {
+  .item-7 {
     padding-bottom: 0;
     .image {
       @apply h-[70px] w-[64px] md:h-[65px] md:w-[54px] xl:h-[120px] xl:w-[110px] xxl:h-[124px] xxl:w-[112px];
@@ -157,6 +159,15 @@
     @include mq(desktop) {
       background-size: contain;
       background-position: top 50% right 40px;
+      height: 280px;
+      padding-top: 40px;
+    }
+  }
+  .item-6 {
+    padding: 0;
+    @apply mx-auto md:h-[216px]  md:w-[216px] xl:relative xl:top-[-15px] xl:h-[320px] xl:w-[320px];
+    .image {
+      @apply h-full xl:w-full;
     }
   }
 }

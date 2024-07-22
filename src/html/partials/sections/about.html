@@ -14,10 +14,32 @@
       class="list mt-6 grid grid-cols-1 gap-6 md:mt-12 md:grid-cols-3 md:gap-x-7 md:gap-y-10 xl:gap-x-0 xl:gap-y-24 xxl:mx-auto xxl:max-w-[1376px] xxl:gap-x-[88px]"
     >
       {% for item in section.items %} {% if item.img %}
+      {%if item.class == 'item-6' %}
+      <li class="item {{item.class}}">
 
+        <picture>
+
+
+          <source media="(min-width: 768px)" srcset="./assets/images/sections/about/{{item.img}}-tab.webp 1x, ./assets/images/sections/about/{{item.img}}-tab@2x.webp 2x">
+
+          <source media="(min-width: 320px)" srcset="./assets/images/sections/about/{{item.img}}.webp 1x, ./assets/images/sections/about/{{item.img}}.webp 2x">
+
+          <img
+            class="image mx-auto block  md:w-full md:h-full"
+            width="{{item.width}}"
+            height="{{item.height}}"
+            loading="lazy"
+            alt="{{item.alt}}"
+            src="./assets/images/sections/about/{{item.img}}.webp"
+            srcset="./assets/images/sections/about/{{item.img}}@2x.webp 2x"
+          />
+        </picture>
+
+      </li>
+      {% else %}
       <li class="item {{item.class}}">
         <img
-          class="image mx-auto block h-auto w-[88px] md:w-[65px] xl:w-[120px] xxl:w-[124px]"
+          class="image mx-auto block h-auto  md:w-[65px] xl:w-[120px] xxl:w-[124px]"
           width="{{item.width}}"
           height="{{item.height}}"
           loading="lazy"
@@ -37,11 +59,13 @@
         </p>
       </li>
 
+      {% endif %}
+
       {% else %}
 
       <li class="item {{item.class}}">
         <span
-          class="numbers block text-center font-IBMPlexMono text-[68px] font-semibold leading-[1.3] md:text-[50px] xl:text-[92px]"
+          class="numbers block text-center font-IBMPlexMono text-[68px] font-semibold leading-[1.3] md:text-[50px] xl:text-[80px] xxl:text-[92px]"
           >{{item.number}}</span
         >
         <p
