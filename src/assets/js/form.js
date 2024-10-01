@@ -330,7 +330,9 @@ telegram backend. */
                   service.showSuccess(service.translate('reply'), true, loading, true);
 
                   /* That redirects user to some URL after send form. */
-                  window.location.href = 'https://frontend.goiteens.com/v2/success/';
+
+                  const queryString = service.convertFormDataToQueryString(data);
+                  window.location.href = 'https://frontend.goiteens.com/v2/success/' + queryString;
                 } else {
                   console.log('error ', resp.statusText);
                   $(form).css('display', 'block');

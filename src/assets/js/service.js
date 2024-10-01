@@ -745,6 +745,41 @@ function uid() {
 }
 
 /**
+ * Converts form data to a query string.
+ * @param {Object} formData - The form data to convert.
+ * @returns {string} The query string.
+ */
+function convertFormDataToQueryString(formData) {
+  let fields = {
+    utm_source: 'utm_source',
+    utm_medium: 'utm_medium',
+    utm_term: 'utm_term',
+    utm_campaign: 'utm_campaign',
+    utm_content: 'utm_content',
+    campaignId: 'campaignid',
+    adsetId: 'adsetid',
+    adId: 'adid',
+    phone: 'phone',
+    email: 'email',
+    name: 'name2',
+    google_id: 'ga',
+  };
+  let params = {};
+  for (let key in formData) {
+    if (formData[key] !== undefined && formData[key] !== null) {
+      if (fields.hasOwnProperty(key)) {
+        if (formData[key].length > 0) {
+          params[fields[key]] = formData[key];
+        }
+      }
+    }
+  }
+  let queryString = new URLSearchParams(params).toString();
+  return queryString;
+}
+
+
+/**
  * It sends an HTTP request to the server, and returns true if the server says the email is available,
  * and false if the server says the email is not available
  * @param email - The email address to check.
@@ -772,6 +807,7 @@ function changeFormStep(form, nextStep) {
 }
 
 export default {
+  convertFormDataToQueryString,
   addDisabledAttributeToSubmitBtn,
   changeFormStep,
   checkEmailDomain,
