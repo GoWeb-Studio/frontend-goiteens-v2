@@ -1,15 +1,20 @@
 {% set section = directions %}
 
-<section class="{{section.id}} bg-primary pt-20 pb-14 overflow-hidden md:pb-8 xl:py-0">
+<section class="{{section.id}} overflow-hidden xl:py-0 bg-[#F5F5F5] pt-20 pb-10">
   <div class="container">
-    <div class="xl:flex xl:items-center xl:gap-[53px] xxl:ml-auto xxl:max-w-[1236px] xxl:gap-[88px]">
-      <!-- TEXT BLOCK: TITLE, TEXT, BUTTON -->
-      <div class="xl:max-w-[732px] xl:shrink-0">
-        <h2 class="mb-5 font-IBMPlexMono text-[20px] text-black-secondary font-semibold  uppercase leading-[26px] mdOnly:max-w-[582px] md:text-[32px] md:leading-[44px]">
+    <div
+      class="box xl:flex xl:h-[740px] xl:items-center xl:gap-[53px] xxl:mx-auto xxl:max-w-[1236px] xxl:gap-[88px]"
+    >
+      <div class="xl:max-w-[732px] xl:shrink-0 xxl:max-w-[748px]">
+        <h2
+          class="font-IBMPlexMono text-lg font-semibold uppercase text-[#474747] md:text-[28px] md:font-bold md:normal-case md:leading-snug xxl:text-[32px] xxl:leading-snug xxl:tracking-[0.01em]"
+        >
           {{section.title}}
         </h2>
 
-        <p class="mb-8 text-sm text-black-secondary font-normal leading-5 md:mb-[54px] md:max-w-[582px] md:text-xl">
+        <p
+          class="mt-4 text-sm text-[#474747] md:text-base xl:max-w-[700px] xl:text-lg xxl:max-w-none"
+        >
           {{section.text}}
         </p>
 
@@ -18,56 +23,29 @@
           aria-label="{{section.ariaLabel}}"
           rel="noopener noreferrer nofollow"
           target="_blank"
-          class="mb-[52px] block max-w-[335px] py-2 px-6 bg-[#5331B2] text-center font-IBMPlexSans text-[16px] leading-8 text-white duration-300 hover:bg-[#653CD9] focus:bg-[#653CD9] active:bg-[#8160E0] w-full rounded-[104px]
-          md:mb-[128px] md:max-w-[704px] md:py-4 md:text-xl md:leading-8 xl:mb-0 xl:max-w-[732px] notXl:mx-auto"
-          >
+          class="mt-10 block w-full max-w-[335px] rounded-[104px] bg-[#653CD9] py-2 text-center font-IBMPlexSans text-[16px] leading-[2] text-white duration-300 hover:bg-[#5331B2] focus:bg-[#5331B2] active:bg-[#5331B2] md:max-w-[704px] md:py-[18px] md:text-xl xl:mt-10 xl:max-w-[732px] notXl:mx-auto"
+        >
           {{section.btn}}
         </a>
       </div>
 
-      <!-- DESKTOP SLIDER -->
-      <ul class="directions-slick-carousel !hidden xl:!block">
-        {% for item in section.items %}
-        <li
-          class="directions__items {{item.class}} h-[158px] w-[335px] border-[3px] bg-white p-5 md:h-[179px] md:w-[384px] xl:h-[200px] xl:w-[390px]"
-        >
-          <div
-            class="mb-3 smOnly:flex smOnly:flex-row-reverse smOnly:items-center smOnly:justify-between"
-          >
-            <p
-              class="item-age inline-block rounded-[50px] px-3 pb-[5px] pt-[3px] font-IBMPlexMono text-[12px] font-semibold md:mb-3"
-            >
-              {{item.age}}
-            </p>
-            <h3 class="font-IBMPlexMono text-[20px] font-bold md:text-2xl">{{item.title}}</h3>
+      <div class="directions__slider swiper mt-12 md:mt-[120px] xl:h-[708px]">
+        <div class="swiper-wrapper cursor-grab">
+          {% for item in section.items %}
+          <div class="directions__items {{item.class}} swiper-slide">
+            <div class="flex flex-col items-start gap-3">
+              <p
+                class="item-age inline-block rounded-[50px] px-3 pb-[5px] pt-[3px] font-IBMPlexMono text-sm font-semibold"
+              >
+                {{item.age}}
+              </p>
+              <h3 class="font-IBMPlexMono text-lg font-bold text-[#474747]">{{item.title}}</h3>
+            </div>
+            <p class="mt-1 text-sm text-[#474747]">{{item.text}}</p>
           </div>
-          <p class="text-sm">{{item.text}}</p>
-        </li>
-        {% endfor %}
-      </ul>
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
-
-  <!-- MOB & TAB SLIDER -->
-  <ul class="directions-slick-carousel xl:hidden">
-    {% for item in section.items %}
-    <li
-      class="directions__items h-[200px] {{item.class}} w-[335px] border-[3px] bg-white p-5 md:w-[384px]"
-    >
-      <div class="mb-3 smOnly:flex smOnly:flex-row-reverse smOnly:justify-between">
-        <p
-          class="item-age h-[26px] rounded-[50px] px-3 py-[3px] font-IBMPlexMono text-[12px] leading-[16px] font-semibold flex justify-center items-center md:mb-3 md:h-full md:w-[104px]"
-        >
-          {{item.age}}
-        </p>
-        <h3 class="font-IBMPlexMono text-[20px] text-black-secondary font-bold leading-[26px] md:text-2xl">
-          {{item.title}}
-        </h3>
-      </div>
-      <p class="text-sm text-black-secondary font-normal">
-        {{item.text}}
-      </p>
-    </li>
-    {% endfor %}
-  </ul>
 </section>

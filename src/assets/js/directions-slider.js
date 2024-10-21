@@ -1,43 +1,20 @@
-import $ from 'jquery';
-import slick from 'slick-carousel';
+import Swiper from 'swiper';
+import { Autoplay } from 'swiper/modules';
 
-$('.directions-slick-carousel').slick({
-  speed: 15000,
-  autoplay: true,
-  autoplaySpeed: 0,
-  arrows:false,
-  cssEase: 'linear',
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  infinite: true,
-  swipeToSlide: true,
-  centerMode: true,
-  adaptiveHeight: true,
-  focusOnSelect: true,
-  mobileFirst: true,
-  pauseOnHover: true,
-  responsive: [
-    {
-      breakpoint: 1279,
-      settings: {
-        vertical: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      },
+new Swiper('.swiper', {
+  direction: 'horizontal',
+  breakpoints: {
+    1280: {
+      direction: 'vertical',
+      speed: 20000,
     },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
+  },
+  autoplay: {
+    delay: 1,
+  },
+  speed: 20000,
+  loop: true,
+  modules: [Autoplay],
+  spaceBetween: 12,
+  slidesPerView: 'auto',
 });

@@ -1,59 +1,44 @@
 .directions {
-  background-repeat: no-repeat;
-  background-image: url('../images/sprite.svg#directions-bg');
+  background-repeat: repeat-x;
+  background-image: url('../images/sections/directions/bg.svg');
   background-size: 1761px auto;
-  background-position: bottom -970px left;
+  background-position: bottom -536px left calc(50% - 200px);
 
   @include mq(tablet) {
-    background-position: bottom -1180px left;
+    background-position: bottom -498px left calc(50% + 352px);
   }
 
   @include mq(desktop) {
-    background-position: bottom -1192px left;
+    background-position: bottom -700px left calc(50% - 15px);
   }
 
   @include mq(big-desktop) {
-    background-position: bottom -1200px left calc(50% + 53px);
+    background-position: bottom -700px left calc(50% + 53px);
   }
 
-  .slick-slide .directions__items {
-    width: 330px !important;
-    margin-left: auto;
-    margin-right: auto;
-
-    @include mq(tablet) {
-      width: 374px !important;
-    }
-     @include mq(desktop) {
-      width: 384px !important;
-    }
-  }
-  .slick-slide {
-    padding: 6px !important;
-
-    @include mq(mobile-only) {
-      width: 335px !important;
-    }
-
-    @include mq(tablet) {
-      width: 384px !important;
+  .container {
+    .box {
+      .swiper {
+        .directions__items {
+          @apply h-[200px] w-[335px] border-[3px] bg-white p-5 transition duration-200 hover:scale-105 md:h-[180px] md:w-[396px];
+        }
+      }
     }
   }
 
-  &__items {
-    animation: all 250ms ease-in;
+  .logic {
+    border-color: #dbf5b0;
+
+    .item-age {
+      background-color: #dbf5b0;
+    }
   }
 
   .scratch {
     border-color: #f5e3ab;
 
     .item-age {
-      background-color: #f0cd60;
-      color: #ffffff;
-    }
-
-    &:hover {
-      transform: scale(1.05);
+      background-color: #f5e3ab;
     }
   }
 
@@ -63,8 +48,13 @@
     .item-age {
       background-color: #dbf5b0;
     }
-    &:hover {
-      transform: scale(1.05);
+  }
+
+  .painting {
+    border-color: #f5e3ab;
+
+    .item-age {
+      background-color: #f5e3ab;
     }
   }
 
@@ -74,20 +64,6 @@
     .item-age {
       background-color: #f5bfb8;
     }
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-
-  .frontend {
-    border-color: #c2b0f5;
-
-    .item-age {
-      background-color: #c2b0f5;
-    }
-    &:hover {
-      transform: scale(1.05);
-    }
   }
 
   .math {
@@ -95,21 +71,6 @@
 
     .item-age {
       background-color: #f0b890;
-      flex-shrink: 0;
-    }
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-
-  .gameDev {
-    border-color: #d6d6d6;
-
-    .item-age {
-      background-color: #d6d6d6;
-    }
-    &:hover {
-      transform: scale(1.05);
     }
   }
 
@@ -119,19 +80,56 @@
     .item-age {
       background-color: #f5bae2;
     }
-    &:hover {
-      transform: scale(1.05);
+  }
+
+  .frontend {
+    border-color: #c2b0f5;
+
+    .item-age {
+      background-color: #c2b0f5;
     }
   }
 
   .python {
-    border-color: #b8dbf5;
+    border-color: #327db2;
 
     .item-age {
       background-color: #b8dbf5;
     }
-    &:hover {
-      transform: scale(1.05);
+  }
+
+  .gameDev {
+    border-color: #999999;
+
+    .item-age {
+      background-color: #d6d6d6;
+    }
+  }
+
+  .workshop {
+    border-color: #c2b0f5;
+
+    .item-age {
+      background-color: #c2b0f5;
+    }
+  }
+
+  .hmt {
+    border-color: #b8c3f5;
+
+    .item-age {
+      background-color: #b8c3f5;
+    }
+  }
+
+  .swiper {
+    overflow: visible;
+
+    .swiper-wrapper {
+      overflow: visible;
+      -webkit-transition-timing-function: linear !important;
+      -o-transition-timing-function: linear !important;
+      transition-timing-function: linear !important;
     }
   }
 }
