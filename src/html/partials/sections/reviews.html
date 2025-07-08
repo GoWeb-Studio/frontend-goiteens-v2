@@ -3,7 +3,7 @@
   <div class="reviews-container container relative">
     <div class="relative xl:mx-auto xl:w-[984px] xl:pt-4">
       <h2
-        class="section-title mb-8 text-xl md:mb-10 md:text-[32px] md:leading-[1.3] mdOnly:max-w-[583px] xl:ml-[27px] xxl:ml-5"
+        class="section-title mb-8 text-xl md:mb-10 md:text-[32px] md:leading-[1.3] xl:ml-[27px] xxl:ml-5 mdOnly:max-w-[583px]"
       >
         {{ section.title }}
       </h2>
@@ -14,16 +14,16 @@
             <div class="reviews-img relative mb-6 inline-block pb-4 pl-4 md:mb-10">
               <div class="relative border-b-[3px] border-l-[3px] border-black-dark pb-2 pl-2">
                 <img
-                   width="299"
-                   height="438"
-                   loading="lazy"
-                   alt="{{ card.alt }}"
-                   src="./assets/images/sections/reviews/{{ card.img }}.webp"
-                   srcset="./assets/images/sections/reviews/{{ card.img }}@2x.webp 2x"
-                 />
-             </div>
-             <!-- PLAY BUTTON -->
-              <a
+                  width="299"
+                  height="438"
+                  loading="lazy"
+                  alt="{{ card.alt }}"
+                  src="./assets/images/sections/reviews/{{ card.img }}.webp"
+                  srcset="./assets/images/sections/reviews/{{ card.img }}@2x.webp 2x"
+                />
+              </div>
+              <!-- PLAY BUTTON -->
+              <!-- <a
                 class="group absolute bottom-0 left-0 z-[2] flex h-[84px] w-[84px] transform items-center justify-center bg-[#FEC830] duration-500 hover:bg-[#E0AB00] focus:bg-[#E0AB00] active:bg-[#F0CD60]"
                 rel="noopener noreferrer nofollow"
                 href="{{ card.link }}"
@@ -38,7 +38,7 @@
                 >
                   <use href="./assets/images/sprite.svg#{{ section.svgPlay }}"></use>
                 </svg>
-              </a>
+              </a> -->
 
               <span class="absolute bottom-9 left-[136px] font-IBMPlexMono text-sm text-white">
                 {{ card.imgTitle }}
@@ -66,7 +66,6 @@
             type="button"
           ></button>
         </div>
-
       </div>
     </div>
   </div>

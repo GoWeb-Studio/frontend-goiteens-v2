@@ -31,7 +31,7 @@ const watcher = done => {
     series(tasks.css, browserSync.reload)
   );
   watch(paths.watch.js).on('change', series(tasks.scripts, browserSync.reload));
-  watch(paths.watch.images, tasks.images);
+  watch(paths.watch.images, tasks.images.buildImages);
   watch(paths.watch.sprite, tasks.sprite);
   watch(paths.watch.fonts, tasks.fonts);
   watch(paths.watch.crm, tasks.crm);
@@ -49,8 +49,7 @@ exports.start = series(
     tasks.css,
     tasks.scripts,
     tasks.sprite,
-    tasks.images,
-    tasks.imagesWebp
+    tasks.images.buildImages // Обновлено для корректного пути
     // tasks.app
     // tasks.crm,
     // tasks.php
@@ -69,8 +68,7 @@ exports.build = series(
     tasks.css,
     tasks.scripts,
     tasks.sprite,
-    tasks.images,
-    tasks.imagesWebp,
+    tasks.images.buildImages, // Обновлено для корректного пути
     tasks.app,
     tasks.crm,
     tasks.php

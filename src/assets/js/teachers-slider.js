@@ -12,6 +12,7 @@ $('.teachers-slider').slick({
   cssEase: 'ease-out',
   slidesToShow: 2,
   slidesToScroll: 1,
+  swipeToSlide: true,
   variableWidth: true,
   responsive: [
     {
