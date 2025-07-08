@@ -1,14 +1,18 @@
 {% set section = teachers %}
 <!-- purgecss start ignore -->
-<section class="{{section.id}} pb-20 relative overflow-hidden md:pt-[262px] md:pb-10 xl:pt-[306px] xxl:pt-[348px]">
+<section
+  class="{{section.id}} pb-20 relative overflow-hidden md:pt-[262px] md:pb-10 xl:pt-[306px] xxl:pt-[348px]"
+>
   <div class="container">
-    <h2 class="mb-[60px] font-IBMPlexMono text-[20px] font-semibold uppercase leading-[26px] text-black-primary md:text-[32px] md:leading-[42px] md:mb-[84px] mdOnly:w-[307px] xl:mb-[82px] xxl:pl-[260px] xxl:mb-[40px]">
+    <h2
+      class="mb-[60px] font-IBMPlexMono text-[20px] font-semibold uppercase leading-[26px] text-black-primary md:mb-[84px] md:text-[32px] md:leading-[42px] xl:mb-[82px] xxl:mb-[40px] xxl:pl-[260px] mdOnly:w-[307px]"
+    >
       {{section.title}}
     </h2>
     <ul class="teachers-slider">
       {% for item in section.items %}
       <li
-        class="teachers-item group relative min-w-[340px] max-h-[430px] cursor-pointer overflow-hidden smOnly:mx-auto"
+        class="teachers-item group relative max-h-[430px] min-w-[340px] overflow-hidden smOnly:mx-auto"
       >
         <img
           width="340"
@@ -20,25 +24,27 @@
           class="w-full"
         />
         {% if item.title%}
-        <h3 class="absolute bottom-[55px] right-20 xs:right-5 z-[2] text-xl font-normal leading-[26px] normal-case text-[#A38AED]">
+        <h3
+          class="absolute bottom-[55px] right-20 z-[2] text-xl font-normal normal-case leading-[26px] text-[#A38AED] xs:right-5"
+        >
           {{ item.title }}
         </h3>
-        {% endif %}
-
-        {% if item.name%}
-        <h3 class="absolute bottom-5 right-20 xs:right-5 z-[2] text-2xl font-medium normal-case text-white">
+        {% endif %} {% if item.name%}
+        <h3
+          class="absolute bottom-5 right-20 z-[2] text-2xl font-medium normal-case text-white xs:right-5"
+        >
           {{ item.name }}
         </h3>
         {% endif %}
 
         <div
-          class="teachers-wrapper absolute left-0 top-0 z-[1] h-full w-[280px] xs:w-full opacity-0 shadow-black duration-300 ease-out bg-cardGradient group-hover:opacity-100 group-focus:opacity-100"
+          class="teachers-wrapper bg-cardGradient absolute left-0 top-0 z-[1] h-full w-[280px] opacity-0 shadow-black duration-300 ease-out group-hover:opacity-100 group-focus:opacity-100 xs:w-full"
         >
           <ul
             class="absolute left-0 top-0 z-[2] h-full w-full space-y-2 px-6 py-8 text-white marker:w-[6px] marker:pl-6 marker:text-white"
           >
             {% for skill in item.skills %}
-            <li class="ml-6 list-disc text-base font-IBMPlexSans font-normal leading-[21px]">
+            <li class="ml-6 list-disc font-IBMPlexSans text-base font-normal leading-[21px]">
               {{ skill.text }}
             </li>
             {% endfor %}
