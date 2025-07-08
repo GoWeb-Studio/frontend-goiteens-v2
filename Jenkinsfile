@@ -1,7 +1,7 @@
 @Library('jenkins-common')_
 
 // "all-biulds" for goiteens
-node("all-biulds"){
+node("goiteens"){
     stage('Load credentials') {
         withCredentials([
             string(credentialsId: 'telegramApiTokenJenkinsSoftryzen', variable: 'telegramNotifyChannelBotApiToken'),
