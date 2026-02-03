@@ -33,8 +33,16 @@ const manageEnvironment = function (environment) {
   });
 };
 
+
+
 const getDataForFile = file => {
-  return JSON.parse(fs.readFileSync('./src/json/data.json'));
+  const data = JSON.parse(fs.readFileSync('./src/json/data.json'));
+  // Cache bust для спрайту — gulp-cache-bust не чіпає SVG <use href>
+  const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+  data.assetsVersion = process.argv.includes('--production')
+    ? `${pkg.version}-${Date.now()}`
+    : 'dev';
+  return data;
 };
 
 const html = () => {

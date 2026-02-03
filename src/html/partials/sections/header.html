@@ -5,20 +5,15 @@
       <div class="xl:grid xl:gap-2">
         <a href="{{page.canonical}}" aria-label="{{logo.link_logo_aria}}">
           <svg
-            class="md:h-9 md:w-[142px] xl:h-6 xl:w-[96px] xxl:h-9 xxl:w-[142px]"
-            width="118"
-            height="30"
+          width="100"
+          height="24"
+          class="md:h-auto md:w-[149px] xl:w-[133px]"
             aria-label="{{logo.logo_aria}}"
           >
             <title>{{logo.logo_aria}}</title>
-            <use href="./assets/images/sprite.svg#logo"></use>
+            <use href="./assets/images/sprite.svg?v={{data.assetsVersion}}#logo"></use>
           </svg>
         </a>
-        <p
-          class="hidden font-gotham xl:block xl:max-w-[102px] xl:text-[10px] xl:leading-[1.6] xl:tracking-[0.1px] xl:text-[#1A1A1A] xxl:max-w-[123px] xxl:text-xs xxl:tracking-[0.12px]"
-        >
-          {{section.textLogo}}
-        </p>
       </div>
       <a
         href="{{section.number.link}}"

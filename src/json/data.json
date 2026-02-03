@@ -799,10 +799,10 @@
     "id": "footer",
     "socialItems": [
       {
-        "svg": "facebook",
-        "svgAlt": "логотип facebook",
-        "link": "https://www.facebook.com/GoITeens/",
-        "ariaLabel": "посилання на фейсбук"
+        "svg": "telegram",
+        "svgAlt": "логотип telegram",
+        "link": "https://t.me/devofteens",
+        "ariaLabel": "посилання на телеграм"
       },
       {
         "svg": "instagram",
@@ -811,16 +811,40 @@
         "ariaLabel": "посилання на інстаграм"
       },
       {
-        "svg": "telegram",
-        "svgAlt": "логотип telegram",
-        "link": "https://t.me/devofteens",
-        "ariaLabel": "посилання на телеграм"
+        "svg": "facebook",
+        "svgAlt": "логотип facebook",
+        "link": "https://www.facebook.com/GoITeens/",
+        "ariaLabel": "посилання на фейсбук"
       },
       {
         "svg": "youtube",
         "svgAlt": "логотип youtube",
         "link": "https://www.youtube.com/@GoITeens_Hub",
         "ariaLabel": "посилання на ютуб"
+      },
+      {
+        "svg": "tiktok",
+        "svgAlt": "логотип tiktok",
+        "link": "https://www.tiktok.com/@go_iteens",
+        "ariaLabel": "посилання на tiktok"
+      },
+      {
+        "svg": "discord",
+        "svgAlt": "логотип discord",
+        "link": "https://discord.com/invite/goiteens",
+        "ariaLabel": "посилання на discord"
+      },
+      {
+        "svg": "linkedin",
+        "svgAlt": "логотип linkedin",
+        "link": "https://www.linkedin.com/company/goiteens-it-academy-for-teens-and-kids/",
+        "ariaLabel": "посилання на linkedin"
+      },
+      {
+        "svg": "viber",
+        "svgAlt": "логотип viber",
+        "link": "https://invite.viber.com/?g2=AQB8pGkQCDGHtEzc6ggFnRYuoKeUem7LLIGWK3i5DDNtQ7n2U3Q0kD5dyFYqCwJk",
+        "ariaLabel": "посилання на viber"
       }
     ],
     "linksItems": [
@@ -853,8 +877,8 @@
         "link": "https://goiteens.com/contact-page/"
       }
     ],
-    "contactNumber": "+38 067 158 73 68",
-    "contactNumberLink": "+380671587368",
+    "contactNumber": "+38 073 565 45 96",
+    "contactNumberLink": "+380735654596",
     "contactNumberSvg": "phone",
     "paymentList": [
       {
