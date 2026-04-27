@@ -5,7 +5,7 @@
 .input-wrap-half {
   @apply w-[calc((100%_-_1.5rem)/2)];
 
-  & + .input-wrap-checkbox {
+  &+.input-wrap-checkbox {
     @apply mt-6;
   }
 }
@@ -41,7 +41,7 @@ input[type='tel'].input-field {
 .checkbox {
   @apply absolute left-0 top-0 inline-block h-6 w-6 rounded-full border border-gray-400 bg-contain bg-center bg-no-repeat;
 
-  [type='checkbox']:checked + & {
+  [type='checkbox']:checked+& {
     @apply border-accent bg-check;
   }
 }
@@ -49,13 +49,18 @@ input[type='tel'].input-field {
 .input-label-checkbox {
   @apply relative inline-block cursor-pointer pl-10 text-[10px] font-medium leading-[1.4] md:text-[12px];
 
-  & > .is-invalid + .checkbox {
+  &>.is-invalid+.checkbox {
     @apply border-2 border-[#CA381F];
   }
 }
 
 /*! purgecss start ignore */
 .just-validate-error-label {
-  @apply absolute bottom-0 left-0 mt-1 translate-y-[calc(100%_+_4px)]  text-[10px] font-light leading-[1.1];
+  @apply absolute bottom-0 left-0 mt-1 translate-y-[calc(100%_+_4px)] text-[10px] font-light leading-[1.1];
 }
+
 /*! purgecss end ignore */
+
+.input-field.iti__tel-input {
+  padding-left: 52px !important;
+}

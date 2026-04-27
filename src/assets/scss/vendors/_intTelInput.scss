@@ -1668,3 +1668,20 @@ $mobilePopupMargin: 30px !default;
 }
 
 /*! purgecss end ignore */
+
+.iti__selected-country {
+  position: absolute;
+  z-index: 10;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.iti__selected-dial-code {
+  display: none;
+}
+
+.iti__selected-country-primary {
+  display: flex;
+  align-items: center;
+}

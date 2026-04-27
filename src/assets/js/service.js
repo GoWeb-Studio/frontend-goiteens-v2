@@ -75,7 +75,8 @@ async function getItiConfig(preferredCountries, excludeCountries) {
     initialCountry: country_code,
     preferredCountries,
     excludeCountries,
-    utilsScript: './assets/js/utils.js',
+    autoPlaceholder: 'polite',
+    loadUtils: () => import('intl-tel-input/utils'),
   };
 }
 
