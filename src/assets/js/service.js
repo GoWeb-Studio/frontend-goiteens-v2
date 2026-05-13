@@ -31,7 +31,7 @@ async function getIpInfo() {
       .split('\n')
       .reduce(function (obj, pair) {
         pair = pair.split('=');
-        return (obj[pair[0]] = pair[1]), obj;
+        return ((obj[pair[0]] = pair[1]), obj);
       }, {});
   } catch (error) {
     console.error(error);
@@ -413,7 +413,7 @@ function getNameRegex(locale = window.locale) {
  * It returns the Email regular expression
  */
 function getEmailRegex() {
-return /^(?=^.{3,63}$)(^[A-Za-z0-9_+]+(([_\.\-\+](?=[A-Za-z0-9_+]))[a-zA-Z0-9_+]+([\-\.\+](?=[A-Za-z0-9_+]))*?)*@(\w+([\.\-](?=(\w|\d))))+[a-zA-Z]{2,6})$/;
+  return /^(?=^.{3,63}$)(^[A-Za-z0-9_+]+(([_\.\-\+](?=[A-Za-z0-9_+]))[a-zA-Z0-9_+]+([\-\.\+](?=[A-Za-z0-9_+]))*?)*@(\w+([\.\-](?=(\w|\d))))+[a-zA-Z]{2,6})$/;
 }
 
 /**
@@ -788,7 +788,6 @@ function convertFormDataToQueryString(formData) {
   let queryString = new URLSearchParams(params).toString();
   return queryString;
 }
-
 
 /**
  * It sends an HTTP request to the server, and returns true if the server says the email is available,

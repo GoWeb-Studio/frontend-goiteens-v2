@@ -332,10 +332,13 @@ telegram backend. */
 
                   /* That redirects user to some URL after send form. */
 
-                  const successParams = new URLSearchParams(service.convertFormDataToQueryString(data));
+                  const successParams = new URLSearchParams(
+                    service.convertFormDataToQueryString(data)
+                  );
                   const dealId = resp.data?.Deal_ID ?? '';
                   if (dealId) successParams.set('zoho_deal_id', dealId);
-                  window.location.href = 'https://frontend.goiteens.com/v2/success/?' + successParams.toString();
+                  window.location.href =
+                    'https://frontend.goiteens.com/v2/success/?' + successParams.toString();
                 } else {
                   console.log('error ', resp.statusText);
                   $(form).css('display', 'block');
