@@ -492,11 +492,12 @@ async function sendEmail(data) {
  * cookies
  * @param array - an array of utm marks to save to cookies
  */
-function saveParamsToCookies(array) {
-  array.forEach(utmMark => {
-    const utm = getUrlParameter(utmMark);
-    if (utm) {
-      Cookies.set(utmMark, utm);
+function saveParamsToCookies(params) {
+  const keys = Array.isArray(params) ? params : Object.keys(params);
+  keys.forEach(key => {
+    const value = getUrlParameter(key);
+    if (value) {
+      Cookies.set(key, value);
     }
   });
 }

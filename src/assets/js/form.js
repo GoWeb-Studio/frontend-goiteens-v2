@@ -59,16 +59,17 @@ $(window).on('load', async function () {
     /* It's a check that the domain has MX records on dns server */
     needsCheckEmailDomain: true,
 
-    utmMarks: [
-      'utm_source',
-      'utm_medium',
-      'utm_content',
-      'utm_term',
-      'utm_campaign',
-      'campaignId',
-      'adsetId',
-      'adId',
-    ],
+    utmMarks: {
+      utm_source: 'utm_source',
+      utm_medium: 'utm_medium',
+      utm_content: 'utm_content',
+      utm_term: 'utm_term',
+      utm_campaign: 'utm_campaign',
+      campaignId: 'campaignId',
+      adsetId: 'adsetId',
+      adId: 'adId',
+      gclid: 'Gclid',
+    },
     referralMarks: ['SRC', 'from'],
     defaultLocale: defaultLang,
     defaultPhoneCountry: itiLocale,
@@ -278,6 +279,7 @@ telegram backend. */
 
               if (resp.status === 200) {
                 service.setUrlParameter('name2', name.value);
+                service.setUrlParameter('zoho_deal_id', resp.data?.Deal_ID ?? '');
 
                 if (window.elzaToken) {
                   const elzaId = await service.sendDataToIntelza(phoneNumber);
@@ -330,8 +332,10 @@ telegram backend. */
 
                   /* That redirects user to some URL after send form. */
 
-                  const queryString = service.convertFormDataToQueryString(data);
-                  window.location.href = 'https://frontend.goiteens.com/v2/success/?' + queryString;
+                  const successParams = new URLSearchParams(service.convertFormDataToQueryString(data));
+                  const dealId = resp.data?.Deal_ID ?? '';
+                  if (dealId) successParams.set('zoho_deal_id', dealId);
+                  window.location.href = 'https://frontend.goiteens.com/v2/success/?' + successParams.toString();
                 } else {
                   console.log('error ', resp.statusText);
                   $(form).css('display', 'block');

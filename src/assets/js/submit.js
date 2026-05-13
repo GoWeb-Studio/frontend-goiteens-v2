@@ -46,6 +46,7 @@ function ensureUtmData(data) {
   data.campaignId = getCookie('campaignId');
   data.adsetId = getCookie('adsetId');
   data.adId = getCookie('adId');
+  data.Gclid = getCookie('gclid');
 
   return data;
 }
