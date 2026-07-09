@@ -118,6 +118,7 @@ pnpm-lock.yaml
 
 # IDE
 .idea
+.claude/
 
 # ARCHIVE
 *.7z
