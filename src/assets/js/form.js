@@ -156,6 +156,18 @@ telegram backend. */
     const email = form.querySelector('[name="email"]');
     const promocode = form.querySelector('[name="promocode"]');
 
+    /* Очищення інпута по кліку на кнопку-хрестик */
+    form.querySelectorAll('.input-clear').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const input = btn.closest('.input-wrap')?.querySelector('.input-field');
+        if (!input) return;
+
+        input.value = '';
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        input.focus();
+      });
+    });
+
     // Vars
     const iti = intlTelInput(
       phone,

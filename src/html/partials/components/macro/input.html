@@ -68,7 +68,7 @@
   {% else %}
 
   {% if arg.title %}
-  <label class="input-label" for="{{ id }}_input_{{ arg.name }}">{{ arg.title }}</label>
+  <label class="input-label input-label-float" for="{{ id }}_input_{{ arg.name }}">{{ arg.title }}</label>
   {% endif %}
 
   <input
@@ -83,6 +83,14 @@
     {% if arg.placeholder %} placeholder="{{ arg.placeholder }}" {% endif %}
     {% if arg.accept %} accept="{{ arg.accept }}" {% endif %}
   />
+  {% if arg.type != "file" %}
+  <button type="button" class="input-clear" aria-label="Очистити поле">
+    <svg class="input-clear-icon" width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18.8838 5.29282C19.2743 5.68334 19.2743 6.31651 18.8838 6.70703L6.70703 18.8838C6.31651 19.2743 5.68334 19.2743 5.29282 18.8838L5.11604 18.707C4.72552 18.3165 4.72552 17.6833 5.11604 17.2928L17.2928 5.11604C17.6833 4.72552 18.3165 4.72552 18.707 5.11604L18.8838 5.29282Z" clip-rule="evenodd" fill="currentColor" fill-rule="evenodd"/>
+      <path d="M5.29282 5.11604C5.68334 4.72552 6.31651 4.72552 6.70703 5.11604L18.8838 17.2928C19.2743 17.6833 19.2743 18.3165 18.8838 18.707L18.707 18.8838C18.3165 19.2743 17.6833 19.2743 17.2928 18.8838L5.11604 6.70703C4.72552 6.31651 4.72552 5.68334 5.11604 5.29282L5.29282 5.11604Z" clip-rule="evenodd" fill="currentColor" fill-rule="evenodd"/>
+    </svg>
+  </button>
+  {% endif %}
   {% endif %}
 </div>
 {% endmacro %}
