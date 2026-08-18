@@ -29,14 +29,19 @@
   left: 52px !important;
 }
 
+/* intl-tel-input на ініті обгортає <input type="tel"> і на мить збиває
+   :placeholder-shown. Порожній required tel лишається :invalid, тож не
+   трактуємо його як заповнений — інакше лейбл спалахує й зникає. */
 .input-wrap:has(.input-field:focus) .input-label-float,
-.input-wrap:has(.input-field:not(:placeholder-shown)) .input-label-float,
+.input-wrap:has(.input-field:not([type='tel']):not(:placeholder-shown)) .input-label-float,
+.input-wrap:has(.input-field[type='tel']:valid:not(:placeholder-shown)) .input-label-float,
 .input-wrap:has(.input-field.is-invalid) .input-label-float {
   @apply top-2 translate-y-0 opacity-100 md:top-3 xl:top-3;
 }
 
 .input-wrap:has(.input-field:focus) .input-label-float,
-.input-wrap:has(.input-field:not(:placeholder-shown)) .input-label-float {
+.input-wrap:has(.input-field:not([type='tel']):not(:placeholder-shown)) .input-label-float,
+.input-wrap:has(.input-field[type='tel']:valid:not(:placeholder-shown)) .input-label-float {
   @apply text-accent;
 }
 
@@ -46,7 +51,8 @@
 
 /* Резервуємо місце під лейбл зверху, коли інпут в фокусі / заповнений / невалідний */
 .input-wrap:has(.input-label-float) .input-field:focus,
-.input-wrap:has(.input-label-float) .input-field:not(:placeholder-shown),
+.input-wrap:has(.input-label-float) .input-field:not([type='tel']):not(:placeholder-shown),
+.input-wrap:has(.input-label-float) .input-field[type='tel']:valid:not(:placeholder-shown),
 .input-wrap:has(.input-label-float) .input-field.is-invalid {
   padding-top: 26px !important;
   padding-bottom: 6px !important;
@@ -54,7 +60,8 @@
 
 @media (min-width: 1280px) {
   .input-wrap:has(.input-label-float) .input-field:focus,
-  .input-wrap:has(.input-label-float) .input-field:not(:placeholder-shown),
+  .input-wrap:has(.input-label-float) .input-field:not([type='tel']):not(:placeholder-shown),
+  .input-wrap:has(.input-label-float) .input-field[type='tel']:valid:not(:placeholder-shown),
   .input-wrap:has(.input-label-float) .input-field.is-invalid {
     padding-top: 32px !important;
     padding-bottom: 8px !important;
@@ -107,7 +114,8 @@ input[type='tel'].input-field {
   }
 }
 
-.input-wrap:has(.input-field:not(:placeholder-shown)) .input-clear {
+.input-wrap:has(.input-field:not([type='tel']):not(:placeholder-shown)) .input-clear,
+.input-wrap:has(.input-field[type='tel']:valid:not(:placeholder-shown)) .input-clear {
   @apply pointer-events-auto opacity-100;
 }
 

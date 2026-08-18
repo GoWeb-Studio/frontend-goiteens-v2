@@ -9,6 +9,7 @@ import intlTelInput from 'intl-tel-input';
 import JustValidate from 'just-validate';
 import service from './service.js';
 import crm from './submit.js';
+import { pushGtmEvent, sendMetaLead } from './metaLead.js';
 
 $(window).on('load', async function () {
   /*  Украина(uk), Польша(pl), Мексика-Колумбия(es), Филиппины(en), Румыния(ro) */
@@ -259,13 +260,22 @@ telegram backend. */
           /* It's a function that sends data to the CRM. */
           const response = crm.submit(...crmParams);
 
-          /* It's a Google Tag Manager event. */
-          dataLayer.push({
-            event: 'lead',
-            phone: phoneNumber,
-            email: email.value,
-            conversionId: service.uid(),
-          });
+          async function trackLeadEvents(resp) {
+            await Promise.all([
+              pushGtmEvent('lead', {
+                phone: phoneNumber,
+                email: email.value,
+                conversionId: service.uid(),
+              }),
+              sendMetaLead({
+                dealId: resp?.data?.Deal_ID,
+                email: email.value,
+                phone: phoneNumber,
+                name: name.value,
+                ip: window.ipData?.ip || null,
+              }),
+            ]);
+          }
 
           // https://www.youtube.com/watch?v=sqcLjcSloXs
 
@@ -290,6 +300,8 @@ telegram backend. */
               const resp = await response;
 
               if (resp.status === 200) {
+                await trackLeadEvents(resp);
+
                 service.setUrlParameter('name2', name.value);
                 service.setUrlParameter('zoho_deal_id', resp.data?.Deal_ID ?? '');
 
@@ -326,43 +338,51 @@ telegram backend. */
 
           /* It's a function that redirects the user to the Telegram backend. */
           async function showTelegramBackendBlock() {
-            response.finally(async () => {
+            try {
+              const resp = await response;
+              if (resp.status === 200) {
+                await trackLeadEvents(resp);
+              }
+            } catch (error) {
+              console.log(error);
+            } finally {
               await service.redirectToTelegramBackend(form, data).finally(() => {
                 service.changeFormStep(form, 3);
                 loading.hide();
               });
-            });
+            }
           }
 
           async function showDefaultBlock() {
-            response
-              .then(resp => {
-                if (resp.status === 200) {
-                  $(form).trigger('reset');
-                  service.changeFormStep(form, 3);
-                  service.showSuccess(service.translate('reply'), true, loading, true);
+            try {
+              const resp = await response;
+              if (resp.status === 200) {
+                await trackLeadEvents(resp);
 
-                  /* That redirects user to some URL after send form. */
+                $(form).trigger('reset');
+                service.changeFormStep(form, 3);
+                service.showSuccess(service.translate('reply'), true, loading, true);
 
-                  const successParams = new URLSearchParams(
-                    service.convertFormDataToQueryString(data)
-                  );
-                  const dealId = resp.data?.Deal_ID ?? '';
-                  if (dealId) successParams.set('zoho_deal_id', dealId);
-                  window.location.href =
-                    'https://frontend.goiteens.com/v2/success/?' + successParams.toString();
-                } else {
-                  console.log('error ', resp.statusText);
-                  $(form).css('display', 'block');
-                  service.showError();
-                }
-              })
-              .catch(err => {
-                console.log(err);
+                /* That redirects user to some URL after send form. */
+
+                const successParams = new URLSearchParams(
+                  service.convertFormDataToQueryString(data)
+                );
+                const dealId = resp.data?.Deal_ID ?? '';
+                if (dealId) successParams.set('zoho_deal_id', dealId);
+                window.location.href =
+                  'https://frontend.goiteens.com/v2/success/?' + successParams.toString();
+              } else {
+                console.log('error ', resp.statusText);
                 $(form).css('display', 'block');
                 service.showError();
-                loading.hide();
-              });
+              }
+            } catch (err) {
+              console.log(err);
+              $(form).css('display', 'block');
+              service.showError();
+              loading.hide();
+            }
           }
         }
       });
