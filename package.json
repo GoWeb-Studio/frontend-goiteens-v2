@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env PORT=3000 gulp start --development ",
     "build": "gulp build --production",
-    "pages": "gulp pages --production --pages",
+    "pages": "gulp pages --production",
     "prettier": "npx prettier . --write",
     "htmlhint": "npx htmlhint \"**/*.html\""
   },

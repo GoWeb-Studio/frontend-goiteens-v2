@@ -15,7 +15,7 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=<?= $params['GTM'] ?>"
+        src="https://www.googletagmanager.com/ns.html?id={% if isPages %}{{ params.GTM }}{% else %}<?= $params['GTM'] ?>{% endif %}"
         height="0"
         width="0"
         style="display: none; visibility: hidden"

@@ -8,7 +8,40 @@ const nunjucksRender = require('gulp-nunjucks-render');
 const rename = require('gulp-rename');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
+const through2 = require('through2');
 const paths = require('../paths');
+
+const isPages = process.argv.includes('pages') || process.argv.includes('--pages');
+
+const parseIni = filePath => {
+  if (!fs.existsSync(filePath)) {
+    return {};
+  }
+
+  return fs
+    .readFileSync(filePath, 'utf8')
+    .split('\n')
+    .reduce((acc, line) => {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('#') || !trimmed.includes('=')) {
+        return acc;
+      }
+
+      const idx = trimmed.indexOf('=');
+      const key = trimmed.slice(0, idx).trim();
+      let value = trimmed.slice(idx + 1).trim();
+
+      if (
+        (value.startsWith("'") && value.endsWith("'")) ||
+        (value.startsWith('"') && value.endsWith('"'))
+      ) {
+        value = value.slice(1, -1);
+      }
+
+      acc[key] = value;
+      return acc;
+    }, {});
+};
 
 // other htmlminConfig settings: https://github.com/kangax/html-minifier#options-quick-reference
 const htmlminConfig = {
@@ -42,6 +75,8 @@ const getDataForFile = file => {
   data.assetsVersion = process.argv.includes('--production')
     ? `${pkg.version}-${Date.now()}`
     : 'dev';
+  data.isPages = isPages;
+  data.params = parseIni('./src/app/params.ini');
   return data;
 };
 
@@ -69,7 +104,13 @@ const html = () => {
     )
     .pipe(mode.production(htmlmin(htmlminConfig)))
     .pipe(mode.production(cachebust(cachebustConfig)))
-    .pipe(mode.production(rename({ extname: '.php' })))
+    .pipe(
+      mode.production(
+        isPages
+          ? through2.obj((file, _, cb) => cb(null, file))
+          : rename({ extname: '.php' })
+      )
+    )
     .pipe(gulp.dest(paths.build.html));
 };
 

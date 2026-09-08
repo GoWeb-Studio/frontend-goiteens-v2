@@ -76,3 +76,15 @@ exports.build = series(
     // tasks.phpmailer
   )
 );
+
+exports.pages = series(
+  tasks.clean,
+  parallel(
+    tasks.fonts,
+    tasks.html.html,
+    tasks.css,
+    tasks.scripts,
+    tasks.sprite,
+    tasks.images.buildImages
+  )
+);

@@ -25,19 +25,19 @@
     j.async = true;
     j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
     f.parentNode.insertBefore(j, f);
-  })(window, document, 'script', 'dataLayer', '<?= $params['GTM'] ?>');
+  })(window, document, 'script', 'dataLayer', '{% if isPages %}{{ params.GTM }}{% else %}<?= $params['GTM'] ?>{% endif %}');
 </script>
 <!-- End Google Tag Manager -->
 
 <!-- PHP Vars -->
 <script>
   window.locale = '{{ page.lang }}';
-  window.productName = '<?= $params['PRODUCT_NAME'] ?? NULL?>';
-  window.productId = '<?= $params['PRODUCT_ID'] ?? NULL?>';
-  window.leelooHash = '<?= $params['LEELOO_HASH'] ?? NULL ?>';
-  window.elzaToken = '<?= $params['ELZA_TOKEN'] ?? NULL ?>';
-  window.telegramBackendUrl = '<?= $params['TELEGRAM_BACKEND_URL'] ?? NULL ?>';
-  window.telegramBot = '<?= $params['TELEGRAM_BOT'] ?? NULL ?>';
-  window.leadFormat = '<?= $params['CAPI_LEAD_FORMAT'] ?? NULL ?>';
+  window.productName = '{% if isPages %}{{ params.PRODUCT_NAME }}{% else %}<?= $params['PRODUCT_NAME'] ?? NULL?>{% endif %}';
+  window.productId = '{% if isPages %}{{ params.PRODUCT_ID }}{% else %}<?= $params['PRODUCT_ID'] ?? NULL?>{% endif %}';
+  window.leelooHash = '{% if isPages %}{{ params.LEELOO_HASH }}{% else %}<?= $params['LEELOO_HASH'] ?? NULL ?>{% endif %}';
+  window.elzaToken = '{% if isPages %}{{ params.ELZA_TOKEN }}{% else %}<?= $params['ELZA_TOKEN'] ?? NULL ?>{% endif %}';
+  window.telegramBackendUrl = '{% if isPages %}{{ params.TELEGRAM_BACKEND_URL }}{% else %}<?= $params['TELEGRAM_BACKEND_URL'] ?? NULL ?>{% endif %}';
+  window.telegramBot = '{% if isPages %}{{ params.TELEGRAM_BOT }}{% else %}<?= $params['TELEGRAM_BOT'] ?? NULL ?>{% endif %}';
+  window.leadFormat = '{% if isPages %}{{ params.CAPI_LEAD_FORMAT }}{% else %}<?= $params['CAPI_LEAD_FORMAT'] ?? NULL ?>{% endif %}';
 </script>
 <!-- End PHP Vars -->
